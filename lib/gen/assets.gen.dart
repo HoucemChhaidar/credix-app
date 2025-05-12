@@ -1,0 +1,214 @@
+/// GENERATED CODE - DO NOT MODIFY BY HAND
+/// *****************************************************
+///  FlutterGen
+/// *****************************************************
+
+// coverage:ignore-file
+// ignore_for_file: type=lint
+// ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal,deprecated_member_use
+
+import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_svg/flutter_svg.dart' as _svg;
+import 'package:vector_graphics/vector_graphics.dart' as _vg;
+
+class $AssetsIconsGen {
+  const $AssetsIconsGen();
+
+  /// File path: assets/icons/arrow_down_left.svg
+  SvgGenImage get arrowDownLeft =>
+      const SvgGenImage('assets/icons/arrow_down_left.svg');
+
+  /// File path: assets/icons/arrow_right_outline.svg
+  SvgGenImage get arrowRightOutline =>
+      const SvgGenImage('assets/icons/arrow_right_outline.svg');
+
+  /// File path: assets/icons/arrow_up_right_outline.svg
+  SvgGenImage get arrowUpRightOutline =>
+      const SvgGenImage('assets/icons/arrow_up_right_outline.svg');
+
+  /// File path: assets/icons/barcode_outline.svg
+  SvgGenImage get barcodeOutline =>
+      const SvgGenImage('assets/icons/barcode_outline.svg');
+
+  /// File path: assets/icons/chevron_left.svg
+  SvgGenImage get chevronLeft =>
+      const SvgGenImage('assets/icons/chevron_left.svg');
+
+  /// File path: assets/icons/email_filled.svg
+  SvgGenImage get emailFilled =>
+      const SvgGenImage('assets/icons/email_filled.svg');
+
+  /// File path: assets/icons/email_outline.svg
+  SvgGenImage get emailOutline =>
+      const SvgGenImage('assets/icons/email_outline.svg');
+
+  /// File path: assets/icons/empty_wallet_filled.svg
+  SvgGenImage get emptyWalletFilled =>
+      const SvgGenImage('assets/icons/empty_wallet_filled.svg');
+
+  /// File path: assets/icons/empty_wallet_outline.svg
+  SvgGenImage get emptyWalletOutline =>
+      const SvgGenImage('assets/icons/empty_wallet_outline.svg');
+
+  /// File path: assets/icons/export_outline.svg
+  SvgGenImage get exportOutline =>
+      const SvgGenImage('assets/icons/export_outline.svg');
+
+  /// File path: assets/icons/eye_filled.svg
+  SvgGenImage get eyeFilled => const SvgGenImage('assets/icons/eye_filled.svg');
+
+  /// File path: assets/icons/eye_slash_filled.svg
+  SvgGenImage get eyeSlashFilled =>
+      const SvgGenImage('assets/icons/eye_slash_filled.svg');
+
+  /// File path: assets/icons/home_filled.svg
+  SvgGenImage get homeFilled =>
+      const SvgGenImage('assets/icons/home_filled.svg');
+
+  /// File path: assets/icons/home_outline.svg
+  SvgGenImage get homeOutline =>
+      const SvgGenImage('assets/icons/home_outline.svg');
+
+  /// File path: assets/icons/lock_filled.svg
+  SvgGenImage get lockFilled =>
+      const SvgGenImage('assets/icons/lock_filled.svg');
+
+  /// File path: assets/icons/lock_outline.svg
+  SvgGenImage get lockOutline =>
+      const SvgGenImage('assets/icons/lock_outline.svg');
+
+  /// File path: assets/icons/settings_filled.svg
+  SvgGenImage get settingsFilled =>
+      const SvgGenImage('assets/icons/settings_filled.svg');
+
+  /// File path: assets/icons/settings_outline.svg
+  SvgGenImage get settingsOutline =>
+      const SvgGenImage('assets/icons/settings_outline.svg');
+
+  /// File path: assets/icons/tag_filled.svg
+  SvgGenImage get tagFilled => const SvgGenImage('assets/icons/tag_filled.svg');
+
+  /// File path: assets/icons/tag_outline.svg
+  SvgGenImage get tagOutline =>
+      const SvgGenImage('assets/icons/tag_outline.svg');
+
+  /// File path: assets/icons/tick_circle_filled.svg
+  SvgGenImage get tickCircleFilled =>
+      const SvgGenImage('assets/icons/tick_circle_filled.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [
+    arrowDownLeft,
+    arrowRightOutline,
+    arrowUpRightOutline,
+    barcodeOutline,
+    chevronLeft,
+    emailFilled,
+    emailOutline,
+    emptyWalletFilled,
+    emptyWalletOutline,
+    exportOutline,
+    eyeFilled,
+    eyeSlashFilled,
+    homeFilled,
+    homeOutline,
+    lockFilled,
+    lockOutline,
+    settingsFilled,
+    settingsOutline,
+    tagFilled,
+    tagOutline,
+    tickCircleFilled,
+  ];
+}
+
+class $AssetsLogoGen {
+  const $AssetsLogoGen();
+
+  /// File path: assets/logo/credix_logo.svg
+  SvgGenImage get credixLogo =>
+      const SvgGenImage('assets/logo/credix_logo.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [credixLogo];
+}
+
+class Assets {
+  const Assets._();
+
+  static const $AssetsIconsGen icons = $AssetsIconsGen();
+  static const $AssetsLogoGen logo = $AssetsLogoGen();
+}
+
+class SvgGenImage {
+  const SvgGenImage(this._assetName, {this.size, this.flavors = const {}})
+    : _isVecFormat = false;
+
+  const SvgGenImage.vec(this._assetName, {this.size, this.flavors = const {}})
+    : _isVecFormat = true;
+
+  final String _assetName;
+  final Size? size;
+  final Set<String> flavors;
+  final bool _isVecFormat;
+
+  _svg.SvgPicture svg({
+    Key? key,
+    bool matchTextDirection = false,
+    AssetBundle? bundle,
+    String? package,
+    double? width,
+    double? height,
+    BoxFit fit = BoxFit.contain,
+    AlignmentGeometry alignment = Alignment.center,
+    bool allowDrawingOutsideViewBox = false,
+    WidgetBuilder? placeholderBuilder,
+    String? semanticsLabel,
+    bool excludeFromSemantics = false,
+    _svg.SvgTheme? theme,
+    ColorFilter? colorFilter,
+    Clip clipBehavior = Clip.hardEdge,
+    @deprecated Color? color,
+    @deprecated BlendMode colorBlendMode = BlendMode.srcIn,
+    @deprecated bool cacheColorFilter = false,
+  }) {
+    final _svg.BytesLoader loader;
+    if (_isVecFormat) {
+      loader = _vg.AssetBytesLoader(
+        _assetName,
+        assetBundle: bundle,
+        packageName: package,
+      );
+    } else {
+      loader = _svg.SvgAssetLoader(
+        _assetName,
+        assetBundle: bundle,
+        packageName: package,
+        theme: theme,
+      );
+    }
+    return _svg.SvgPicture(
+      loader,
+      key: key,
+      matchTextDirection: matchTextDirection,
+      width: width,
+      height: height,
+      fit: fit,
+      alignment: alignment,
+      allowDrawingOutsideViewBox: allowDrawingOutsideViewBox,
+      placeholderBuilder: placeholderBuilder,
+      semanticsLabel: semanticsLabel,
+      excludeFromSemantics: excludeFromSemantics,
+      colorFilter:
+          colorFilter ??
+          (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
+      clipBehavior: clipBehavior,
+      cacheColorFilter: cacheColorFilter,
+    );
+  }
+
+  String get path => _assetName;
+
+  String get keyName => _assetName;
+}

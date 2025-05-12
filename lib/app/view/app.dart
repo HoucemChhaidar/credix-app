@@ -1,5 +1,6 @@
+import 'package:credix_app/core/ui/theme/app_theme.dart';
+import 'package:credix_app/features/auth/pages/login_page.dart';
 import 'package:credix_app/l10n/l10n.dart';
-import 'package:credix_app/login/login.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
@@ -9,15 +10,11 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        appBarTheme: AppBarTheme(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        ),
-        useMaterial3: true,
-      ),
+      title: 'Credix App',
+      theme: AppTheme.light,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const LoginPage(),
+      home: LoginPage(),
     );
   }
 }
