@@ -16,119 +16,99 @@ class $AssetsIconsGen {
   const $AssetsIconsGen();
 
   /// File path: assets/icons/arrow_down_left.svg
-  SvgGenImage get arrowDownLeft =>
-      const SvgGenImage('assets/icons/arrow_down_left.svg');
+  SvgGenImage get arrowDownLeft => const SvgGenImage('assets/icons/arrow_down_left.svg');
 
   /// File path: assets/icons/arrow_right_outline.svg
-  SvgGenImage get arrowRightOutline =>
-      const SvgGenImage('assets/icons/arrow_right_outline.svg');
+  SvgGenImage get arrowRightOutline => const SvgGenImage('assets/icons/arrow_right_outline.svg');
 
   /// File path: assets/icons/arrow_up_right_outline.svg
-  SvgGenImage get arrowUpRightOutline =>
-      const SvgGenImage('assets/icons/arrow_up_right_outline.svg');
+  SvgGenImage get arrowUpRightOutline => const SvgGenImage('assets/icons/arrow_up_right_outline.svg');
 
   /// File path: assets/icons/barcode_outline.svg
-  SvgGenImage get barcodeOutline =>
-      const SvgGenImage('assets/icons/barcode_outline.svg');
+  SvgGenImage get barcodeOutline => const SvgGenImage('assets/icons/barcode_outline.svg');
 
   /// File path: assets/icons/chevron_left.svg
-  SvgGenImage get chevronLeft =>
-      const SvgGenImage('assets/icons/chevron_left.svg');
+  SvgGenImage get chevronLeft => const SvgGenImage('assets/icons/chevron_left.svg');
 
   /// File path: assets/icons/email_filled.svg
-  SvgGenImage get emailFilled =>
-      const SvgGenImage('assets/icons/email_filled.svg');
+  SvgGenImage get emailFilled => const SvgGenImage('assets/icons/email_filled.svg');
 
   /// File path: assets/icons/email_outline.svg
-  SvgGenImage get emailOutline =>
-      const SvgGenImage('assets/icons/email_outline.svg');
+  SvgGenImage get emailOutline => const SvgGenImage('assets/icons/email_outline.svg');
 
   /// File path: assets/icons/empty_wallet_filled.svg
-  SvgGenImage get emptyWalletFilled =>
-      const SvgGenImage('assets/icons/empty_wallet_filled.svg');
+  SvgGenImage get emptyWalletFilled => const SvgGenImage('assets/icons/empty_wallet_filled.svg');
 
   /// File path: assets/icons/empty_wallet_outline.svg
-  SvgGenImage get emptyWalletOutline =>
-      const SvgGenImage('assets/icons/empty_wallet_outline.svg');
+  SvgGenImage get emptyWalletOutline => const SvgGenImage('assets/icons/empty_wallet_outline.svg');
 
   /// File path: assets/icons/export_outline.svg
-  SvgGenImage get exportOutline =>
-      const SvgGenImage('assets/icons/export_outline.svg');
+  SvgGenImage get exportOutline => const SvgGenImage('assets/icons/export_outline.svg');
 
   /// File path: assets/icons/eye_filled.svg
   SvgGenImage get eyeFilled => const SvgGenImage('assets/icons/eye_filled.svg');
 
   /// File path: assets/icons/eye_slash_filled.svg
-  SvgGenImage get eyeSlashFilled =>
-      const SvgGenImage('assets/icons/eye_slash_filled.svg');
+  SvgGenImage get eyeSlashFilled => const SvgGenImage('assets/icons/eye_slash_filled.svg');
 
   /// File path: assets/icons/home_filled.svg
-  SvgGenImage get homeFilled =>
-      const SvgGenImage('assets/icons/home_filled.svg');
+  SvgGenImage get homeFilled => const SvgGenImage('assets/icons/home_filled.svg');
 
   /// File path: assets/icons/home_outline.svg
-  SvgGenImage get homeOutline =>
-      const SvgGenImage('assets/icons/home_outline.svg');
+  SvgGenImage get homeOutline => const SvgGenImage('assets/icons/home_outline.svg');
 
   /// File path: assets/icons/lock_filled.svg
-  SvgGenImage get lockFilled =>
-      const SvgGenImage('assets/icons/lock_filled.svg');
+  SvgGenImage get lockFilled => const SvgGenImage('assets/icons/lock_filled.svg');
 
   /// File path: assets/icons/lock_outline.svg
-  SvgGenImage get lockOutline =>
-      const SvgGenImage('assets/icons/lock_outline.svg');
+  SvgGenImage get lockOutline => const SvgGenImage('assets/icons/lock_outline.svg');
 
   /// File path: assets/icons/settings_filled.svg
-  SvgGenImage get settingsFilled =>
-      const SvgGenImage('assets/icons/settings_filled.svg');
+  SvgGenImage get settingsFilled => const SvgGenImage('assets/icons/settings_filled.svg');
 
   /// File path: assets/icons/settings_outline.svg
-  SvgGenImage get settingsOutline =>
-      const SvgGenImage('assets/icons/settings_outline.svg');
+  SvgGenImage get settingsOutline => const SvgGenImage('assets/icons/settings_outline.svg');
 
   /// File path: assets/icons/tag_filled.svg
   SvgGenImage get tagFilled => const SvgGenImage('assets/icons/tag_filled.svg');
 
   /// File path: assets/icons/tag_outline.svg
-  SvgGenImage get tagOutline =>
-      const SvgGenImage('assets/icons/tag_outline.svg');
+  SvgGenImage get tagOutline => const SvgGenImage('assets/icons/tag_outline.svg');
 
   /// File path: assets/icons/tick_circle_filled.svg
-  SvgGenImage get tickCircleFilled =>
-      const SvgGenImage('assets/icons/tick_circle_filled.svg');
+  SvgGenImage get tickCircleFilled => const SvgGenImage('assets/icons/tick_circle_filled.svg');
 
   /// List of all assets
   List<SvgGenImage> get values => [
-    arrowDownLeft,
-    arrowRightOutline,
-    arrowUpRightOutline,
-    barcodeOutline,
-    chevronLeft,
-    emailFilled,
-    emailOutline,
-    emptyWalletFilled,
-    emptyWalletOutline,
-    exportOutline,
-    eyeFilled,
-    eyeSlashFilled,
-    homeFilled,
-    homeOutline,
-    lockFilled,
-    lockOutline,
-    settingsFilled,
-    settingsOutline,
-    tagFilled,
-    tagOutline,
-    tickCircleFilled,
-  ];
+        arrowDownLeft,
+        arrowRightOutline,
+        arrowUpRightOutline,
+        barcodeOutline,
+        chevronLeft,
+        emailFilled,
+        emailOutline,
+        emptyWalletFilled,
+        emptyWalletOutline,
+        exportOutline,
+        eyeFilled,
+        eyeSlashFilled,
+        homeFilled,
+        homeOutline,
+        lockFilled,
+        lockOutline,
+        settingsFilled,
+        settingsOutline,
+        tagFilled,
+        tagOutline,
+        tickCircleFilled,
+      ];
 }
 
 class $AssetsLogoGen {
   const $AssetsLogoGen();
 
   /// File path: assets/logo/credix_logo.svg
-  SvgGenImage get credixLogo =>
-      const SvgGenImage('assets/logo/credix_logo.svg');
+  SvgGenImage get credixLogo => const SvgGenImage('assets/logo/credix_logo.svg');
 
   /// List of all assets
   List<SvgGenImage> get values => [credixLogo];
@@ -142,11 +122,9 @@ class Assets {
 }
 
 class SvgGenImage {
-  const SvgGenImage(this._assetName, {this.size, this.flavors = const {}})
-    : _isVecFormat = false;
+  const SvgGenImage(this._assetName, {this.size, this.flavors = const {}}) : _isVecFormat = false;
 
-  const SvgGenImage.vec(this._assetName, {this.size, this.flavors = const {}})
-    : _isVecFormat = true;
+  const SvgGenImage.vec(this._assetName, {this.size, this.flavors = const {}}) : _isVecFormat = true;
 
   final String _assetName;
   final Size? size;
@@ -200,9 +178,7 @@ class SvgGenImage {
       placeholderBuilder: placeholderBuilder,
       semanticsLabel: semanticsLabel,
       excludeFromSemantics: excludeFromSemantics,
-      colorFilter:
-          colorFilter ??
-          (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
+      colorFilter: colorFilter ?? (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
       clipBehavior: clipBehavior,
       cacheColorFilter: cacheColorFilter,
     );
