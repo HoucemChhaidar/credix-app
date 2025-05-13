@@ -1,14 +1,16 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:credix_app/core/di/injection.dart';
 import 'package:credix_app/core/presentation/resources/colors/app_colors.dart';
 import 'package:credix_app/core/presentation/resources/sizes/app_sizes.dart';
 import 'package:credix_app/core/presentation/resources/styles/app_text_styles.dart';
-import 'package:credix_app/core/presentation/widgets/common/app_scaffold.dart';
 import 'package:credix_app/core/presentation/widgets/widgets.dart';
+import 'package:credix_app/core/routing/app_router.dart';
 import 'package:credix_app/features/auth/presentation/blocs/login/login_bloc.dart';
 import 'package:credix_app/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+@RoutePage()
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
 
@@ -51,16 +53,33 @@ class LoginPage extends StatelessWidget {
                   hintText: 'Password',
                 ),
                 const SizedBox(height: AppSizes.lg),
-                AppButton(
-                  buttonText: 'Sign In',
-                  onPressed: () => context
-                      .read<LoginBloc>()
-                      .add(LoginEvent.login(email: emailController.text, password: passwordController.text)),
+                state.maybeWhen(
+                  orElse: () {
+                    return AppButton(
+                      content: const AppText.bodyMedium('Sign In', color: AppColors.neutral1),
+                      onPressed: () {
+                        context
+                            .read<LoginBloc>()
+                            .add(LoginEvent.login(email: emailController.text, password: passwordController.text));
+                      },
+                    );
+                  },
+                  loading: () {
+                    return const AppButton(
+                      enabled: false,
+                      content: FadingCircularProgress(),
+                    );
+                  },
                 ),
                 const SizedBox(height: AppSizes.md),
-                const AppText.labelMedium(
-                  'Forgot Password?',
-                  color: AppColors.neutral7,
+                InkWell(
+                  onTap: () {
+                    getIt<AppRouter>().push(ForgotPasswordRoute());
+                  },
+                  child: const AppText.labelMedium(
+                    'Forgot Password?',
+                    color: AppColors.neutral7,
+                  ),
                 ),
                 const Spacer(),
                 Padding(
