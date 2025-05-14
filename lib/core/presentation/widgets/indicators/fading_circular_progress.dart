@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 class FadingCircularProgress extends StatefulWidget {
   const FadingCircularProgress({
     super.key,
-    this.size = 24.0,
-    this.strokeWidth = 2.0,
+    this.size = 20,
+    this.strokeWidth = 2,
     this.duration = const Duration(milliseconds: 1200),
   });
 

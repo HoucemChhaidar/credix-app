@@ -1,0 +1,72 @@
+import 'package:credix_app/core/presentation/resources/colors/app_colors.dart';
+import 'package:credix_app/core/presentation/resources/sizes/app_sizes.dart';
+import 'package:credix_app/core/presentation/widgets/widgets.dart';
+import 'package:credix_app/gen/assets.gen.dart';
+import 'package:flutter/material.dart';
+
+class AppBottomNavBar extends StatelessWidget {
+  const AppBottomNavBar({
+    required this.selectedIndex,
+    required this.onItemSelected,
+    super.key,
+  });
+
+  final int selectedIndex;
+  final ValueChanged<int> onItemSelected;
+
+  @override
+  Widget build(BuildContext context) {
+    return BottomAppBar(
+      notchMargin: 0,
+      elevation: 0,
+      height: AppSizes.s80,
+      padding: EdgeInsets.zero,
+      color: AppColors.neutral1,
+      child: Row(
+        children: [
+          Expanded(
+            child: TabItem(
+              isSelected: selectedIndex == 0,
+              filledIcon: Assets.icons.homeFilled,
+              outlineIcon: Assets.icons.homeOutline,
+              label: 'Home',
+              index: 0,
+              onTabSelected: onItemSelected,
+            ),
+          ),
+          Expanded(
+            child: TabItem(
+              isSelected: selectedIndex == 1,
+              filledIcon: Assets.icons.emptyWalletFilled,
+              outlineIcon: Assets.icons.emptyWalletOutline,
+              label: 'History',
+              index: 1,
+              onTabSelected: onItemSelected,
+            ),
+          ),
+          const SizedBox(width: 80),
+          Expanded(
+            child: TabItem(
+              isSelected: selectedIndex == 2,
+              filledIcon: Assets.icons.tagFilled,
+              outlineIcon: Assets.icons.tagOutline,
+              label: 'Offers',
+              index: 2,
+              onTabSelected: onItemSelected,
+            ),
+          ),
+          Expanded(
+            child: TabItem(
+              isSelected: selectedIndex == 3,
+              filledIcon: Assets.icons.settingsFilled,
+              outlineIcon: Assets.icons.settingsOutline,
+              label: 'Settings',
+              index: 3,
+              onTabSelected: onItemSelected,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

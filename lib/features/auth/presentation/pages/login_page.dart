@@ -23,22 +23,21 @@ class LoginPage extends StatelessWidget {
       create: (context) => getIt<LoginBloc>(),
       child: BlocBuilder<LoginBloc, LoginState>(
         builder: (context, state) {
-          return AppScaffold(
+          return KeyboardAwareScaffold(
             child: Column(
               children: [
-                const SizedBox(height: AppSizes.s48),
-                const LogoWrapper(),
+                const SizedBox(height: AppSizes.s64),
+                const LogoBadge(),
                 const SizedBox(height: AppSizes.md),
-                const AppText.headlineLarge('Welcome!'),
-                const SizedBox(height: AppSizes.xs),
-                const AppText.bodyMedium(
-                  'Enter your account',
-                  color: AppColors.neutral6,
+                const AppText.h1('Welcome!'),
+                const SizedBox(height: AppSizes.xxs),
+                const AppText.labelMedium(
+                  'Enter your email and password to continue.',
+                  color: AppColors.neutral7,
                 ),
                 const SizedBox(height: AppSizes.s40),
                 AppTextField.standard(
                   controller: emailController,
-                  label: 'Email',
                   hintText: 'Email',
                   keyboardType: TextInputType.emailAddress,
                   prefixIcon: Padding(
@@ -49,14 +48,16 @@ class LoginPage extends StatelessWidget {
                 const SizedBox(height: AppSizes.md),
                 AppTextField.password(
                   controller: passwordController,
-                  label: 'Password',
                   hintText: 'Password',
                 ),
-                const SizedBox(height: AppSizes.lg),
+                const SizedBox(height: AppSizes.xl),
                 state.maybeWhen(
                   orElse: () {
                     return AppButton(
-                      content: const AppText.bodyMedium('Sign In', color: AppColors.neutral1),
+                      content: const AppText.labelMedium(
+                        'Sign In',
+                        color: AppColors.neutral1,
+                      ),
                       onPressed: () {
                         context
                             .read<LoginBloc>()
@@ -73,9 +74,7 @@ class LoginPage extends StatelessWidget {
                 ),
                 const SizedBox(height: AppSizes.md),
                 InkWell(
-                  onTap: () {
-                    getIt<AppRouter>().push(ForgotPasswordRoute());
-                  },
+                  onTap: () => getIt<AppRouter>().push(ForgotPasswordRoute()),
                   child: const AppText.labelMedium(
                     'Forgot Password?',
                     color: AppColors.neutral7,
@@ -83,15 +82,15 @@ class LoginPage extends StatelessWidget {
                 ),
                 const Spacer(),
                 Padding(
-                  padding: const EdgeInsets.only(bottom: AppSizes.s64),
+                  padding: const EdgeInsets.only(bottom: AppSizes.s80),
                   child: Text.rich(
                     TextSpan(
                       text: "Don't have an account? ",
-                      style: AppTextStyles.bodyLarge,
+                      style: AppTextStyles.labelLarge,
                       children: [
                         TextSpan(
                           text: 'Sign Up',
-                          style: AppTextStyles.bodyLarge.copyWith(
+                          style: AppTextStyles.labelLarge.copyWith(
                             color: AppColors.primary600,
                           ),
                         ),

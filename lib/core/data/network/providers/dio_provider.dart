@@ -8,10 +8,9 @@ abstract class DioProvider {
   Dio get dio {
     final dio = Dio(
       BaseOptions(
-        baseUrl: 'http://172.16.0.74:2345',
         contentType: 'application/json',
-        connectTimeout: const Duration(seconds: 5),
-        receiveTimeout: const Duration(seconds: 5),
+        connectTimeout: const Duration(seconds: 30),
+        receiveTimeout: const Duration(seconds: 30),
       ),
     );
     dio.interceptors.add(LoggingInterceptor());

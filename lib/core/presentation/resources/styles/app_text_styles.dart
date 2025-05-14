@@ -4,72 +4,80 @@ class AppTextStyles {
   static const _interFontFamily = 'Inter';
   static const _shareTechFontFamily = 'Share Tech Mono';
 
-  // Display
-  static const TextStyle displayLarge = TextStyle(
+  static const TextStyle display = TextStyle(
     fontSize: 40,
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w700,
     fontFamily: _interFontFamily,
-    height: 1,
+    height: 48 / 40,
   );
 
-  // Headline
-  static const TextStyle headlineLarge = TextStyle(
-    fontSize: 20,
-    fontWeight: FontWeight.bold,
-    fontFamily: _interFontFamily,
-    height: 1,
-  );
-  static const TextStyle headlineMedium = TextStyle(
-    fontSize: 16,
-    fontWeight: FontWeight.bold,
-    fontFamily: _interFontFamily,
-    height: 1,
-  );
-
-  // Body
-  static const TextStyle bodyLarge = TextStyle(
-    fontSize: 14,
+  static const TextStyle h1 = TextStyle(
+    fontSize: 24,
     fontWeight: FontWeight.w600,
     fontFamily: _interFontFamily,
-    height: 1,
+    height: 32 / 24,
   );
+
+  static const TextStyle h2 = TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.w600,
+    fontFamily: _interFontFamily,
+    height: 28 / 20,
+  );
+
+  static const TextStyle h3 = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
+    fontFamily: _interFontFamily,
+    height: 24 / 18,
+  );
+
+  static const TextStyle bodyLarge = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+    fontFamily: _interFontFamily,
+    height: 24 / 16,
+  );
+
   static const TextStyle bodyMedium = TextStyle(
     fontSize: 14,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w400,
     fontFamily: _interFontFamily,
-    height: 1,
+    height: 20 / 14,
   );
 
-  // Label
   static const TextStyle labelLarge = TextStyle(
-    fontSize: 12,
+    fontSize: 16,
     fontWeight: FontWeight.w600,
     fontFamily: _interFontFamily,
-    height: 1,
-  );
-  static const TextStyle labelMedium = TextStyle(
-    fontSize: 12,
-    fontWeight: FontWeight.w500,
-    fontFamily: _interFontFamily,
-    height: 1,
-  );
-  static const TextStyle labelSmall = TextStyle(
-    fontSize: 10,
-    fontWeight: FontWeight.w600,
-    fontFamily: _interFontFamily,
+    height: 24 / 16,
   );
 
-  // Receipt
-  static const TextStyle receiptLarge = TextStyle(
-    fontSize: 20,
+  static const TextStyle labelMedium = TextStyle(
+    fontSize: 14,
     fontWeight: FontWeight.w500,
-    fontFamily: _shareTechFontFamily,
-    height: 1,
+    fontFamily: _interFontFamily,
+    height: 20 / 14,
   );
+
+  static const TextStyle labelSmall = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+    fontFamily: _interFontFamily,
+    height: 16 / 12,
+  );
+
+  static const TextStyle receiptLarge = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.w400,
+    fontFamily: _shareTechFontFamily,
+    height: 28 / 24,
+  );
+
   static const TextStyle receiptMedium = TextStyle(
     fontSize: 16,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w400,
     fontFamily: _shareTechFontFamily,
-    height: 1,
+    height: 20 / 16,
   );
 }

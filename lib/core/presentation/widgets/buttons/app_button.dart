@@ -17,7 +17,6 @@ class AppButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: AppSizes.s48,
       width: double.infinity,
       child: ElevatedButton(
         onPressed: enabled ? onPressed : null,
@@ -25,7 +24,9 @@ class AppButton extends StatelessWidget {
           elevation: const WidgetStatePropertyAll(0),
           backgroundColor: WidgetStatePropertyAll(enabled ? AppColors.neutral11 : AppColors.neutral9),
           overlayColor: const WidgetStatePropertyAll(AppColors.neutral9),
-          padding: const WidgetStatePropertyAll(EdgeInsets.zero),
+          padding: const WidgetStatePropertyAll(
+            EdgeInsets.symmetric(vertical: AppSizes.md),
+          ),
           shape: WidgetStatePropertyAll(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(AppSizes.xs),

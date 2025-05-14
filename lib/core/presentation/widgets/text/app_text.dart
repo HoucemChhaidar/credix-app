@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class AppText extends StatelessWidget {
   // === Display ===
-  const AppText.displayLarge(
+  const AppText.display(
     String text, {
     Key? key,
     Color? color,
@@ -14,7 +14,7 @@ class AppText extends StatelessWidget {
   }) : this._(
           key: key,
           text: text,
-          style: AppTextStyles.displayLarge,
+          style: AppTextStyles.display,
           color: color,
           textAlign: textAlign,
           maxLines: maxLines,
@@ -23,7 +23,7 @@ class AppText extends StatelessWidget {
         );
 
   // === Headline ===
-  const AppText.headlineLarge(
+  const AppText.h1(
     String text, {
     Key? key,
     Color? color,
@@ -34,7 +34,7 @@ class AppText extends StatelessWidget {
   }) : this._(
           key: key,
           text: text,
-          style: AppTextStyles.headlineLarge,
+          style: AppTextStyles.h1,
           color: color,
           textAlign: textAlign,
           maxLines: maxLines,
@@ -42,7 +42,7 @@ class AppText extends StatelessWidget {
           onTap: onTap,
         );
 
-  const AppText.headlineMedium(
+  const AppText.h2(
     String text, {
     Key? key,
     Color? color,
@@ -53,7 +53,26 @@ class AppText extends StatelessWidget {
   }) : this._(
           key: key,
           text: text,
-          style: AppTextStyles.headlineMedium,
+          style: AppTextStyles.h2,
+          color: color,
+          textAlign: textAlign,
+          maxLines: maxLines,
+          overflow: overflow,
+          onTap: onTap,
+        );
+
+  const AppText.h3(
+    String text, {
+    Key? key,
+    Color? color,
+    TextAlign? textAlign,
+    int? maxLines,
+    TextOverflow? overflow,
+    VoidCallback? onTap,
+  }) : this._(
+          key: key,
+          text: text,
+          style: AppTextStyles.h3,
           color: color,
           textAlign: textAlign,
           maxLines: maxLines,

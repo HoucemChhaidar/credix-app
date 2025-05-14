@@ -1,9 +1,9 @@
 import 'package:credix_app/core/presentation/resources/sizes/app_sizes.dart';
-import 'package:credix_app/core/presentation/widgets/common/blurred_glow_circle.dart';
+import 'package:credix_app/core/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
-class AppScaffold extends StatelessWidget {
-  const AppScaffold({required this.child, super.key});
+class KeyboardAwareScaffold extends StatelessWidget {
+  const KeyboardAwareScaffold({required this.child, super.key});
 
   final Widget child;
 

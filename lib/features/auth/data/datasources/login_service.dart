@@ -1,3 +1,4 @@
+import 'package:credix_app/core/constants/app_endpoints.dart';
 import 'package:credix_app/core/data/network/models/base_model.dart';
 import 'package:credix_app/core/data/network/models/network_request.dart';
 import 'package:credix_app/core/data/network/models/network_request_body.dart';
@@ -16,7 +17,7 @@ class LoginService with NetworkServiceProvider<BaseModel<dynamic, dynamic>> {
     final response = await executeRequest(
       dio,
       NetworkRequest(
-        path: '/auth/login',
+        path: AppEndpoints.login,
         type: NetworkRequestType.post,
         body: NetworkRequestBody.json({'email': email, 'password': password}),
       ),

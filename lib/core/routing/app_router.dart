@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:credix_app/features/auth/presentation/pages/forgot_password_page.dart';
 import 'package:credix_app/features/auth/presentation/pages/login_page.dart';
+import 'package:credix_app/features/home/presentation/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 
@@ -20,5 +21,6 @@ class AppRouter extends RootStackRouter {
   List<AutoRoute> get routes => [
         AutoRoute(page: LoginRoute.page, initial: true),
         AutoRoute(page: ForgotPasswordRoute.page),
+        AutoRoute(page: HomeRoute.page),
       ];
 }

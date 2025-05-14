@@ -15,14 +15,16 @@ class ForgotPasswordPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppScaffold(
+    return KeyboardAwareScaffold(
       child: Column(
         children: [
-          const SizedBox(height: AppSizes.xs),
           Align(
             alignment: Alignment.centerLeft,
-            child: AppBackButton(onTap: getIt<AppRouter>().back),
+            child: AppBackButton(
+              onTap: getIt<AppRouter>().back,
+            ),
           ),
+          const SizedBox(height: AppSizes.md),
           DualToneIconBadge(
             toneAccent: AppColors.primary50,
             toneBase: AppColors.primary500,
@@ -32,17 +34,16 @@ class ForgotPasswordPage extends StatelessWidget {
             ),
           ),
           const SizedBox(height: AppSizes.md),
-          const AppText.headlineLarge('Forgot Password?'),
-          const SizedBox(height: AppSizes.xs),
-          const AppText.bodyMedium(
-            '''Enter the email associated with your account and we’ll send an email to reset your password''',
-            color: AppColors.neutral6,
+          const AppText.h1('Forgot Password?'),
+          const SizedBox(height: AppSizes.xxs),
+          const AppText.labelMedium(
+            'Enter your email to get a reset link',
+            color: AppColors.neutral7,
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: AppSizes.s40),
           AppTextField.standard(
             controller: emailController,
-            label: 'Email',
             hintText: 'Email',
             keyboardType: TextInputType.emailAddress,
             prefixIcon: Padding(
@@ -50,9 +51,9 @@ class ForgotPasswordPage extends StatelessWidget {
               child: AppIcon(icon: Assets.icons.emailFilled),
             ),
           ),
-          const SizedBox(height: AppSizes.lg),
+          const SizedBox(height: AppSizes.xl),
           AppButton(
-            content: const AppText.bodyMedium(
+            content: const AppText.labelMedium(
               'Send Email',
               color: AppColors.neutral1,
             ),

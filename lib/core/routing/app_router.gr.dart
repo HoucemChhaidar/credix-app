@@ -14,11 +14,11 @@ part of 'app_router.dart';
 /// [ForgotPasswordPage]
 class ForgotPasswordRoute extends PageRouteInfo<ForgotPasswordRouteArgs> {
   ForgotPasswordRoute({Key? key, List<PageRouteInfo>? children})
-    : super(
-        ForgotPasswordRoute.name,
-        args: ForgotPasswordRouteArgs(key: key),
-        initialChildren: children,
-      );
+      : super(
+          ForgotPasswordRoute.name,
+          args: ForgotPasswordRouteArgs(key: key),
+          initialChildren: children,
+        );
 
   static const String name = 'ForgotPasswordRoute';
 
@@ -45,14 +45,29 @@ class ForgotPasswordRouteArgs {
 }
 
 /// generated route for
+/// [HomePage]
+class HomeRoute extends PageRouteInfo<void> {
+  const HomeRoute({List<PageRouteInfo>? children}) : super(HomeRoute.name, initialChildren: children);
+
+  static const String name = 'HomeRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const HomePage();
+    },
+  );
+}
+
+/// generated route for
 /// [LoginPage]
 class LoginRoute extends PageRouteInfo<LoginRouteArgs> {
   LoginRoute({Key? key, List<PageRouteInfo>? children})
-    : super(
-        LoginRoute.name,
-        args: LoginRouteArgs(key: key),
-        initialChildren: children,
-      );
+      : super(
+          LoginRoute.name,
+          args: LoginRouteArgs(key: key),
+          initialChildren: children,
+        );
 
   static const String name = 'LoginRoute';
 

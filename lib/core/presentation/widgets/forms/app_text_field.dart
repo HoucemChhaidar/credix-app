@@ -10,7 +10,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class AppTextField extends StatelessWidget {
   const AppTextField._({
     required this.controller,
-    this.label,
     this.hintText,
     this.keyboardType = TextInputType.text,
     this.obscureText = false,
@@ -23,7 +22,6 @@ class AppTextField extends StatelessWidget {
 
   factory AppTextField.standard({
     required TextEditingController controller,
-    String? label,
     String? hintText,
     TextInputType keyboardType = TextInputType.text,
     Widget? prefixIcon,
@@ -33,7 +31,6 @@ class AppTextField extends StatelessWidget {
   }) {
     return AppTextField._(
       controller: controller,
-      label: label,
       hintText: hintText,
       keyboardType: keyboardType,
       prefixIcon: prefixIcon,
@@ -45,14 +42,12 @@ class AppTextField extends StatelessWidget {
 
   factory AppTextField.password({
     required TextEditingController controller,
-    String? label,
     String? hintText,
     double borderRadius = AppSizes.sm,
     Key? key,
   }) {
     return AppTextField._(
       controller: controller,
-      label: label,
       hintText: hintText,
       borderRadius: borderRadius,
       obscureText: true,
@@ -61,7 +56,6 @@ class AppTextField extends StatelessWidget {
     );
   }
 
-  final String? label;
   final String? hintText;
   final TextEditingController controller;
   final TextInputType keyboardType;
@@ -77,7 +71,6 @@ class AppTextField extends StatelessWidget {
       return BlocProvider(
         create: (_) => PasswordVisibilityCubit(),
         child: _PasswordTextField(
-          label: label,
           hintText: hintText,
           controller: controller,
           borderRadius: borderRadius,
@@ -88,11 +81,6 @@ class AppTextField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        if (label != null)
-          Padding(
-            padding: const EdgeInsets.only(bottom: AppSizes.xs),
-            child: Text(label!, style: AppTextStyles.bodyLarge),
-          ),
         TextFormField(
           controller: controller,
           keyboardType: keyboardType,
@@ -122,13 +110,11 @@ class AppTextField extends StatelessWidget {
 
 class _PasswordTextField extends StatelessWidget {
   const _PasswordTextField({
-    required this.label,
     required this.hintText,
     required this.controller,
     required this.borderRadius,
   });
 
-  final String? label;
   final String? hintText;
   final TextEditingController controller;
   final double borderRadius;
@@ -138,11 +124,6 @@ class _PasswordTextField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        if (label != null)
-          Padding(
-            padding: const EdgeInsets.only(bottom: AppSizes.xs),
-            child: Text(label!, style: AppTextStyles.bodyLarge),
-          ),
         BlocBuilder<PasswordVisibilityCubit, bool>(
           builder: (context, visible) {
             return TextFormField(
@@ -156,11 +137,16 @@ class _PasswordTextField extends StatelessWidget {
                   padding: const EdgeInsets.fromLTRB(AppSizes.md, AppSizes.md, AppSizes.xs, AppSizes.md),
                   child: AppIcon(icon: Assets.icons.lockFilled),
                 ),
-                suffixIcon: InkWell(
-                  onTap: context.read<PasswordVisibilityCubit>().toggle,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(AppSizes.xs, AppSizes.md, AppSizes.md, AppSizes.md),
-                    child: AppIcon(icon: visible ? Assets.icons.eyeFilled : Assets.icons.eyeSlashFilled),
+                suffixIcon: Material(
+                  color: Colors.transparent,
+                  child: InkWell(
+                    splashColor: AppColors.primary50,
+                    customBorder: const CircleBorder(),
+                    onTap: context.read<PasswordVisibilityCubit>().toggle,
+                    child: Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: AppIcon(icon: visible ? Assets.icons.eyeFilled : Assets.icons.eyeSlashFilled),
+                    ),
                   ),
                 ),
                 filled: true,

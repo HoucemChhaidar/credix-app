@@ -4,13 +4,15 @@ import 'package:credix_app/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class LogoWrapper extends StatelessWidget {
-  const LogoWrapper({super.key});
+class LogoBadge extends StatelessWidget {
+  const LogoBadge({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: AppSizes.md, vertical: AppSizes.sm),
+      width: AppSizes.s72,
+      height: AppSizes.s72,
+      padding: const EdgeInsets.symmetric(horizontal: AppSizes.md),
       decoration: BoxDecoration(
         color: AppColors.neutral1,
         borderRadius: BorderRadius.circular(AppSizes.md),

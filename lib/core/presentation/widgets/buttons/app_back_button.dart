@@ -18,16 +18,15 @@ class AppBackButton extends StatelessWidget {
         customBorder: const CircleBorder(),
         onTap: onTap,
         child: Container(
-          width: AppSizes.s40,
-          height: AppSizes.s40,
-          padding: const EdgeInsets.all(AppSizes.sm),
+          width: AppSizes.s48,
+          height: AppSizes.s48,
+          padding: const EdgeInsets.all(AppSizes.md),
           decoration: const BoxDecoration(
             shape: BoxShape.circle,
           ),
           child: AppIcon(
-            icon: Assets.icons.chevronLeft,
+            icon: Assets.icons.chevronLeftOutline,
             color: AppColors.neutral10,
-            size: AppSizes.md,
           ),
         ),
       ),

@@ -26,9 +26,10 @@ class AppTheme {
         onSurface: AppColors.neutral11,
       ),
       textTheme: const TextTheme(
-        displayLarge: AppTextStyles.displayLarge,
-        headlineLarge: AppTextStyles.headlineLarge,
-        headlineMedium: AppTextStyles.headlineMedium,
+        displayLarge: AppTextStyles.display,
+        headlineLarge: AppTextStyles.h1,
+        headlineMedium: AppTextStyles.h2,
+        headlineSmall: AppTextStyles.h3,
         bodyLarge: AppTextStyles.bodyLarge,
         bodyMedium: AppTextStyles.bodyMedium,
         labelLarge: AppTextStyles.labelLarge,
