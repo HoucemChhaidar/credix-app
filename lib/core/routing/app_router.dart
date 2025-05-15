@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:credix_app/features/auth/presentation/pages/forgot_password_page.dart';
 import 'package:credix_app/features/auth/presentation/pages/login_page.dart';
+import 'package:credix_app/features/barcode/presentation/pages/barcode_page.dart';
 import 'package:credix_app/features/history/presentation/pages/history_page.dart';
 import 'package:credix_app/features/home/presentation/pages/home_page.dart';
 import 'package:credix_app/features/main/presentation/pages/main_page.dart';
@@ -33,6 +34,7 @@ class AppRouter extends RootStackRouter {
         children: [
           AutoRoute(page: HomeRoute.page),
           AutoRoute(page: HistoryRoute.page),
+          AutoRoute(page: BarcodeRoute.page),
           AutoRoute(page: OffersRoute.page),
           AutoRoute(page: SettingsRoute.page),
         ],

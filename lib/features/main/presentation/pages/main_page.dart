@@ -20,6 +20,7 @@ class MainPage extends StatelessWidget {
             routes: const [
               HomeRoute(),
               HistoryRoute(),
+              BarcodeRoute(),
               OffersRoute(),
               SettingsRoute(),
             ],

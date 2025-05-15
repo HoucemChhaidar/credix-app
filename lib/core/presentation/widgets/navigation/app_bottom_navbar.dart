@@ -47,21 +47,21 @@ class AppBottomNavBar extends StatelessWidget {
           const SizedBox(width: 80),
           Expanded(
             child: TabItem(
-              isSelected: activeIndex == 2,
+              isSelected: activeIndex == 3,
               filledIcon: Assets.icons.tagFilled,
               outlineIcon: Assets.icons.tagOutline,
               label: 'Offers',
-              index: 2,
+              index: 3,
               onTabSelected: onTabSelected,
             ),
           ),
           Expanded(
             child: TabItem(
-              isSelected: activeIndex == 3,
+              isSelected: activeIndex == 4,
               filledIcon: Assets.icons.settingsFilled,
               outlineIcon: Assets.icons.settingsOutline,
               label: 'Settings',
-              index: 3,
+              index: 4,
               onTabSelected: onTabSelected,
             ),
           ),

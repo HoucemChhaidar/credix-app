@@ -11,6 +11,22 @@
 part of 'app_router.dart';
 
 /// generated route for
+/// [BarcodePage]
+class BarcodeRoute extends PageRouteInfo<void> {
+  const BarcodeRoute({List<PageRouteInfo>? children})
+    : super(BarcodeRoute.name, initialChildren: children);
+
+  static const String name = 'BarcodeRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const BarcodePage();
+    },
+  );
+}
+
+/// generated route for
 /// [ForgotPasswordPage]
 class ForgotPasswordRoute extends PageRouteInfo<ForgotPasswordRouteArgs> {
   ForgotPasswordRoute({Key? key, List<PageRouteInfo>? children})
