@@ -73,12 +73,16 @@ class LoginPage extends StatelessWidget {
                   },
                 ),
                 const SizedBox(height: AppSizes.md),
-                InkWell(
+                AppText.labelMedium(
+                  'Forgot Password?',
+                  color: AppColors.neutral7,
                   onTap: () => getIt<AppRouter>().push(ForgotPasswordRoute()),
-                  child: const AppText.labelMedium(
-                    'Forgot Password?',
-                    color: AppColors.neutral7,
-                  ),
+                ),
+                const SizedBox(height: AppSizes.md),
+                AppText.labelMedium(
+                  'Escape Sign In!',
+                  color: AppColors.red500,
+                  onTap: () => getIt<AppRouter>().replaceAll([const HomeRoute()]),
                 ),
                 const Spacer(),
                 Padding(

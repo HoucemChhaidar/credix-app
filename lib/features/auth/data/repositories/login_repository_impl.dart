@@ -1,3 +1,4 @@
+import 'package:credix_app/core/data/network/models/base_model.dart';
 import 'package:credix_app/features/auth/data/datasources/login_service.dart';
 import 'package:credix_app/features/auth/data/models/login_response.dart';
 import 'package:credix_app/features/auth/domain/repositories/login_repository.dart';
@@ -17,7 +18,7 @@ class LoginRepositoryImpl implements LoginRepository {
     final response = await _service.login(dio: _dio, email: email, password: password);
     return response.when(
       ok: (data) {
-        return Left<LoginResponse, String>(LoginResponse.fromJson(data.data as Map<String, dynamic>));
+        return Left<LoginResponse, String>(LoginResponse.fromJson((data as BaseModel).data as Map<String, dynamic>));
       },
       badRequest: (message) {
         return Right<LoginResponse, String>(message);

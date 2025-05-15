@@ -14,11 +14,11 @@ part of 'app_router.dart';
 /// [ForgotPasswordPage]
 class ForgotPasswordRoute extends PageRouteInfo<ForgotPasswordRouteArgs> {
   ForgotPasswordRoute({Key? key, List<PageRouteInfo>? children})
-      : super(
-          ForgotPasswordRoute.name,
-          args: ForgotPasswordRouteArgs(key: key),
-          initialChildren: children,
-        );
+    : super(
+        ForgotPasswordRoute.name,
+        args: ForgotPasswordRouteArgs(key: key),
+        initialChildren: children,
+      );
 
   static const String name = 'ForgotPasswordRoute';
 
@@ -45,9 +45,26 @@ class ForgotPasswordRouteArgs {
 }
 
 /// generated route for
+/// [HistoryPage]
+class HistoryRoute extends PageRouteInfo<void> {
+  const HistoryRoute({List<PageRouteInfo>? children})
+    : super(HistoryRoute.name, initialChildren: children);
+
+  static const String name = 'HistoryRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const HistoryPage();
+    },
+  );
+}
+
+/// generated route for
 /// [HomePage]
 class HomeRoute extends PageRouteInfo<void> {
-  const HomeRoute({List<PageRouteInfo>? children}) : super(HomeRoute.name, initialChildren: children);
+  const HomeRoute({List<PageRouteInfo>? children})
+    : super(HomeRoute.name, initialChildren: children);
 
   static const String name = 'HomeRoute';
 
@@ -63,11 +80,11 @@ class HomeRoute extends PageRouteInfo<void> {
 /// [LoginPage]
 class LoginRoute extends PageRouteInfo<LoginRouteArgs> {
   LoginRoute({Key? key, List<PageRouteInfo>? children})
-      : super(
-          LoginRoute.name,
-          args: LoginRouteArgs(key: key),
-          initialChildren: children,
-        );
+    : super(
+        LoginRoute.name,
+        args: LoginRouteArgs(key: key),
+        initialChildren: children,
+      );
 
   static const String name = 'LoginRoute';
 
@@ -91,4 +108,52 @@ class LoginRouteArgs {
   String toString() {
     return 'LoginRouteArgs{key: $key}';
   }
+}
+
+/// generated route for
+/// [MainPage]
+class MainRoute extends PageRouteInfo<void> {
+  const MainRoute({List<PageRouteInfo>? children})
+    : super(MainRoute.name, initialChildren: children);
+
+  static const String name = 'MainRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const MainPage();
+    },
+  );
+}
+
+/// generated route for
+/// [OffersPage]
+class OffersRoute extends PageRouteInfo<void> {
+  const OffersRoute({List<PageRouteInfo>? children})
+    : super(OffersRoute.name, initialChildren: children);
+
+  static const String name = 'OffersRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const OffersPage();
+    },
+  );
+}
+
+/// generated route for
+/// [SettingsPage]
+class SettingsRoute extends PageRouteInfo<void> {
+  const SettingsRoute({List<PageRouteInfo>? children})
+    : super(SettingsRoute.name, initialChildren: children);
+
+  static const String name = 'SettingsRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const SettingsPage();
+    },
+  );
 }

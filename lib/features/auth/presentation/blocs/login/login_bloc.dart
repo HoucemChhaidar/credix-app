@@ -31,7 +31,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
         // Simulate real-world response delay (e.g., network latency or transition timing)
         await Future<void>.delayed(const Duration(milliseconds: 1200));
         emit(const LoginState.success());
-        await getIt<AppRouter>().push(const HomeRoute());
+        await getIt<AppRouter>().replaceAll([const HomeRoute()]);
       },
       (right) async {
         await Future<void>.delayed(const Duration(milliseconds: 800));

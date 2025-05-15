@@ -6,13 +6,13 @@ import 'package:flutter/material.dart';
 
 class AppBottomNavBar extends StatelessWidget {
   const AppBottomNavBar({
-    required this.selectedIndex,
-    required this.onItemSelected,
+    required this.activeIndex,
+    required this.onTabSelected,
     super.key,
   });
 
-  final int selectedIndex;
-  final ValueChanged<int> onItemSelected;
+  final int activeIndex;
+  final ValueChanged<int> onTabSelected;
 
   @override
   Widget build(BuildContext context) {
@@ -20,49 +20,49 @@ class AppBottomNavBar extends StatelessWidget {
       notchMargin: 0,
       elevation: 0,
       height: AppSizes.s80,
-      padding: EdgeInsets.zero,
+      padding: const EdgeInsets.symmetric(horizontal: AppSizes.md),
       color: AppColors.neutral1,
       child: Row(
         children: [
           Expanded(
             child: TabItem(
-              isSelected: selectedIndex == 0,
+              isSelected: activeIndex == 0,
               filledIcon: Assets.icons.homeFilled,
               outlineIcon: Assets.icons.homeOutline,
               label: 'Home',
               index: 0,
-              onTabSelected: onItemSelected,
+              onTabSelected: onTabSelected,
             ),
           ),
           Expanded(
             child: TabItem(
-              isSelected: selectedIndex == 1,
+              isSelected: activeIndex == 1,
               filledIcon: Assets.icons.emptyWalletFilled,
               outlineIcon: Assets.icons.emptyWalletOutline,
               label: 'History',
               index: 1,
-              onTabSelected: onItemSelected,
+              onTabSelected: onTabSelected,
             ),
           ),
           const SizedBox(width: 80),
           Expanded(
             child: TabItem(
-              isSelected: selectedIndex == 2,
+              isSelected: activeIndex == 2,
               filledIcon: Assets.icons.tagFilled,
               outlineIcon: Assets.icons.tagOutline,
               label: 'Offers',
               index: 2,
-              onTabSelected: onItemSelected,
+              onTabSelected: onTabSelected,
             ),
           ),
           Expanded(
             child: TabItem(
-              isSelected: selectedIndex == 3,
+              isSelected: activeIndex == 3,
               filledIcon: Assets.icons.settingsFilled,
               outlineIcon: Assets.icons.settingsOutline,
               label: 'Settings',
               index: 3,
-              onTabSelected: onItemSelected,
+              onTabSelected: onTabSelected,
             ),
           ),
         ],

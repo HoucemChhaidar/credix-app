@@ -1,9 +1,7 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:credix_app/core/di/injection.dart';
 import 'package:credix_app/core/presentation/resources/colors/app_colors.dart';
 import 'package:credix_app/core/presentation/resources/sizes/app_sizes.dart';
 import 'package:credix_app/core/presentation/widgets/widgets.dart';
-import 'package:credix_app/core/routing/app_router.dart';
 import 'package:credix_app/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 
@@ -18,12 +16,7 @@ class ForgotPasswordPage extends StatelessWidget {
     return KeyboardAwareScaffold(
       child: Column(
         children: [
-          Align(
-            alignment: Alignment.centerLeft,
-            child: AppBackButton(
-              onTap: getIt<AppRouter>().back,
-            ),
-          ),
+          const AppBackButton(),
           const SizedBox(height: AppSizes.md),
           DualToneIconBadge(
             toneAccent: AppColors.primary50,

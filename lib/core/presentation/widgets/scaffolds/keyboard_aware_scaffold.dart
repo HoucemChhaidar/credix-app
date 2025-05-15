@@ -25,7 +25,7 @@ class KeyboardAwareScaffold extends StatelessWidget {
           ),
           SafeArea(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: AppSizes.md),
+              padding: const EdgeInsets.all(AppSizes.md).copyWith(top: AppSizes.xs),
               child: SingleChildScrollView(
                 physics: const BouncingScrollPhysics(),
                 child: ConstrainedBox(

@@ -30,18 +30,15 @@ class TransactionTile extends StatelessWidget {
           const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              AppText.labelMedium(
-                '02872010',
-                color: AppColors.neutral11,
-              ),
+              AppText.labelMedium('02872010', color: AppColors.neutral11),
               AppText.labelSmall('03/05/24 • 16:33', color: AppColors.neutral7),
             ],
           ),
           const Spacer(),
           Row(
+            spacing: AppSizes.sm,
             children: [
               const AppText.labelLarge('-29.590', color: AppColors.red500),
-              const SizedBox(width: AppSizes.sm),
               Container(
                 width: AppSizes.xl,
                 height: AppSizes.xl,
@@ -50,7 +47,10 @@ class TransactionTile extends StatelessWidget {
                   color: AppColors.neutral3,
                   shape: BoxShape.circle,
                 ),
-                child: AppIcon(icon: Assets.icons.chevronRightOutline),
+                child: AppIcon(
+                  icon: Assets.icons.chevronRightOutline,
+                  color: AppColors.neutral11,
+                ),
               ),
             ],
           ),

@@ -33,13 +33,13 @@ class TabItem extends StatelessWidget {
         child: SizedBox(
           height: AppSizes.s80,
           child: Column(
+            spacing: AppSizes.xxs,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               AppIcon(
                 icon: isSelected ? filledIcon : outlineIcon,
                 color: isSelected ? AppColors.primary500 : AppColors.neutral6,
               ),
-              const SizedBox(height: AppSizes.xxs),
               AppText.labelSmall(
                 label,
                 color: isSelected ? AppColors.primary500 : AppColors.neutral6,

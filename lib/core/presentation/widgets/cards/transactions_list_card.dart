@@ -4,17 +4,17 @@ import 'package:credix_app/core/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class TransactionsListCard extends StatelessWidget {
-  const TransactionsListCard({super.key});
+  const TransactionsListCard({this.isPreview = true, super.key, this.onViewAll});
+
+  final bool isPreview;
+  final void Function()? onViewAll;
 
   @override
   Widget build(BuildContext context) {
     return Flexible(
       child: Container(
         width: double.infinity,
-        constraints: BoxConstraints(
-          maxHeight: MediaQuery.of(context).size.height * 0.5,
-        ),
-        padding: const EdgeInsets.fromLTRB(AppSizes.md, AppSizes.lg, AppSizes.md, 0),
+        padding: const EdgeInsets.symmetric(horizontal: AppSizes.md).copyWith(top: isPreview ? AppSizes.lg : 0),
         decoration: BoxDecoration(
           color: AppColors.neutral1,
           borderRadius: BorderRadius.circular(AppSizes.md),
@@ -22,14 +22,22 @@ class TransactionsListCard extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                AppText.h1('Transactions'),
-                AppText.labelSmall('view all', color: AppColors.neutral7),
-              ],
-            ),
-            const SizedBox(height: AppSizes.md),
+            if (isPreview) ...[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const AppText.h2('Transactions'),
+                  InkWell(
+                    onTap: onViewAll,
+                    child: const AppText.labelSmall(
+                      'view all',
+                      color: AppColors.neutral7,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: AppSizes.md),
+            ],
             Expanded(
               child: ListView.separated(
                 physics: const ClampingScrollPhysics(),
@@ -41,7 +49,7 @@ class TransactionsListCard extends StatelessWidget {
                 ),
                 itemBuilder: (_, index) {
                   return Padding(
-                    padding: EdgeInsets.only(bottom: index == 19 ? AppSizes.xs : 0),
+                    padding: EdgeInsets.only(top: index == 0 ? AppSizes.xs : 0, bottom: index == 19 ? AppSizes.xs : 0),
                     child: const TransactionTile(),
                   );
                 },
