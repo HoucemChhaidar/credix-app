@@ -1,2 +1,0 @@
-/Users/mac/Developer/personal/credix_app/android/app/.cxx/Debug/1ca26o5x/arm64-v8a/CMakeFiles/edit_cache.dir
-/Users/mac/Developer/personal/credix_app/android/app/.cxx/Debug/1ca26o5x/arm64-v8a/CMakeFiles/rebuild_cache.dir
