@@ -10,12 +10,15 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final tabsRouter = AutoTabsRouter.of(context);
+
     return Column(
       spacing: AppSizes.md,
       children: [
         const ProfileHeader(),
         const BalanceCard(),
-        TransactionsListCard(onViewAll: () => tabsRouter.setActiveIndex(1)),
+        TransactionListCard(
+          onViewAll: () => tabsRouter.setActiveIndex(1),
+        ),
       ],
     );
   }

@@ -4,22 +4,17 @@ import 'package:credix_app/core/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
-class HistoryPage extends StatelessWidget {
-  const HistoryPage({super.key});
+class TransactionListPage extends StatelessWidget {
+  const TransactionListPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          spacing: AppSizes.xs,
-          children: [
-            AppBackButton(),
-            AppText.h1('Transactions'),
-          ],
-        ),
+        AppText.h1('Transactions'),
         SizedBox(height: AppSizes.md),
-        TransactionsListCard(isPreview: false),
+        TransactionListCard(isPreview: false),
       ],
     );
   }

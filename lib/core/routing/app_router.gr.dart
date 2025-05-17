@@ -61,22 +61,6 @@ class ForgotPasswordRouteArgs {
 }
 
 /// generated route for
-/// [HistoryPage]
-class HistoryRoute extends PageRouteInfo<void> {
-  const HistoryRoute({List<PageRouteInfo>? children})
-    : super(HistoryRoute.name, initialChildren: children);
-
-  static const String name = 'HistoryRoute';
-
-  static PageInfo page = PageInfo(
-    name,
-    builder: (data) {
-      return const HistoryPage();
-    },
-  );
-}
-
-/// generated route for
 /// [HomePage]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
@@ -170,6 +154,38 @@ class SettingsRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const SettingsPage();
+    },
+  );
+}
+
+/// generated route for
+/// [TransactionDetailsPage]
+class TransactionDetailsRoute extends PageRouteInfo<void> {
+  const TransactionDetailsRoute({List<PageRouteInfo>? children})
+    : super(TransactionDetailsRoute.name, initialChildren: children);
+
+  static const String name = 'TransactionDetailsRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const TransactionDetailsPage();
+    },
+  );
+}
+
+/// generated route for
+/// [TransactionListPage]
+class TransactionListRoute extends PageRouteInfo<void> {
+  const TransactionListRoute({List<PageRouteInfo>? children})
+    : super(TransactionListRoute.name, initialChildren: children);
+
+  static const String name = 'TransactionListRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const TransactionListPage();
     },
   );
 }

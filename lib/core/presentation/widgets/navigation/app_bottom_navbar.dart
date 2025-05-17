@@ -39,7 +39,7 @@ class AppBottomNavBar extends StatelessWidget {
               isSelected: activeIndex == 1,
               filledIcon: Assets.icons.emptyWalletFilled,
               outlineIcon: Assets.icons.emptyWalletOutline,
-              label: 'History',
+              label: 'Transactions',
               index: 1,
               onTabSelected: onTabSelected,
             ),

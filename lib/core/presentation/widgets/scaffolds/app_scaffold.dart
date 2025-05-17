@@ -1,21 +1,20 @@
-import 'package:credix_app/core/di/injection.dart';
 import 'package:credix_app/core/presentation/resources/sizes/app_sizes.dart';
-import 'package:credix_app/core/presentation/widgets/navigation/app_floating_action_button.dart';
 import 'package:credix_app/core/presentation/widgets/widgets.dart';
-import 'package:credix_app/core/routing/app_router.dart';
 import 'package:flutter/material.dart';
 
 class AppScaffold extends StatelessWidget {
   const AppScaffold({
+    required this.child,
     required this.activeIndex,
     required this.onTabSelected,
-    required this.child,
+    required this.onFloatingActionButtonTap,
     super.key,
   });
 
   final int activeIndex;
-  final ValueChanged<int> onTabSelected;
   final Widget child;
+  final ValueChanged<int> onTabSelected;
+  final VoidCallback onFloatingActionButtonTap;
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +44,7 @@ class AppScaffold extends StatelessWidget {
         activeIndex: activeIndex,
         onTabSelected: onTabSelected,
       ),
-      floatingActionButton: AppFloatingActionButton(onTap: () => getIt<AppRouter>().push(const BarcodeRoute())),
+      floatingActionButton: AppFloatingActionButton(onTap: onFloatingActionButtonTap),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }

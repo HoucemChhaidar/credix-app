@@ -20,8 +20,6 @@ import 'package:credix_app/features/auth/domain/repositories/login_repository.da
     as _i773;
 import 'package:credix_app/features/auth/presentation/blocs/login/login_bloc.dart'
     as _i693;
-import 'package:credix_app/features/main/presentation/cubit/bottom_nav_cubit.dart'
-    as _i894;
 import 'package:dio/dio.dart' as _i361;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
@@ -39,7 +37,6 @@ extension GetItInjectableX on _i174.GetIt {
     );
     final dioProvider = _$DioProvider();
     gh.factory<_i680.LoginService>(() => _i680.LoginService());
-    gh.factory<_i894.BottomNavbarCubit>(() => _i894.BottomNavbarCubit());
     gh.singleton<_i141.AppRouter>(() => _i141.AppRouter());
     gh.singleton<_i361.Dio>(() => dioProvider.dio);
     gh.factory<_i773.LoginRepository>(() => _i776.LoginRepositoryImpl(

@@ -3,8 +3,8 @@ import 'package:credix_app/core/presentation/resources/sizes/app_sizes.dart';
 import 'package:credix_app/core/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
-class TransactionsListCard extends StatelessWidget {
-  const TransactionsListCard({this.isPreview = true, super.key, this.onViewAll});
+class TransactionListCard extends StatelessWidget {
+  const TransactionListCard({this.isPreview = true, super.key, this.onViewAll});
 
   final bool isPreview;
   final void Function()? onViewAll;
