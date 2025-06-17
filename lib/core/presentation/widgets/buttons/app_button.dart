@@ -29,7 +29,7 @@ class AppButton extends StatelessWidget {
           ),
           shape: WidgetStatePropertyAll(
             RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(AppSizes.xs),
+              borderRadius: BorderRadius.circular(AppSizes.sm),
             ),
           ),
         ),

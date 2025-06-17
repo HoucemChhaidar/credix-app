@@ -1,43 +1,107 @@
 /// Centralized sizes constants using an 8-point grid system.
 class AppSizes {
-  // Semantic sizes
-  /// 4
-  static const double xxs = 4;
+  /// Extra small – 4px
+  ///
+  /// Next size: `sm` (8px)
+  ///
+  /// This is the smallest defined size.
+  static const double xs = 4;
 
-  /// 8
-  static const double xs = 8;
+  /// Small – 8px
+  ///
+  /// Previous size: `xs` (4px)
+  ///
+  /// Next size: `smPlus` (12px)
+  static const double sm = 8;
 
-  /// 12
-  static const double sm = 12;
+  /// Small-plus – 12px
+  ///
+  /// Previous size: `sm` (8px)
+  ///
+  /// Next size: `md` (16px)
+  static const double smPlus = 12;
 
-  /// 16
+  /// Medium – 16px
+  ///
+  /// Previous size: `smPlus` (12px)
+  ///
+  /// Next size: `mdPlus` (20px)
   static const double md = 16;
 
-  /// 20
-  static const double mdLg = 20;
+  /// Medium-plus – 20px
+  ///
+  /// Previous size: `md` (16px)
+  ///
+  /// Next size: `lg` (24px)
+  static const double mdPlus = 20;
 
-  /// 24
+  /// Large – 24px
+  ///
+  /// Previous size: `mdPlus` (20px)
+  ///
+  /// Next size: `xl` (32px)
   static const double lg = 24;
 
-  /// 32
+  /// Extra large – 32px
+  ///
+  /// Previous size: `lg` (24px)
+  ///
+  /// Next size: `xxl` (40px)
   static const double xl = 32;
 
-  // Numeric fallback sizes
-  /// 40
-  static const double s40 = 40;
+  /// 2x extra large – 40px
+  ///
+  /// Previous size: `xl` (32px)
+  ///
+  /// Next size: `xxxl` (48px)
+  static const double xxl = 40;
 
-  /// 48
-  static const double s48 = 48;
+  /// 3x extra large – 48px
+  ///
+  /// Previous size: `xxl` (40px)
+  ///
+  /// Next size: `giant` (56px)
+  static const double xxxl = 48;
 
-  /// 56
-  static const double s56 = 56;
+  /// Giant – 56px
+  ///
+  /// Previous size: `xxxl` (48px)
+  ///
+  /// Next size: `huge` (64px)
+  static const double giant = 56;
 
-  /// 64
-  static const double s64 = 64;
+  /// Huge – 64px
+  ///
+  /// Previous size: `giant` (56px)
+  ///
+  /// Next size: `massive` (72px)
+  static const double huge = 64;
 
-  /// 72
-  static const double s72 = 72;
+  /// Massive – 72px
+  ///
+  /// Previous size: `huge` (64px)
+  ///
+  /// Next size: `jumbo` (80px)
+  static const double massive = 72;
 
-  /// 80
-  static const double s80 = 80;
+  /// Jumbo – 80px
+  ///
+  /// Previous size: `massive` (72px)
+  ///
+  /// Next size: `colossal` (96px)
+  static const double jumbo = 80;
+
+  /// Colossal – 96px
+  ///
+  /// Previous size: `jumbo` (80px)
+  ///
+  /// Next size: `monumental` (104px)
+  static const double colossal = 96;
+
+  /// Monumental – 104px
+  ///
+  /// Previous size: `colossal` (96px)
+  ///
+  /// This is the largest defined size.
+  static const double monumental = 104;
 }

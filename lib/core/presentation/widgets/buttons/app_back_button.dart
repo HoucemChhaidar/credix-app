@@ -21,8 +21,8 @@ class AppBackButton extends StatelessWidget {
           customBorder: const CircleBorder(),
           onTap: getIt<AppRouter>().back,
           child: Container(
-            width: AppSizes.s48,
-            height: AppSizes.s48,
+            width: AppSizes.xxxl,
+            height: AppSizes.xxxl,
             padding: const EdgeInsets.all(AppSizes.md),
             decoration: const BoxDecoration(
               shape: BoxShape.circle,

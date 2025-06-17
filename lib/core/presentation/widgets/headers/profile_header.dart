@@ -14,18 +14,20 @@ class ProfileHeader extends StatelessWidget {
         ClipOval(
           child: AppImage.asset(
             asset: Assets.images.portraitExample,
-            width: AppSizes.s48,
-            height: AppSizes.s48,
+            width: AppSizes.xxxl,
+            height: AppSizes.xxxl,
             fit: BoxFit.cover,
           ),
         ),
-        const SizedBox(width: AppSizes.xs),
-        const Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            AppText.labelMedium('Welcome back!', color: AppColors.neutral7),
-            AppText.labelLarge('Mrs. Cornelius Marks'),
-          ],
+        const SizedBox(width: AppSizes.sm),
+        const Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              AppText.labelMedium('Welcome back!', color: AppColors.neutral7),
+              AppText.labelLarge('Mrs. Cornelius Marks'),
+            ],
+          ),
         ),
       ],
     );

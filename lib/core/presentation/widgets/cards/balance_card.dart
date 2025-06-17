@@ -39,11 +39,11 @@ class BalanceCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     AppText.labelLarge('Total balance', color: AppColors.neutral6),
-                    SizedBox(height: AppSizes.xxs),
+                    SizedBox(height: AppSizes.xs),
                     AppText.display('1,746.862', color: AppColors.neutral1),
                     SizedBox(height: AppSizes.lg),
                     AppText.labelLarge('Account number', color: AppColors.neutral6),
-                    SizedBox(height: AppSizes.xxs),
+                    SizedBox(height: AppSizes.xs),
                     AppText.h2('**** **** **** **96', color: AppColors.neutral1),
                   ],
                 ),
@@ -78,10 +78,10 @@ class _RotatedShapes extends StatelessWidget {
               angle: -30 * math.pi / 180,
               alignment: Alignment.topLeft,
               child: Container(
-                width: AppSizes.s80,
-                height: AppSizes.s80,
+                width: AppSizes.jumbo,
+                height: AppSizes.jumbo,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(AppSizes.mdLg),
+                  borderRadius: BorderRadius.circular(AppSizes.mdPlus),
                   border: Border.all(color: AppColors.neutral9),
                 ),
               ),
@@ -94,11 +94,11 @@ class _RotatedShapes extends StatelessWidget {
               angle: -30 * math.pi / 180,
               alignment: Alignment.topLeft,
               child: Container(
-                width: AppSizes.s80,
-                height: AppSizes.s80,
+                width: AppSizes.jumbo,
+                height: AppSizes.jumbo,
                 decoration: BoxDecoration(
                   color: AppColors.neutral10,
-                  borderRadius: BorderRadius.circular(AppSizes.mdLg),
+                  borderRadius: BorderRadius.circular(AppSizes.mdPlus),
                 ),
               ),
             ),

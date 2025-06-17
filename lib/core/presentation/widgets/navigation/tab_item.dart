@@ -31,9 +31,9 @@ class TabItem extends StatelessWidget {
         splashColor: AppColors.primary50,
         customBorder: const CircleBorder(),
         child: SizedBox(
-          height: AppSizes.s80,
+          height: AppSizes.jumbo,
           child: Column(
-            spacing: AppSizes.xxs,
+            spacing: AppSizes.xs,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               AppIcon(

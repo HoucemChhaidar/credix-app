@@ -34,7 +34,7 @@ class AppScaffold extends StatelessWidget {
           ),
           SafeArea(
             child: Padding(
-              padding: const EdgeInsets.all(AppSizes.md).copyWith(top: AppSizes.xs),
+              padding: const EdgeInsets.all(AppSizes.md).copyWith(top: AppSizes.sm),
               child: child,
             ),
           ),

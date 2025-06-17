@@ -19,7 +19,7 @@ class AppBottomNavBar extends StatelessWidget {
     return BottomAppBar(
       notchMargin: 0,
       elevation: 0,
-      height: AppSizes.s80,
+      height: AppSizes.jumbo,
       padding: const EdgeInsets.symmetric(horizontal: AppSizes.md),
       color: AppColors.neutral1,
       child: Row(

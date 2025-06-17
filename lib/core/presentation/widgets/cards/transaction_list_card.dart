@@ -44,12 +44,12 @@ class TransactionListCard extends StatelessWidget {
                 shrinkWrap: true,
                 itemCount: 20,
                 separatorBuilder: (_, __) => const Padding(
-                  padding: EdgeInsets.symmetric(vertical: AppSizes.xxs),
+                  padding: EdgeInsets.symmetric(vertical: AppSizes.xs),
                   child: Divider(height: 1, color: AppColors.neutral3),
                 ),
                 itemBuilder: (_, index) {
                   return Padding(
-                    padding: EdgeInsets.only(top: index == 0 ? AppSizes.xs : 0, bottom: index == 19 ? AppSizes.xs : 0),
+                    padding: EdgeInsets.only(top: index == 0 ? AppSizes.sm : 0, bottom: index == 19 ? AppSizes.sm : 0),
                     child: const TransactionTile(),
                   );
                 },

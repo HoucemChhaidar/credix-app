@@ -28,19 +28,19 @@ class ForgotPasswordPage extends StatelessWidget {
           ),
           const SizedBox(height: AppSizes.md),
           const AppText.h1('Forgot Password?'),
-          const SizedBox(height: AppSizes.xxs),
+          const SizedBox(height: AppSizes.xs),
           const AppText.labelMedium(
             'Enter your email to get a reset link',
             color: AppColors.neutral7,
             textAlign: TextAlign.center,
           ),
-          const SizedBox(height: AppSizes.s40),
+          const SizedBox(height: AppSizes.xxl),
           AppTextField.standard(
             controller: emailController,
             hintText: 'Email',
             keyboardType: TextInputType.emailAddress,
             prefixIcon: Padding(
-              padding: const EdgeInsets.fromLTRB(AppSizes.md, AppSizes.md, AppSizes.xs, AppSizes.md),
+              padding: const EdgeInsets.fromLTRB(AppSizes.md, AppSizes.md, AppSizes.sm, AppSizes.md),
               child: AppIcon(icon: Assets.icons.emailFilled),
             ),
           ),

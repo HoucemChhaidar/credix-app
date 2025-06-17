@@ -10,8 +10,8 @@ class LogoBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: AppSizes.s72,
-      height: AppSizes.s72,
+      width: AppSizes.massive,
+      height: AppSizes.massive,
       padding: const EdgeInsets.symmetric(horizontal: AppSizes.md),
       decoration: BoxDecoration(
         color: AppColors.neutral1,

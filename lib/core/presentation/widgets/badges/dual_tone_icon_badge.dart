@@ -17,17 +17,17 @@ class DualToneIconBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: AppSizes.s72,
-      height: AppSizes.s72,
+      width: AppSizes.massive,
+      height: AppSizes.massive,
       padding: const EdgeInsets.all(AppSizes.md),
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: toneAccent,
       ),
       child: Container(
-        width: AppSizes.s40,
-        height: AppSizes.s40,
-        padding: const EdgeInsets.all(AppSizes.xs),
+        width: AppSizes.xxl,
+        height: AppSizes.xxl,
+        padding: const EdgeInsets.all(AppSizes.sm),
         decoration: BoxDecoration(
           color: toneBase,
           shape: BoxShape.circle,

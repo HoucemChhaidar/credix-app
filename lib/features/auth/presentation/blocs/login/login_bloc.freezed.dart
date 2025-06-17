@@ -16,45 +16,56 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$LoginEvent {
-  String get email => throw _privateConstructorUsedError;
-  String get password => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String email, String password) login,
+    required TResult Function() loadSavedCredentials,
+    required TResult Function(String username, String password) saveCredentials,
+    required TResult Function() clearCredentials,
+    required TResult Function(bool rememberMe, String email, String password)
+        login,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String email, String password)? login,
+    TResult? Function()? loadSavedCredentials,
+    TResult? Function(String username, String password)? saveCredentials,
+    TResult? Function()? clearCredentials,
+    TResult? Function(bool rememberMe, String email, String password)? login,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String email, String password)? login,
+    TResult Function()? loadSavedCredentials,
+    TResult Function(String username, String password)? saveCredentials,
+    TResult Function()? clearCredentials,
+    TResult Function(bool rememberMe, String email, String password)? login,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_LoadSavedCredentials value) loadSavedCredentials,
+    required TResult Function(_SaveCredentials value) saveCredentials,
+    required TResult Function(_ClearCredentials value) clearCredentials,
     required TResult Function(_Login value) login,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_LoadSavedCredentials value)? loadSavedCredentials,
+    TResult? Function(_SaveCredentials value)? saveCredentials,
+    TResult? Function(_ClearCredentials value)? clearCredentials,
     TResult? Function(_Login value)? login,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_LoadSavedCredentials value)? loadSavedCredentials,
+    TResult Function(_SaveCredentials value)? saveCredentials,
+    TResult Function(_ClearCredentials value)? clearCredentials,
     TResult Function(_Login value)? login,
     required TResult orElse(),
   }) =>
-      throw _privateConstructorUsedError;
-
-  /// Create a copy of LoginEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $LoginEventCopyWith<LoginEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -63,8 +74,6 @@ abstract class $LoginEventCopyWith<$Res> {
   factory $LoginEventCopyWith(
           LoginEvent value, $Res Function(LoginEvent) then) =
       _$LoginEventCopyWithImpl<$Res, LoginEvent>;
-  @useResult
-  $Res call({String email, String password});
 }
 
 /// @nodoc
@@ -79,33 +88,419 @@ class _$LoginEventCopyWithImpl<$Res, $Val extends LoginEvent>
 
   /// Create a copy of LoginEvent
   /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+abstract class _$$LoadSavedCredentialsImplCopyWith<$Res> {
+  factory _$$LoadSavedCredentialsImplCopyWith(_$LoadSavedCredentialsImpl value,
+          $Res Function(_$LoadSavedCredentialsImpl) then) =
+      __$$LoadSavedCredentialsImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$LoadSavedCredentialsImplCopyWithImpl<$Res>
+    extends _$LoginEventCopyWithImpl<$Res, _$LoadSavedCredentialsImpl>
+    implements _$$LoadSavedCredentialsImplCopyWith<$Res> {
+  __$$LoadSavedCredentialsImplCopyWithImpl(_$LoadSavedCredentialsImpl _value,
+      $Res Function(_$LoadSavedCredentialsImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of LoginEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$LoadSavedCredentialsImpl implements _LoadSavedCredentials {
+  const _$LoadSavedCredentialsImpl();
+
+  @override
+  String toString() {
+    return 'LoginEvent.loadSavedCredentials()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadSavedCredentialsImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() loadSavedCredentials,
+    required TResult Function(String username, String password) saveCredentials,
+    required TResult Function() clearCredentials,
+    required TResult Function(bool rememberMe, String email, String password)
+        login,
+  }) {
+    return loadSavedCredentials();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? loadSavedCredentials,
+    TResult? Function(String username, String password)? saveCredentials,
+    TResult? Function()? clearCredentials,
+    TResult? Function(bool rememberMe, String email, String password)? login,
+  }) {
+    return loadSavedCredentials?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loadSavedCredentials,
+    TResult Function(String username, String password)? saveCredentials,
+    TResult Function()? clearCredentials,
+    TResult Function(bool rememberMe, String email, String password)? login,
+    required TResult orElse(),
+  }) {
+    if (loadSavedCredentials != null) {
+      return loadSavedCredentials();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_LoadSavedCredentials value) loadSavedCredentials,
+    required TResult Function(_SaveCredentials value) saveCredentials,
+    required TResult Function(_ClearCredentials value) clearCredentials,
+    required TResult Function(_Login value) login,
+  }) {
+    return loadSavedCredentials(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_LoadSavedCredentials value)? loadSavedCredentials,
+    TResult? Function(_SaveCredentials value)? saveCredentials,
+    TResult? Function(_ClearCredentials value)? clearCredentials,
+    TResult? Function(_Login value)? login,
+  }) {
+    return loadSavedCredentials?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_LoadSavedCredentials value)? loadSavedCredentials,
+    TResult Function(_SaveCredentials value)? saveCredentials,
+    TResult Function(_ClearCredentials value)? clearCredentials,
+    TResult Function(_Login value)? login,
+    required TResult orElse(),
+  }) {
+    if (loadSavedCredentials != null) {
+      return loadSavedCredentials(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadSavedCredentials implements LoginEvent {
+  const factory _LoadSavedCredentials() = _$LoadSavedCredentialsImpl;
+}
+
+/// @nodoc
+abstract class _$$SaveCredentialsImplCopyWith<$Res> {
+  factory _$$SaveCredentialsImplCopyWith(_$SaveCredentialsImpl value,
+          $Res Function(_$SaveCredentialsImpl) then) =
+      __$$SaveCredentialsImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String username, String password});
+}
+
+/// @nodoc
+class __$$SaveCredentialsImplCopyWithImpl<$Res>
+    extends _$LoginEventCopyWithImpl<$Res, _$SaveCredentialsImpl>
+    implements _$$SaveCredentialsImplCopyWith<$Res> {
+  __$$SaveCredentialsImplCopyWithImpl(
+      _$SaveCredentialsImpl _value, $Res Function(_$SaveCredentialsImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of LoginEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? email = null,
+    Object? username = null,
     Object? password = null,
   }) {
-    return _then(_value.copyWith(
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
+    return _then(_$SaveCredentialsImpl(
+      username: null == username
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
               as String,
       password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
-    ) as $Val);
+    ));
   }
 }
 
 /// @nodoc
-abstract class _$$LoginImplCopyWith<$Res> implements $LoginEventCopyWith<$Res> {
+
+class _$SaveCredentialsImpl implements _SaveCredentials {
+  const _$SaveCredentialsImpl({required this.username, required this.password});
+
+  @override
+  final String username;
+  @override
+  final String password;
+
+  @override
+  String toString() {
+    return 'LoginEvent.saveCredentials(username: $username, password: $password)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SaveCredentialsImpl &&
+            (identical(other.username, username) ||
+                other.username == username) &&
+            (identical(other.password, password) ||
+                other.password == password));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, username, password);
+
+  /// Create a copy of LoginEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SaveCredentialsImplCopyWith<_$SaveCredentialsImpl> get copyWith =>
+      __$$SaveCredentialsImplCopyWithImpl<_$SaveCredentialsImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() loadSavedCredentials,
+    required TResult Function(String username, String password) saveCredentials,
+    required TResult Function() clearCredentials,
+    required TResult Function(bool rememberMe, String email, String password)
+        login,
+  }) {
+    return saveCredentials(username, password);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? loadSavedCredentials,
+    TResult? Function(String username, String password)? saveCredentials,
+    TResult? Function()? clearCredentials,
+    TResult? Function(bool rememberMe, String email, String password)? login,
+  }) {
+    return saveCredentials?.call(username, password);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loadSavedCredentials,
+    TResult Function(String username, String password)? saveCredentials,
+    TResult Function()? clearCredentials,
+    TResult Function(bool rememberMe, String email, String password)? login,
+    required TResult orElse(),
+  }) {
+    if (saveCredentials != null) {
+      return saveCredentials(username, password);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_LoadSavedCredentials value) loadSavedCredentials,
+    required TResult Function(_SaveCredentials value) saveCredentials,
+    required TResult Function(_ClearCredentials value) clearCredentials,
+    required TResult Function(_Login value) login,
+  }) {
+    return saveCredentials(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_LoadSavedCredentials value)? loadSavedCredentials,
+    TResult? Function(_SaveCredentials value)? saveCredentials,
+    TResult? Function(_ClearCredentials value)? clearCredentials,
+    TResult? Function(_Login value)? login,
+  }) {
+    return saveCredentials?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_LoadSavedCredentials value)? loadSavedCredentials,
+    TResult Function(_SaveCredentials value)? saveCredentials,
+    TResult Function(_ClearCredentials value)? clearCredentials,
+    TResult Function(_Login value)? login,
+    required TResult orElse(),
+  }) {
+    if (saveCredentials != null) {
+      return saveCredentials(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SaveCredentials implements LoginEvent {
+  const factory _SaveCredentials(
+      {required final String username,
+      required final String password}) = _$SaveCredentialsImpl;
+
+  String get username;
+  String get password;
+
+  /// Create a copy of LoginEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SaveCredentialsImplCopyWith<_$SaveCredentialsImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ClearCredentialsImplCopyWith<$Res> {
+  factory _$$ClearCredentialsImplCopyWith(_$ClearCredentialsImpl value,
+          $Res Function(_$ClearCredentialsImpl) then) =
+      __$$ClearCredentialsImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ClearCredentialsImplCopyWithImpl<$Res>
+    extends _$LoginEventCopyWithImpl<$Res, _$ClearCredentialsImpl>
+    implements _$$ClearCredentialsImplCopyWith<$Res> {
+  __$$ClearCredentialsImplCopyWithImpl(_$ClearCredentialsImpl _value,
+      $Res Function(_$ClearCredentialsImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of LoginEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$ClearCredentialsImpl implements _ClearCredentials {
+  const _$ClearCredentialsImpl();
+
+  @override
+  String toString() {
+    return 'LoginEvent.clearCredentials()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ClearCredentialsImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() loadSavedCredentials,
+    required TResult Function(String username, String password) saveCredentials,
+    required TResult Function() clearCredentials,
+    required TResult Function(bool rememberMe, String email, String password)
+        login,
+  }) {
+    return clearCredentials();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? loadSavedCredentials,
+    TResult? Function(String username, String password)? saveCredentials,
+    TResult? Function()? clearCredentials,
+    TResult? Function(bool rememberMe, String email, String password)? login,
+  }) {
+    return clearCredentials?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loadSavedCredentials,
+    TResult Function(String username, String password)? saveCredentials,
+    TResult Function()? clearCredentials,
+    TResult Function(bool rememberMe, String email, String password)? login,
+    required TResult orElse(),
+  }) {
+    if (clearCredentials != null) {
+      return clearCredentials();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_LoadSavedCredentials value) loadSavedCredentials,
+    required TResult Function(_SaveCredentials value) saveCredentials,
+    required TResult Function(_ClearCredentials value) clearCredentials,
+    required TResult Function(_Login value) login,
+  }) {
+    return clearCredentials(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_LoadSavedCredentials value)? loadSavedCredentials,
+    TResult? Function(_SaveCredentials value)? saveCredentials,
+    TResult? Function(_ClearCredentials value)? clearCredentials,
+    TResult? Function(_Login value)? login,
+  }) {
+    return clearCredentials?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_LoadSavedCredentials value)? loadSavedCredentials,
+    TResult Function(_SaveCredentials value)? saveCredentials,
+    TResult Function(_ClearCredentials value)? clearCredentials,
+    TResult Function(_Login value)? login,
+    required TResult orElse(),
+  }) {
+    if (clearCredentials != null) {
+      return clearCredentials(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ClearCredentials implements LoginEvent {
+  const factory _ClearCredentials() = _$ClearCredentialsImpl;
+}
+
+/// @nodoc
+abstract class _$$LoginImplCopyWith<$Res> {
   factory _$$LoginImplCopyWith(
           _$LoginImpl value, $Res Function(_$LoginImpl) then) =
       __$$LoginImplCopyWithImpl<$Res>;
-  @override
   @useResult
-  $Res call({String email, String password});
+  $Res call({bool rememberMe, String email, String password});
 }
 
 /// @nodoc
@@ -121,10 +516,15 @@ class __$$LoginImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? rememberMe = null,
     Object? email = null,
     Object? password = null,
   }) {
     return _then(_$LoginImpl(
+      rememberMe: null == rememberMe
+          ? _value.rememberMe
+          : rememberMe // ignore: cast_nullable_to_non_nullable
+              as bool,
       email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -140,8 +540,11 @@ class __$$LoginImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$LoginImpl implements _Login {
-  const _$LoginImpl({required this.email, required this.password});
+  const _$LoginImpl(
+      {required this.rememberMe, required this.email, required this.password});
 
+  @override
+  final bool rememberMe;
   @override
   final String email;
   @override
@@ -149,7 +552,7 @@ class _$LoginImpl implements _Login {
 
   @override
   String toString() {
-    return 'LoginEvent.login(email: $email, password: $password)';
+    return 'LoginEvent.login(rememberMe: $rememberMe, email: $email, password: $password)';
   }
 
   @override
@@ -157,13 +560,15 @@ class _$LoginImpl implements _Login {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LoginImpl &&
+            (identical(other.rememberMe, rememberMe) ||
+                other.rememberMe == rememberMe) &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.password, password) ||
                 other.password == password));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, email, password);
+  int get hashCode => Object.hash(runtimeType, rememberMe, email, password);
 
   /// Create a copy of LoginEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -176,27 +581,37 @@ class _$LoginImpl implements _Login {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String email, String password) login,
+    required TResult Function() loadSavedCredentials,
+    required TResult Function(String username, String password) saveCredentials,
+    required TResult Function() clearCredentials,
+    required TResult Function(bool rememberMe, String email, String password)
+        login,
   }) {
-    return login(email, password);
+    return login(rememberMe, email, password);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String email, String password)? login,
+    TResult? Function()? loadSavedCredentials,
+    TResult? Function(String username, String password)? saveCredentials,
+    TResult? Function()? clearCredentials,
+    TResult? Function(bool rememberMe, String email, String password)? login,
   }) {
-    return login?.call(email, password);
+    return login?.call(rememberMe, email, password);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String email, String password)? login,
+    TResult Function()? loadSavedCredentials,
+    TResult Function(String username, String password)? saveCredentials,
+    TResult Function()? clearCredentials,
+    TResult Function(bool rememberMe, String email, String password)? login,
     required TResult orElse(),
   }) {
     if (login != null) {
-      return login(email, password);
+      return login(rememberMe, email, password);
     }
     return orElse();
   }
@@ -204,6 +619,9 @@ class _$LoginImpl implements _Login {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_LoadSavedCredentials value) loadSavedCredentials,
+    required TResult Function(_SaveCredentials value) saveCredentials,
+    required TResult Function(_ClearCredentials value) clearCredentials,
     required TResult Function(_Login value) login,
   }) {
     return login(this);
@@ -212,6 +630,9 @@ class _$LoginImpl implements _Login {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_LoadSavedCredentials value)? loadSavedCredentials,
+    TResult? Function(_SaveCredentials value)? saveCredentials,
+    TResult? Function(_ClearCredentials value)? clearCredentials,
     TResult? Function(_Login value)? login,
   }) {
     return login?.call(this);
@@ -220,6 +641,9 @@ class _$LoginImpl implements _Login {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_LoadSavedCredentials value)? loadSavedCredentials,
+    TResult Function(_SaveCredentials value)? saveCredentials,
+    TResult Function(_ClearCredentials value)? clearCredentials,
     TResult Function(_Login value)? login,
     required TResult orElse(),
   }) {
@@ -232,17 +656,16 @@ class _$LoginImpl implements _Login {
 
 abstract class _Login implements LoginEvent {
   const factory _Login(
-      {required final String email,
+      {required final bool rememberMe,
+      required final String email,
       required final String password}) = _$LoginImpl;
 
-  @override
+  bool get rememberMe;
   String get email;
-  @override
   String get password;
 
   /// Create a copy of LoginEvent
   /// with the given fields replaced by the non-null parameter values.
-  @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoginImplCopyWith<_$LoginImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -254,6 +677,8 @@ mixin _$LoginState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function(String email, String password, bool rememberMe)
+        credentialsLoaded,
     required TResult Function() success,
     required TResult Function(String message) error,
   }) =>
@@ -262,6 +687,8 @@ mixin _$LoginState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function(String email, String password, bool rememberMe)?
+        credentialsLoaded,
     TResult? Function()? success,
     TResult? Function(String message)? error,
   }) =>
@@ -270,6 +697,8 @@ mixin _$LoginState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function(String email, String password, bool rememberMe)?
+        credentialsLoaded,
     TResult Function()? success,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -279,6 +708,7 @@ mixin _$LoginState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
+    required TResult Function(_CredentialsLoaded value) credentialsLoaded,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
   }) =>
@@ -287,6 +717,7 @@ mixin _$LoginState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
+    TResult? Function(_CredentialsLoaded value)? credentialsLoaded,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
   }) =>
@@ -295,6 +726,7 @@ mixin _$LoginState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
+    TResult Function(_CredentialsLoaded value)? credentialsLoaded,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
     required TResult orElse(),
@@ -366,6 +798,8 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function(String email, String password, bool rememberMe)
+        credentialsLoaded,
     required TResult Function() success,
     required TResult Function(String message) error,
   }) {
@@ -377,6 +811,8 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function(String email, String password, bool rememberMe)?
+        credentialsLoaded,
     TResult? Function()? success,
     TResult? Function(String message)? error,
   }) {
@@ -388,6 +824,8 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function(String email, String password, bool rememberMe)?
+        credentialsLoaded,
     TResult Function()? success,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -403,6 +841,7 @@ class _$InitialImpl implements _Initial {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
+    required TResult Function(_CredentialsLoaded value) credentialsLoaded,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
   }) {
@@ -414,6 +853,7 @@ class _$InitialImpl implements _Initial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
+    TResult? Function(_CredentialsLoaded value)? credentialsLoaded,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
   }) {
@@ -425,6 +865,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
+    TResult Function(_CredentialsLoaded value)? credentialsLoaded,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
     required TResult orElse(),
@@ -483,6 +924,8 @@ class _$LoadingImpl implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function(String email, String password, bool rememberMe)
+        credentialsLoaded,
     required TResult Function() success,
     required TResult Function(String message) error,
   }) {
@@ -494,6 +937,8 @@ class _$LoadingImpl implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function(String email, String password, bool rememberMe)?
+        credentialsLoaded,
     TResult? Function()? success,
     TResult? Function(String message)? error,
   }) {
@@ -505,6 +950,8 @@ class _$LoadingImpl implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function(String email, String password, bool rememberMe)?
+        credentialsLoaded,
     TResult Function()? success,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -520,6 +967,7 @@ class _$LoadingImpl implements _Loading {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
+    required TResult Function(_CredentialsLoaded value) credentialsLoaded,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
   }) {
@@ -531,6 +979,7 @@ class _$LoadingImpl implements _Loading {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
+    TResult? Function(_CredentialsLoaded value)? credentialsLoaded,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
   }) {
@@ -542,6 +991,7 @@ class _$LoadingImpl implements _Loading {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
+    TResult Function(_CredentialsLoaded value)? credentialsLoaded,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
     required TResult orElse(),
@@ -555,6 +1005,192 @@ class _$LoadingImpl implements _Loading {
 
 abstract class _Loading implements LoginState {
   const factory _Loading() = _$LoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$CredentialsLoadedImplCopyWith<$Res> {
+  factory _$$CredentialsLoadedImplCopyWith(_$CredentialsLoadedImpl value,
+          $Res Function(_$CredentialsLoadedImpl) then) =
+      __$$CredentialsLoadedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String email, String password, bool rememberMe});
+}
+
+/// @nodoc
+class __$$CredentialsLoadedImplCopyWithImpl<$Res>
+    extends _$LoginStateCopyWithImpl<$Res, _$CredentialsLoadedImpl>
+    implements _$$CredentialsLoadedImplCopyWith<$Res> {
+  __$$CredentialsLoadedImplCopyWithImpl(_$CredentialsLoadedImpl _value,
+      $Res Function(_$CredentialsLoadedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of LoginState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? email = null,
+    Object? password = null,
+    Object? rememberMe = null,
+  }) {
+    return _then(_$CredentialsLoadedImpl(
+      email: null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: null == password
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+      rememberMe: null == rememberMe
+          ? _value.rememberMe
+          : rememberMe // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CredentialsLoadedImpl implements _CredentialsLoaded {
+  const _$CredentialsLoadedImpl(
+      {required this.email, required this.password, required this.rememberMe});
+
+  @override
+  final String email;
+  @override
+  final String password;
+  @override
+  final bool rememberMe;
+
+  @override
+  String toString() {
+    return 'LoginState.credentialsLoaded(email: $email, password: $password, rememberMe: $rememberMe)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CredentialsLoadedImpl &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.password, password) ||
+                other.password == password) &&
+            (identical(other.rememberMe, rememberMe) ||
+                other.rememberMe == rememberMe));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, email, password, rememberMe);
+
+  /// Create a copy of LoginState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CredentialsLoadedImplCopyWith<_$CredentialsLoadedImpl> get copyWith =>
+      __$$CredentialsLoadedImplCopyWithImpl<_$CredentialsLoadedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String email, String password, bool rememberMe)
+        credentialsLoaded,
+    required TResult Function() success,
+    required TResult Function(String message) error,
+  }) {
+    return credentialsLoaded(email, password, rememberMe);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String email, String password, bool rememberMe)?
+        credentialsLoaded,
+    TResult? Function()? success,
+    TResult? Function(String message)? error,
+  }) {
+    return credentialsLoaded?.call(email, password, rememberMe);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String email, String password, bool rememberMe)?
+        credentialsLoaded,
+    TResult Function()? success,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (credentialsLoaded != null) {
+      return credentialsLoaded(email, password, rememberMe);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_CredentialsLoaded value) credentialsLoaded,
+    required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
+  }) {
+    return credentialsLoaded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_CredentialsLoaded value)? credentialsLoaded,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
+  }) {
+    return credentialsLoaded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_CredentialsLoaded value)? credentialsLoaded,
+    TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (credentialsLoaded != null) {
+      return credentialsLoaded(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CredentialsLoaded implements LoginState {
+  const factory _CredentialsLoaded(
+      {required final String email,
+      required final String password,
+      required final bool rememberMe}) = _$CredentialsLoadedImpl;
+
+  String get email;
+  String get password;
+  bool get rememberMe;
+
+  /// Create a copy of LoginState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$CredentialsLoadedImplCopyWith<_$CredentialsLoadedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -600,6 +1236,8 @@ class _$SuccessImpl implements _Success {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function(String email, String password, bool rememberMe)
+        credentialsLoaded,
     required TResult Function() success,
     required TResult Function(String message) error,
   }) {
@@ -611,6 +1249,8 @@ class _$SuccessImpl implements _Success {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function(String email, String password, bool rememberMe)?
+        credentialsLoaded,
     TResult? Function()? success,
     TResult? Function(String message)? error,
   }) {
@@ -622,6 +1262,8 @@ class _$SuccessImpl implements _Success {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function(String email, String password, bool rememberMe)?
+        credentialsLoaded,
     TResult Function()? success,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -637,6 +1279,7 @@ class _$SuccessImpl implements _Success {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
+    required TResult Function(_CredentialsLoaded value) credentialsLoaded,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
   }) {
@@ -648,6 +1291,7 @@ class _$SuccessImpl implements _Success {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
+    TResult? Function(_CredentialsLoaded value)? credentialsLoaded,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
   }) {
@@ -659,6 +1303,7 @@ class _$SuccessImpl implements _Success {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
+    TResult Function(_CredentialsLoaded value)? credentialsLoaded,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
     required TResult orElse(),
@@ -744,6 +1389,8 @@ class _$ErrorImpl implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function(String email, String password, bool rememberMe)
+        credentialsLoaded,
     required TResult Function() success,
     required TResult Function(String message) error,
   }) {
@@ -755,6 +1402,8 @@ class _$ErrorImpl implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function(String email, String password, bool rememberMe)?
+        credentialsLoaded,
     TResult? Function()? success,
     TResult? Function(String message)? error,
   }) {
@@ -766,6 +1415,8 @@ class _$ErrorImpl implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function(String email, String password, bool rememberMe)?
+        credentialsLoaded,
     TResult Function()? success,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -781,6 +1432,7 @@ class _$ErrorImpl implements _Error {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
+    required TResult Function(_CredentialsLoaded value) credentialsLoaded,
     required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
   }) {
@@ -792,6 +1444,7 @@ class _$ErrorImpl implements _Error {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
+    TResult? Function(_CredentialsLoaded value)? credentialsLoaded,
     TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
   }) {
@@ -803,6 +1456,7 @@ class _$ErrorImpl implements _Error {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
+    TResult Function(_CredentialsLoaded value)? credentialsLoaded,
     TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
     required TResult orElse(),

@@ -10,13 +10,13 @@ class TransactionTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: AppSizes.xs),
+      padding: const EdgeInsets.symmetric(vertical: AppSizes.sm),
       child: Row(
         children: [
           Container(
-            width: AppSizes.s48,
-            height: AppSizes.s48,
-            padding: const EdgeInsets.all(AppSizes.sm),
+            width: AppSizes.xxxl,
+            height: AppSizes.xxxl,
+            padding: const EdgeInsets.all(AppSizes.smPlus),
             decoration: const BoxDecoration(
               color: AppColors.neutral3,
               shape: BoxShape.circle,
@@ -26,7 +26,7 @@ class TransactionTile extends StatelessWidget {
               color: AppColors.red500,
             ),
           ),
-          const SizedBox(width: AppSizes.sm),
+          const SizedBox(width: AppSizes.smPlus),
           const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -36,13 +36,13 @@ class TransactionTile extends StatelessWidget {
           ),
           const Spacer(),
           Row(
-            spacing: AppSizes.sm,
+            spacing: AppSizes.smPlus,
             children: [
               const AppText.labelLarge('-29.590', color: AppColors.red500),
               Container(
                 width: AppSizes.xl,
                 height: AppSizes.xl,
-                padding: const EdgeInsets.all(AppSizes.xs),
+                padding: const EdgeInsets.all(AppSizes.sm),
                 decoration: const BoxDecoration(
                   color: AppColors.neutral3,
                   shape: BoxShape.circle,

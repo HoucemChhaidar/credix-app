@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:credix_app/core/data/local/credentials_storage.dart';
 import 'package:credix_app/core/di/injection.dart';
 import 'package:credix_app/core/routing/app_router.dart';
 import 'package:credix_app/features/auth/domain/repositories/login_repository.dart';
@@ -14,8 +15,17 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   LoginBloc(this.loginRepository) : super(const LoginState.initial()) {
     on<LoginEvent>((event, emit) async {
       await event.when(
-        login: (email, password) async {
-          await login(email, password, emit);
+        loadSavedCredentials: () async {
+          await loadSavedCredentials(emit);
+        },
+        saveCredentials: (email, password) async {
+          await CredentialsStorage.saveCredentials(username: email, password: password);
+        },
+        clearCredentials: () async {
+          await CredentialsStorage.clearCredentials();
+        },
+        login: (isRemembering, email, password) async {
+          await login(isRemembering: isRemembering, email, password, emit);
         },
       );
     });
@@ -23,8 +33,31 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
 
   LoginRepository loginRepository;
 
-  Future<void> login(String email, String password, Emitter<LoginState> emit) async {
+  Future<void> loadSavedCredentials(Emitter<LoginState> emit) async {
     emit(const LoginState.loading());
+    final credentials = await CredentialsStorage.getSavedCredentials();
+    if (credentials['username'] != null && credentials['password'] != null) {
+      final rememberCredentials = credentials['rememberCredentials'] == 'true';
+      emit(
+        LoginState.credentialsLoaded(
+          email: credentials['username'] ?? '',
+          password: credentials['password'] ?? '',
+          rememberMe: rememberCredentials,
+        ),
+      );
+    } else {
+      emit(const LoginState.initial());
+    }
+  }
+
+  Future<void> login(String email, String password, Emitter<LoginState> emit, {required bool isRemembering}) async {
+    emit(const LoginState.loading());
+    if (isRemembering) {
+      await CredentialsStorage.saveCredentials(username: email, password: password);
+    } else {
+      await CredentialsStorage.clearCredentials();
+    }
+
     final response = await loginRepository.login(email: email, password: password);
     await response.fold(
       (left) async {

@@ -12,14 +12,14 @@ class AppFloatingActionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: AppSizes.s80,
-      height: AppSizes.s80,
+      width: AppSizes.jumbo,
+      height: AppSizes.jumbo,
       decoration: const BoxDecoration(
         shape: BoxShape.circle,
         boxShadow: [
           BoxShadow(
             color: AppColors.primary200,
-            offset: Offset(0, AppSizes.xxs),
+            offset: Offset(0, AppSizes.xs),
             blurRadius: AppSizes.md,
             spreadRadius: 2,
           ),
@@ -32,11 +32,11 @@ class AppFloatingActionButton extends StatelessWidget {
           customBorder: const CircleBorder(),
           onTap: onTap,
           child: Padding(
-            padding: const EdgeInsets.all(AppSizes.mdLg),
+            padding: const EdgeInsets.all(AppSizes.mdPlus),
             child: AppIcon(
               icon: Assets.icons.barcodeOutline,
               color: AppColors.neutral1,
-              size: AppSizes.s40,
+              size: AppSizes.xxl,
             ),
           ),
         ),

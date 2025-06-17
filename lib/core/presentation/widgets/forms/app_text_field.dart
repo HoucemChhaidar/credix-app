@@ -15,7 +15,7 @@ class AppTextField extends StatelessWidget {
     this.obscureText = false,
     this.prefixIcon,
     this.suffixIcon,
-    this.borderRadius = AppSizes.sm,
+    this.borderRadius = AppSizes.smPlus,
     this.useVisibilityToggle = false,
     super.key,
   });
@@ -26,7 +26,7 @@ class AppTextField extends StatelessWidget {
     TextInputType keyboardType = TextInputType.text,
     Widget? prefixIcon,
     Widget? suffixIcon,
-    double borderRadius = AppSizes.sm,
+    double borderRadius = AppSizes.smPlus,
     Key? key,
   }) {
     return AppTextField._(
@@ -43,7 +43,7 @@ class AppTextField extends StatelessWidget {
   factory AppTextField.password({
     required TextEditingController controller,
     String? hintText,
-    double borderRadius = AppSizes.sm,
+    double borderRadius = AppSizes.smPlus,
     Key? key,
   }) {
     return AppTextField._(
@@ -134,7 +134,7 @@ class _PasswordTextField extends StatelessWidget {
                 hintText: hintText,
                 hintStyle: AppTextStyles.bodyMedium.copyWith(color: AppColors.neutral7),
                 prefixIcon: Padding(
-                  padding: const EdgeInsets.fromLTRB(AppSizes.md, AppSizes.md, AppSizes.xs, AppSizes.md),
+                  padding: const EdgeInsets.fromLTRB(AppSizes.md, AppSizes.md, AppSizes.sm, AppSizes.md),
                   child: AppIcon(icon: Assets.icons.lockFilled),
                 ),
                 suffixIcon: Material(
