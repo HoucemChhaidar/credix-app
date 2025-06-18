@@ -12,7 +12,6 @@ class LoginState with _$LoginState {
     required bool rememberMe,
   }) = _CredentialsLoaded;
 
-
   const factory LoginState.success() = _Success;
 
   const factory LoginState.error({required String message}) = _Error;

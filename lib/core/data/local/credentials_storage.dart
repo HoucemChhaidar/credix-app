@@ -10,43 +10,37 @@ class CredentialsStorage {
     ),
   );
 
-  static const String _usernameKey = 'saved_username';
+  static const String _emailKey = 'saved_email';
   static const String _passwordKey = 'saved_password';
-  static const String _rememberCredentialsKey = 'remember_credentials';
+  static const String _rememberMeKey = 'remember_me';
 
   // Save credentials
   static Future<void> saveCredentials({
     required String username,
     required String password,
   }) async {
-    await _storage.write(key: _usernameKey, value: username);
+    await _storage.write(key: _emailKey, value: username);
     await _storage.write(key: _passwordKey, value: password);
-    await _storage.write(key: _rememberCredentialsKey, value: 'true');
+    await _storage.write(key: _rememberMeKey, value: 'true');
   }
 
   // Get saved credentials
   static Future<Map<String, String?>> getSavedCredentials() async {
-    final username = await _storage.read(key: _usernameKey);
+    final username = await _storage.read(key: _emailKey);
     final password = await _storage.read(key: _passwordKey);
-    final rememberCredentials = await _storage.read(key: _rememberCredentialsKey);
+    final rememberMe = await _storage.read(key: _rememberMeKey);
 
     return {
       'username': username,
       'password': password,
-      'rememberCredentials': rememberCredentials,
+      'rememberMe': rememberMe,
     };
   }
 
   // Clear saved credentials
   static Future<void> clearCredentials() async {
-    await _storage.delete(key: _usernameKey);
+    await _storage.delete(key: _emailKey);
     await _storage.delete(key: _passwordKey);
-    await _storage.delete(key: _rememberCredentialsKey);
-  }
-
-  // Check if credentials should be remembered
-  static Future<bool> shouldRememberCredentials() async {
-    final remember = await _storage.read(key: _rememberCredentialsKey);
-    return remember == 'true';
+    await _storage.delete(key: _rememberMeKey);
   }
 }

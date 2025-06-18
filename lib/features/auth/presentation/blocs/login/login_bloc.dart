@@ -18,12 +18,6 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
         loadSavedCredentials: () async {
           await loadSavedCredentials(emit);
         },
-        saveCredentials: (email, password) async {
-          await CredentialsStorage.saveCredentials(username: email, password: password);
-        },
-        clearCredentials: () async {
-          await CredentialsStorage.clearCredentials();
-        },
         login: (isRemembering, email, password) async {
           await login(isRemembering: isRemembering, email, password, emit);
         },
@@ -36,13 +30,13 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   Future<void> loadSavedCredentials(Emitter<LoginState> emit) async {
     emit(const LoginState.loading());
     final credentials = await CredentialsStorage.getSavedCredentials();
-    if (credentials['username'] != null && credentials['password'] != null) {
-      final rememberCredentials = credentials['rememberCredentials'] == 'true';
+    if (credentials['email'] != null && credentials['password'] != null) {
+      final enabled = credentials['rememberMe'] == 'true';
       emit(
         LoginState.credentialsLoaded(
-          email: credentials['username'] ?? '',
+          email: credentials['email'] ?? '',
           password: credentials['password'] ?? '',
-          rememberMe: rememberCredentials,
+          rememberMe: enabled,
         ),
       );
     } else {
@@ -61,13 +55,10 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     final response = await loginRepository.login(email: email, password: password);
     await response.fold(
       (left) async {
-        // Simulate real-world response delay (e.g., network latency or transition timing)
-        await Future<void>.delayed(const Duration(milliseconds: 1200));
         emit(const LoginState.success());
         await getIt<AppRouter>().replaceAll([const MainRoute()]);
       },
       (right) async {
-        await Future<void>.delayed(const Duration(milliseconds: 800));
         emit(LoginState.error(message: right));
       },
     );
