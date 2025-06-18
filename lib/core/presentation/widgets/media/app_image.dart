@@ -78,9 +78,10 @@ class AppImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final defaultPlaceholder = placeholder ??
-        FutureBuilder<void>(
-          future: Future.delayed(Duration.zero),
-          builder: (_, __) => const Placeholder(),
+        Container(
+          width: width,
+          height: height,
+          color: Colors.grey[300],
         );
 
     Widget image = isNetwork
