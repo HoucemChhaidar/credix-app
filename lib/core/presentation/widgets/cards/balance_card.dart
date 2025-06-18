@@ -6,56 +6,64 @@ import 'package:credix_app/core/presentation/widgets/icons/app_icon.dart';
 import 'package:credix_app/core/presentation/widgets/text/app_text.dart';
 import 'package:credix_app/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
 class BalanceCard extends StatelessWidget {
-  const BalanceCard({super.key});
+  const BalanceCard({required this.loading, super.key});
+
+  final bool loading;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: AppColors.neutral12,
-        borderRadius: BorderRadius.circular(AppSizes.lg),
-      ),
-      child: Stack(
-        alignment: Alignment.bottomRight,
-        children: [
-          const Positioned(
-            top: 0,
-            right: 0,
-            child: _RotatedShapes(),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: AppSizes.xl,
-              vertical: AppSizes.lg,
+    return Skeletonizer(
+      enabled: loading,
+      containersColor: AppColors.neutral10,
+      effect: const ShimmerEffect(),
+      child: Container(
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: AppColors.neutral12,
+          borderRadius: BorderRadius.circular(AppSizes.lg),
+        ),
+        child: Stack(
+          alignment: Alignment.bottomRight,
+          children: [
+            const Positioned(
+              top: 0,
+              right: 0,
+              child: _RotatedShapes(),
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                const Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    AppText.labelLarge('Total balance', color: AppColors.neutral6),
-                    SizedBox(height: AppSizes.xs),
-                    AppText.display('1,746.862', color: AppColors.neutral1),
-                    SizedBox(height: AppSizes.lg),
-                    AppText.labelLarge('Account number', color: AppColors.neutral6),
-                    SizedBox(height: AppSizes.xs),
-                    AppText.h2('**** **** **** **96', color: AppColors.neutral1),
-                  ],
-                ),
-                AppIcon(
-                  icon: Assets.icons.arrowRightOutline,
-                  color: AppColors.neutral1,
-                  size: AppSizes.xl,
-                ),
-              ],
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: AppSizes.xl,
+                vertical: AppSizes.lg,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      AppText.labelLarge('Total balance', color: AppColors.neutral6),
+                      SizedBox(height: AppSizes.xs),
+                      AppText.display('1,746.862', color: AppColors.neutral1),
+                      SizedBox(height: AppSizes.lg),
+                      AppText.labelLarge('Account number', color: AppColors.neutral6),
+                      SizedBox(height: AppSizes.xs),
+                      AppText.h2('**** **** **** **96', color: AppColors.neutral1),
+                    ],
+                  ),
+                  AppIcon(
+                    icon: Assets.icons.arrowRightOutline,
+                    color: AppColors.neutral1,
+                    size: AppSizes.xl,
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

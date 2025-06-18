@@ -26,6 +26,7 @@ dependencies:
   json_annotation: ^4.9.0
   json_serializable: ^6.9.5
   logger: ^2.5.0
+  skeletonizer: ^1.4.3
 
 dev_dependencies:
   auto_route_generator: ^10.0.1

@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:credix_app/core/data/local/credentials_storage.dart';
+import 'package:credix_app/core/data/local/token_storage.dart';
 import 'package:credix_app/core/di/injection.dart';
 import 'package:credix_app/core/routing/app_router.dart';
 import 'package:credix_app/features/auth/domain/repositories/login_repository.dart';
@@ -47,7 +48,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   Future<void> login(String email, String password, Emitter<LoginState> emit, {required bool isRemembering}) async {
     emit(const LoginState.loading());
     if (isRemembering) {
-      await CredentialsStorage.saveCredentials(username: email, password: password);
+      await CredentialsStorage.saveCredentials(email: email, password: password);
     } else {
       await CredentialsStorage.clearCredentials();
     }
@@ -56,6 +57,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     await response.fold(
       (left) async {
         emit(const LoginState.success());
+        await TokenStorage.saveAuthData(token: left.token!);
         await getIt<AppRouter>().replaceAll([const MainRoute()]);
       },
       (right) async {

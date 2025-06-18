@@ -28,7 +28,6 @@ mixin _$NetworkResponse<BaseModel> {
     required TResult Function(String message) noData,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(BaseModel data)? ok,
@@ -54,20 +53,19 @@ mixin _$NetworkResponse<BaseModel> {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Ok<BaseModel> value) ok,
     required TResult Function(_BadRequest<BaseModel> value) badRequest,
     required TResult Function(_NoAuth<BaseModel> value) noAuth,
     required TResult Function(_NoAccess<BaseModel> value) noAccess,
-    required TResult Function(_InvalidParameters<BaseModel> value) invalidParameters,
+    required TResult Function(_InvalidParameters<BaseModel> value)
+        invalidParameters,
     required TResult Function(_NotFound<BaseModel> value) notFound,
     required TResult Function(_Conflict<BaseModel> value) conflict,
     required TResult Function(_NoData<BaseModel> value) noData,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Ok<BaseModel> value)? ok,
@@ -97,18 +95,21 @@ mixin _$NetworkResponse<BaseModel> {
 
 /// @nodoc
 abstract class $NetworkResponseCopyWith<BaseModel, $Res> {
-  factory $NetworkResponseCopyWith(NetworkResponse<BaseModel> value, $Res Function(NetworkResponse<BaseModel>) then) =
-      _$NetworkResponseCopyWithImpl<BaseModel, $Res, NetworkResponse<BaseModel>>;
+  factory $NetworkResponseCopyWith(NetworkResponse<BaseModel> value,
+          $Res Function(NetworkResponse<BaseModel>) then) =
+      _$NetworkResponseCopyWithImpl<BaseModel, $Res,
+          NetworkResponse<BaseModel>>;
 }
 
 /// @nodoc
-class _$NetworkResponseCopyWithImpl<BaseModel, $Res, $Val extends NetworkResponse<BaseModel>>
+class _$NetworkResponseCopyWithImpl<BaseModel, $Res,
+        $Val extends NetworkResponse<BaseModel>>
     implements $NetworkResponseCopyWith<BaseModel, $Res> {
   _$NetworkResponseCopyWithImpl(this._value, this._then);
 
-// ignore: unused_field
+  // ignore: unused_field
   final $Val _value;
-// ignore: unused_field
+  // ignore: unused_field
   final $Res Function($Val) _then;
 
   /// Create a copy of NetworkResponse
@@ -117,7 +118,8 @@ class _$NetworkResponseCopyWithImpl<BaseModel, $Res, $Val extends NetworkRespons
 
 /// @nodoc
 abstract class _$$OkImplCopyWith<BaseModel, $Res> {
-  factory _$$OkImplCopyWith(_$OkImpl<BaseModel> value, $Res Function(_$OkImpl<BaseModel>) then) =
+  factory _$$OkImplCopyWith(
+          _$OkImpl<BaseModel> value, $Res Function(_$OkImpl<BaseModel>) then) =
       __$$OkImplCopyWithImpl<BaseModel, $Res>;
   @useResult
   $Res call({BaseModel data});
@@ -127,7 +129,9 @@ abstract class _$$OkImplCopyWith<BaseModel, $Res> {
 class __$$OkImplCopyWithImpl<BaseModel, $Res>
     extends _$NetworkResponseCopyWithImpl<BaseModel, $Res, _$OkImpl<BaseModel>>
     implements _$$OkImplCopyWith<BaseModel, $Res> {
-  __$$OkImplCopyWithImpl(_$OkImpl<BaseModel> _value, $Res Function(_$OkImpl<BaseModel>) _then) : super(_value, _then);
+  __$$OkImplCopyWithImpl(
+      _$OkImpl<BaseModel> _value, $Res Function(_$OkImpl<BaseModel>) _then)
+      : super(_value, _then);
 
   /// Create a copy of NetworkResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -167,7 +171,8 @@ class _$OkImpl<BaseModel> implements _Ok<BaseModel> {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
   /// Create a copy of NetworkResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -233,7 +238,8 @@ class _$OkImpl<BaseModel> implements _Ok<BaseModel> {
     required TResult Function(_BadRequest<BaseModel> value) badRequest,
     required TResult Function(_NoAuth<BaseModel> value) noAuth,
     required TResult Function(_NoAccess<BaseModel> value) noAccess,
-    required TResult Function(_InvalidParameters<BaseModel> value) invalidParameters,
+    required TResult Function(_InvalidParameters<BaseModel> value)
+        invalidParameters,
     required TResult Function(_NotFound<BaseModel> value) notFound,
     required TResult Function(_Conflict<BaseModel> value) conflict,
     required TResult Function(_NoData<BaseModel> value) noData,
@@ -284,13 +290,14 @@ abstract class _Ok<BaseModel> implements NetworkResponse<BaseModel> {
   /// Create a copy of NetworkResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$OkImplCopyWith<BaseModel, _$OkImpl<BaseModel>> get copyWith => throw _privateConstructorUsedError;
+  _$$OkImplCopyWith<BaseModel, _$OkImpl<BaseModel>> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$BadRequestImplCopyWith<BaseModel, $Res> {
-  factory _$$BadRequestImplCopyWith(
-          _$BadRequestImpl<BaseModel> value, $Res Function(_$BadRequestImpl<BaseModel>) then) =
+  factory _$$BadRequestImplCopyWith(_$BadRequestImpl<BaseModel> value,
+          $Res Function(_$BadRequestImpl<BaseModel>) then) =
       __$$BadRequestImplCopyWithImpl<BaseModel, $Res>;
   @useResult
   $Res call({String message});
@@ -298,9 +305,11 @@ abstract class _$$BadRequestImplCopyWith<BaseModel, $Res> {
 
 /// @nodoc
 class __$$BadRequestImplCopyWithImpl<BaseModel, $Res>
-    extends _$NetworkResponseCopyWithImpl<BaseModel, $Res, _$BadRequestImpl<BaseModel>>
+    extends _$NetworkResponseCopyWithImpl<BaseModel, $Res,
+        _$BadRequestImpl<BaseModel>>
     implements _$$BadRequestImplCopyWith<BaseModel, $Res> {
-  __$$BadRequestImplCopyWithImpl(_$BadRequestImpl<BaseModel> _value, $Res Function(_$BadRequestImpl<BaseModel>) _then)
+  __$$BadRequestImplCopyWithImpl(_$BadRequestImpl<BaseModel> _value,
+      $Res Function(_$BadRequestImpl<BaseModel>) _then)
       : super(_value, _then);
 
   /// Create a copy of NetworkResponse
@@ -348,8 +357,9 @@ class _$BadRequestImpl<BaseModel> implements _BadRequest<BaseModel> {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$BadRequestImplCopyWith<BaseModel, _$BadRequestImpl<BaseModel>> get copyWith =>
-      __$$BadRequestImplCopyWithImpl<BaseModel, _$BadRequestImpl<BaseModel>>(this, _$identity);
+  _$$BadRequestImplCopyWith<BaseModel, _$BadRequestImpl<BaseModel>>
+      get copyWith => __$$BadRequestImplCopyWithImpl<BaseModel,
+          _$BadRequestImpl<BaseModel>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -407,7 +417,8 @@ class _$BadRequestImpl<BaseModel> implements _BadRequest<BaseModel> {
     required TResult Function(_BadRequest<BaseModel> value) badRequest,
     required TResult Function(_NoAuth<BaseModel> value) noAuth,
     required TResult Function(_NoAccess<BaseModel> value) noAccess,
-    required TResult Function(_InvalidParameters<BaseModel> value) invalidParameters,
+    required TResult Function(_InvalidParameters<BaseModel> value)
+        invalidParameters,
     required TResult Function(_NotFound<BaseModel> value) notFound,
     required TResult Function(_Conflict<BaseModel> value) conflict,
     required TResult Function(_NoData<BaseModel> value) noData,
@@ -458,12 +469,14 @@ abstract class _BadRequest<BaseModel> implements NetworkResponse<BaseModel> {
   /// Create a copy of NetworkResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$BadRequestImplCopyWith<BaseModel, _$BadRequestImpl<BaseModel>> get copyWith => throw _privateConstructorUsedError;
+  _$$BadRequestImplCopyWith<BaseModel, _$BadRequestImpl<BaseModel>>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$NoAuthImplCopyWith<BaseModel, $Res> {
-  factory _$$NoAuthImplCopyWith(_$NoAuthImpl<BaseModel> value, $Res Function(_$NoAuthImpl<BaseModel>) then) =
+  factory _$$NoAuthImplCopyWith(_$NoAuthImpl<BaseModel> value,
+          $Res Function(_$NoAuthImpl<BaseModel>) then) =
       __$$NoAuthImplCopyWithImpl<BaseModel, $Res>;
   @useResult
   $Res call({String message});
@@ -471,9 +484,11 @@ abstract class _$$NoAuthImplCopyWith<BaseModel, $Res> {
 
 /// @nodoc
 class __$$NoAuthImplCopyWithImpl<BaseModel, $Res>
-    extends _$NetworkResponseCopyWithImpl<BaseModel, $Res, _$NoAuthImpl<BaseModel>>
+    extends _$NetworkResponseCopyWithImpl<BaseModel, $Res,
+        _$NoAuthImpl<BaseModel>>
     implements _$$NoAuthImplCopyWith<BaseModel, $Res> {
-  __$$NoAuthImplCopyWithImpl(_$NoAuthImpl<BaseModel> _value, $Res Function(_$NoAuthImpl<BaseModel>) _then)
+  __$$NoAuthImplCopyWithImpl(_$NoAuthImpl<BaseModel> _value,
+      $Res Function(_$NoAuthImpl<BaseModel>) _then)
       : super(_value, _then);
 
   /// Create a copy of NetworkResponse
@@ -522,7 +537,8 @@ class _$NoAuthImpl<BaseModel> implements _NoAuth<BaseModel> {
   @override
   @pragma('vm:prefer-inline')
   _$$NoAuthImplCopyWith<BaseModel, _$NoAuthImpl<BaseModel>> get copyWith =>
-      __$$NoAuthImplCopyWithImpl<BaseModel, _$NoAuthImpl<BaseModel>>(this, _$identity);
+      __$$NoAuthImplCopyWithImpl<BaseModel, _$NoAuthImpl<BaseModel>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -580,7 +596,8 @@ class _$NoAuthImpl<BaseModel> implements _NoAuth<BaseModel> {
     required TResult Function(_BadRequest<BaseModel> value) badRequest,
     required TResult Function(_NoAuth<BaseModel> value) noAuth,
     required TResult Function(_NoAccess<BaseModel> value) noAccess,
-    required TResult Function(_InvalidParameters<BaseModel> value) invalidParameters,
+    required TResult Function(_InvalidParameters<BaseModel> value)
+        invalidParameters,
     required TResult Function(_NotFound<BaseModel> value) notFound,
     required TResult Function(_Conflict<BaseModel> value) conflict,
     required TResult Function(_NoData<BaseModel> value) noData,
@@ -631,12 +648,14 @@ abstract class _NoAuth<BaseModel> implements NetworkResponse<BaseModel> {
   /// Create a copy of NetworkResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NoAuthImplCopyWith<BaseModel, _$NoAuthImpl<BaseModel>> get copyWith => throw _privateConstructorUsedError;
+  _$$NoAuthImplCopyWith<BaseModel, _$NoAuthImpl<BaseModel>> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$NoAccessImplCopyWith<BaseModel, $Res> {
-  factory _$$NoAccessImplCopyWith(_$NoAccessImpl<BaseModel> value, $Res Function(_$NoAccessImpl<BaseModel>) then) =
+  factory _$$NoAccessImplCopyWith(_$NoAccessImpl<BaseModel> value,
+          $Res Function(_$NoAccessImpl<BaseModel>) then) =
       __$$NoAccessImplCopyWithImpl<BaseModel, $Res>;
   @useResult
   $Res call({String message});
@@ -644,9 +663,11 @@ abstract class _$$NoAccessImplCopyWith<BaseModel, $Res> {
 
 /// @nodoc
 class __$$NoAccessImplCopyWithImpl<BaseModel, $Res>
-    extends _$NetworkResponseCopyWithImpl<BaseModel, $Res, _$NoAccessImpl<BaseModel>>
+    extends _$NetworkResponseCopyWithImpl<BaseModel, $Res,
+        _$NoAccessImpl<BaseModel>>
     implements _$$NoAccessImplCopyWith<BaseModel, $Res> {
-  __$$NoAccessImplCopyWithImpl(_$NoAccessImpl<BaseModel> _value, $Res Function(_$NoAccessImpl<BaseModel>) _then)
+  __$$NoAccessImplCopyWithImpl(_$NoAccessImpl<BaseModel> _value,
+      $Res Function(_$NoAccessImpl<BaseModel>) _then)
       : super(_value, _then);
 
   /// Create a copy of NetworkResponse
@@ -695,7 +716,8 @@ class _$NoAccessImpl<BaseModel> implements _NoAccess<BaseModel> {
   @override
   @pragma('vm:prefer-inline')
   _$$NoAccessImplCopyWith<BaseModel, _$NoAccessImpl<BaseModel>> get copyWith =>
-      __$$NoAccessImplCopyWithImpl<BaseModel, _$NoAccessImpl<BaseModel>>(this, _$identity);
+      __$$NoAccessImplCopyWithImpl<BaseModel, _$NoAccessImpl<BaseModel>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -753,7 +775,8 @@ class _$NoAccessImpl<BaseModel> implements _NoAccess<BaseModel> {
     required TResult Function(_BadRequest<BaseModel> value) badRequest,
     required TResult Function(_NoAuth<BaseModel> value) noAuth,
     required TResult Function(_NoAccess<BaseModel> value) noAccess,
-    required TResult Function(_InvalidParameters<BaseModel> value) invalidParameters,
+    required TResult Function(_InvalidParameters<BaseModel> value)
+        invalidParameters,
     required TResult Function(_NotFound<BaseModel> value) notFound,
     required TResult Function(_Conflict<BaseModel> value) conflict,
     required TResult Function(_NoData<BaseModel> value) noData,
@@ -804,13 +827,15 @@ abstract class _NoAccess<BaseModel> implements NetworkResponse<BaseModel> {
   /// Create a copy of NetworkResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NoAccessImplCopyWith<BaseModel, _$NoAccessImpl<BaseModel>> get copyWith => throw _privateConstructorUsedError;
+  _$$NoAccessImplCopyWith<BaseModel, _$NoAccessImpl<BaseModel>> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$InvalidParametersImplCopyWith<BaseModel, $Res> {
   factory _$$InvalidParametersImplCopyWith(
-          _$InvalidParametersImpl<BaseModel> value, $Res Function(_$InvalidParametersImpl<BaseModel>) then) =
+          _$InvalidParametersImpl<BaseModel> value,
+          $Res Function(_$InvalidParametersImpl<BaseModel>) then) =
       __$$InvalidParametersImplCopyWithImpl<BaseModel, $Res>;
   @useResult
   $Res call({String message});
@@ -818,10 +843,12 @@ abstract class _$$InvalidParametersImplCopyWith<BaseModel, $Res> {
 
 /// @nodoc
 class __$$InvalidParametersImplCopyWithImpl<BaseModel, $Res>
-    extends _$NetworkResponseCopyWithImpl<BaseModel, $Res, _$InvalidParametersImpl<BaseModel>>
+    extends _$NetworkResponseCopyWithImpl<BaseModel, $Res,
+        _$InvalidParametersImpl<BaseModel>>
     implements _$$InvalidParametersImplCopyWith<BaseModel, $Res> {
   __$$InvalidParametersImplCopyWithImpl(
-      _$InvalidParametersImpl<BaseModel> _value, $Res Function(_$InvalidParametersImpl<BaseModel>) _then)
+      _$InvalidParametersImpl<BaseModel> _value,
+      $Res Function(_$InvalidParametersImpl<BaseModel>) _then)
       : super(_value, _then);
 
   /// Create a copy of NetworkResponse
@@ -842,7 +869,8 @@ class __$$InvalidParametersImplCopyWithImpl<BaseModel, $Res>
 
 /// @nodoc
 
-class _$InvalidParametersImpl<BaseModel> implements _InvalidParameters<BaseModel> {
+class _$InvalidParametersImpl<BaseModel>
+    implements _InvalidParameters<BaseModel> {
   const _$InvalidParametersImpl(this.message);
 
   @override
@@ -869,8 +897,10 @@ class _$InvalidParametersImpl<BaseModel> implements _InvalidParameters<BaseModel
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$InvalidParametersImplCopyWith<BaseModel, _$InvalidParametersImpl<BaseModel>> get copyWith =>
-      __$$InvalidParametersImplCopyWithImpl<BaseModel, _$InvalidParametersImpl<BaseModel>>(this, _$identity);
+  _$$InvalidParametersImplCopyWith<BaseModel,
+          _$InvalidParametersImpl<BaseModel>>
+      get copyWith => __$$InvalidParametersImplCopyWithImpl<BaseModel,
+          _$InvalidParametersImpl<BaseModel>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -928,7 +958,8 @@ class _$InvalidParametersImpl<BaseModel> implements _InvalidParameters<BaseModel
     required TResult Function(_BadRequest<BaseModel> value) badRequest,
     required TResult Function(_NoAuth<BaseModel> value) noAuth,
     required TResult Function(_NoAccess<BaseModel> value) noAccess,
-    required TResult Function(_InvalidParameters<BaseModel> value) invalidParameters,
+    required TResult Function(_InvalidParameters<BaseModel> value)
+        invalidParameters,
     required TResult Function(_NotFound<BaseModel> value) notFound,
     required TResult Function(_Conflict<BaseModel> value) conflict,
     required TResult Function(_NoData<BaseModel> value) noData,
@@ -971,21 +1002,25 @@ class _$InvalidParametersImpl<BaseModel> implements _InvalidParameters<BaseModel
   }
 }
 
-abstract class _InvalidParameters<BaseModel> implements NetworkResponse<BaseModel> {
-  const factory _InvalidParameters(final String message) = _$InvalidParametersImpl<BaseModel>;
+abstract class _InvalidParameters<BaseModel>
+    implements NetworkResponse<BaseModel> {
+  const factory _InvalidParameters(final String message) =
+      _$InvalidParametersImpl<BaseModel>;
 
   String get message;
 
   /// Create a copy of NetworkResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$InvalidParametersImplCopyWith<BaseModel, _$InvalidParametersImpl<BaseModel>> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$InvalidParametersImplCopyWith<BaseModel,
+          _$InvalidParametersImpl<BaseModel>>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$NotFoundImplCopyWith<BaseModel, $Res> {
-  factory _$$NotFoundImplCopyWith(_$NotFoundImpl<BaseModel> value, $Res Function(_$NotFoundImpl<BaseModel>) then) =
+  factory _$$NotFoundImplCopyWith(_$NotFoundImpl<BaseModel> value,
+          $Res Function(_$NotFoundImpl<BaseModel>) then) =
       __$$NotFoundImplCopyWithImpl<BaseModel, $Res>;
   @useResult
   $Res call({String message});
@@ -993,9 +1028,11 @@ abstract class _$$NotFoundImplCopyWith<BaseModel, $Res> {
 
 /// @nodoc
 class __$$NotFoundImplCopyWithImpl<BaseModel, $Res>
-    extends _$NetworkResponseCopyWithImpl<BaseModel, $Res, _$NotFoundImpl<BaseModel>>
+    extends _$NetworkResponseCopyWithImpl<BaseModel, $Res,
+        _$NotFoundImpl<BaseModel>>
     implements _$$NotFoundImplCopyWith<BaseModel, $Res> {
-  __$$NotFoundImplCopyWithImpl(_$NotFoundImpl<BaseModel> _value, $Res Function(_$NotFoundImpl<BaseModel>) _then)
+  __$$NotFoundImplCopyWithImpl(_$NotFoundImpl<BaseModel> _value,
+      $Res Function(_$NotFoundImpl<BaseModel>) _then)
       : super(_value, _then);
 
   /// Create a copy of NetworkResponse
@@ -1044,7 +1081,8 @@ class _$NotFoundImpl<BaseModel> implements _NotFound<BaseModel> {
   @override
   @pragma('vm:prefer-inline')
   _$$NotFoundImplCopyWith<BaseModel, _$NotFoundImpl<BaseModel>> get copyWith =>
-      __$$NotFoundImplCopyWithImpl<BaseModel, _$NotFoundImpl<BaseModel>>(this, _$identity);
+      __$$NotFoundImplCopyWithImpl<BaseModel, _$NotFoundImpl<BaseModel>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1102,7 +1140,8 @@ class _$NotFoundImpl<BaseModel> implements _NotFound<BaseModel> {
     required TResult Function(_BadRequest<BaseModel> value) badRequest,
     required TResult Function(_NoAuth<BaseModel> value) noAuth,
     required TResult Function(_NoAccess<BaseModel> value) noAccess,
-    required TResult Function(_InvalidParameters<BaseModel> value) invalidParameters,
+    required TResult Function(_InvalidParameters<BaseModel> value)
+        invalidParameters,
     required TResult Function(_NotFound<BaseModel> value) notFound,
     required TResult Function(_Conflict<BaseModel> value) conflict,
     required TResult Function(_NoData<BaseModel> value) noData,
@@ -1153,12 +1192,14 @@ abstract class _NotFound<BaseModel> implements NetworkResponse<BaseModel> {
   /// Create a copy of NetworkResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NotFoundImplCopyWith<BaseModel, _$NotFoundImpl<BaseModel>> get copyWith => throw _privateConstructorUsedError;
+  _$$NotFoundImplCopyWith<BaseModel, _$NotFoundImpl<BaseModel>> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ConflictImplCopyWith<BaseModel, $Res> {
-  factory _$$ConflictImplCopyWith(_$ConflictImpl<BaseModel> value, $Res Function(_$ConflictImpl<BaseModel>) then) =
+  factory _$$ConflictImplCopyWith(_$ConflictImpl<BaseModel> value,
+          $Res Function(_$ConflictImpl<BaseModel>) then) =
       __$$ConflictImplCopyWithImpl<BaseModel, $Res>;
   @useResult
   $Res call({String message});
@@ -1166,9 +1207,11 @@ abstract class _$$ConflictImplCopyWith<BaseModel, $Res> {
 
 /// @nodoc
 class __$$ConflictImplCopyWithImpl<BaseModel, $Res>
-    extends _$NetworkResponseCopyWithImpl<BaseModel, $Res, _$ConflictImpl<BaseModel>>
+    extends _$NetworkResponseCopyWithImpl<BaseModel, $Res,
+        _$ConflictImpl<BaseModel>>
     implements _$$ConflictImplCopyWith<BaseModel, $Res> {
-  __$$ConflictImplCopyWithImpl(_$ConflictImpl<BaseModel> _value, $Res Function(_$ConflictImpl<BaseModel>) _then)
+  __$$ConflictImplCopyWithImpl(_$ConflictImpl<BaseModel> _value,
+      $Res Function(_$ConflictImpl<BaseModel>) _then)
       : super(_value, _then);
 
   /// Create a copy of NetworkResponse
@@ -1217,7 +1260,8 @@ class _$ConflictImpl<BaseModel> implements _Conflict<BaseModel> {
   @override
   @pragma('vm:prefer-inline')
   _$$ConflictImplCopyWith<BaseModel, _$ConflictImpl<BaseModel>> get copyWith =>
-      __$$ConflictImplCopyWithImpl<BaseModel, _$ConflictImpl<BaseModel>>(this, _$identity);
+      __$$ConflictImplCopyWithImpl<BaseModel, _$ConflictImpl<BaseModel>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1275,7 +1319,8 @@ class _$ConflictImpl<BaseModel> implements _Conflict<BaseModel> {
     required TResult Function(_BadRequest<BaseModel> value) badRequest,
     required TResult Function(_NoAuth<BaseModel> value) noAuth,
     required TResult Function(_NoAccess<BaseModel> value) noAccess,
-    required TResult Function(_InvalidParameters<BaseModel> value) invalidParameters,
+    required TResult Function(_InvalidParameters<BaseModel> value)
+        invalidParameters,
     required TResult Function(_NotFound<BaseModel> value) notFound,
     required TResult Function(_Conflict<BaseModel> value) conflict,
     required TResult Function(_NoData<BaseModel> value) noData,
@@ -1326,12 +1371,14 @@ abstract class _Conflict<BaseModel> implements NetworkResponse<BaseModel> {
   /// Create a copy of NetworkResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ConflictImplCopyWith<BaseModel, _$ConflictImpl<BaseModel>> get copyWith => throw _privateConstructorUsedError;
+  _$$ConflictImplCopyWith<BaseModel, _$ConflictImpl<BaseModel>> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$NoDataImplCopyWith<BaseModel, $Res> {
-  factory _$$NoDataImplCopyWith(_$NoDataImpl<BaseModel> value, $Res Function(_$NoDataImpl<BaseModel>) then) =
+  factory _$$NoDataImplCopyWith(_$NoDataImpl<BaseModel> value,
+          $Res Function(_$NoDataImpl<BaseModel>) then) =
       __$$NoDataImplCopyWithImpl<BaseModel, $Res>;
   @useResult
   $Res call({String message});
@@ -1339,9 +1386,11 @@ abstract class _$$NoDataImplCopyWith<BaseModel, $Res> {
 
 /// @nodoc
 class __$$NoDataImplCopyWithImpl<BaseModel, $Res>
-    extends _$NetworkResponseCopyWithImpl<BaseModel, $Res, _$NoDataImpl<BaseModel>>
+    extends _$NetworkResponseCopyWithImpl<BaseModel, $Res,
+        _$NoDataImpl<BaseModel>>
     implements _$$NoDataImplCopyWith<BaseModel, $Res> {
-  __$$NoDataImplCopyWithImpl(_$NoDataImpl<BaseModel> _value, $Res Function(_$NoDataImpl<BaseModel>) _then)
+  __$$NoDataImplCopyWithImpl(_$NoDataImpl<BaseModel> _value,
+      $Res Function(_$NoDataImpl<BaseModel>) _then)
       : super(_value, _then);
 
   /// Create a copy of NetworkResponse
@@ -1390,7 +1439,8 @@ class _$NoDataImpl<BaseModel> implements _NoData<BaseModel> {
   @override
   @pragma('vm:prefer-inline')
   _$$NoDataImplCopyWith<BaseModel, _$NoDataImpl<BaseModel>> get copyWith =>
-      __$$NoDataImplCopyWithImpl<BaseModel, _$NoDataImpl<BaseModel>>(this, _$identity);
+      __$$NoDataImplCopyWithImpl<BaseModel, _$NoDataImpl<BaseModel>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1448,7 +1498,8 @@ class _$NoDataImpl<BaseModel> implements _NoData<BaseModel> {
     required TResult Function(_BadRequest<BaseModel> value) badRequest,
     required TResult Function(_NoAuth<BaseModel> value) noAuth,
     required TResult Function(_NoAccess<BaseModel> value) noAccess,
-    required TResult Function(_InvalidParameters<BaseModel> value) invalidParameters,
+    required TResult Function(_InvalidParameters<BaseModel> value)
+        invalidParameters,
     required TResult Function(_NotFound<BaseModel> value) notFound,
     required TResult Function(_Conflict<BaseModel> value) conflict,
     required TResult Function(_NoData<BaseModel> value) noData,
@@ -1499,5 +1550,6 @@ abstract class _NoData<BaseModel> implements NetworkResponse<BaseModel> {
   /// Create a copy of NetworkResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$NoDataImplCopyWith<BaseModel, _$NoDataImpl<BaseModel>> get copyWith => throw _privateConstructorUsedError;
+  _$$NoDataImplCopyWith<BaseModel, _$NoDataImpl<BaseModel>> get copyWith =>
+      throw _privateConstructorUsedError;
 }

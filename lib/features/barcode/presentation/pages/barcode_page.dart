@@ -13,7 +13,7 @@ class BarcodePage extends StatelessWidget {
       children: [
         AppBackButton(),
         SizedBox(height: AppSizes.md),
-        BalanceCard(),
+        // BalanceCard(),
       ],
     );
   }

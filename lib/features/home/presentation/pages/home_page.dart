@@ -1,7 +1,10 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:credix_app/core/di/injection.dart';
 import 'package:credix_app/core/presentation/resources/sizes/app_sizes.dart';
 import 'package:credix_app/core/presentation/widgets/widgets.dart';
+import 'package:credix_app/features/wallet/presentation/blocs/wallet/wallet_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 @RoutePage()
 class HomePage extends StatelessWidget {
@@ -11,15 +14,27 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final tabsRouter = AutoTabsRouter.of(context);
 
-    return Column(
-      spacing: AppSizes.md,
-      children: [
-        const ProfileHeader(),
-        const BalanceCard(),
-        TransactionListCard(
-          onViewAll: () => tabsRouter.setActiveIndex(1),
-        ),
-      ],
+    return BlocProvider(
+      create: (context) => getIt<WalletBloc>()..add(const WalletEvent.started()),
+      child: BlocBuilder<WalletBloc, WalletState>(
+        builder: (context, state) {
+          return Column(
+            spacing: AppSizes.md,
+            children: [
+              const ProfileHeader(),
+              BalanceCard(
+                loading: state.maybeWhen(
+                  orElse: () => false,
+                  loading: () => true,
+                ),
+              ),
+              TransactionListCard(
+                onViewAll: () => tabsRouter.setActiveIndex(1),
+              ),
+            ],
+          );
+        },
+      ),
     );
   }
 }

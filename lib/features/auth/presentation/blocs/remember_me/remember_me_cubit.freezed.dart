@@ -17,13 +17,11 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$RememberMeState {
   bool get remember => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(bool remember) remember,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(bool remember)? remember,
@@ -35,13 +33,11 @@ mixin _$RememberMeState {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Remember value) remember,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Remember value)? remember,
@@ -57,24 +53,27 @@ mixin _$RememberMeState {
   /// Create a copy of RememberMeState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $RememberMeStateCopyWith<RememberMeState> get copyWith => throw _privateConstructorUsedError;
+  $RememberMeStateCopyWith<RememberMeState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $RememberMeStateCopyWith<$Res> {
-  factory $RememberMeStateCopyWith(RememberMeState value, $Res Function(RememberMeState) then) =
+  factory $RememberMeStateCopyWith(
+          RememberMeState value, $Res Function(RememberMeState) then) =
       _$RememberMeStateCopyWithImpl<$Res, RememberMeState>;
   @useResult
   $Res call({bool remember});
 }
 
 /// @nodoc
-class _$RememberMeStateCopyWithImpl<$Res, $Val extends RememberMeState> implements $RememberMeStateCopyWith<$Res> {
+class _$RememberMeStateCopyWithImpl<$Res, $Val extends RememberMeState>
+    implements $RememberMeStateCopyWith<$Res> {
   _$RememberMeStateCopyWithImpl(this._value, this._then);
 
-// ignore: unused_field
+  // ignore: unused_field
   final $Val _value;
-// ignore: unused_field
+  // ignore: unused_field
   final $Res Function($Val) _then;
 
   /// Create a copy of RememberMeState
@@ -94,8 +93,10 @@ class _$RememberMeStateCopyWithImpl<$Res, $Val extends RememberMeState> implemen
 }
 
 /// @nodoc
-abstract class _$$RememberImplCopyWith<$Res> implements $RememberMeStateCopyWith<$Res> {
-  factory _$$RememberImplCopyWith(_$RememberImpl value, $Res Function(_$RememberImpl) then) =
+abstract class _$$RememberImplCopyWith<$Res>
+    implements $RememberMeStateCopyWith<$Res> {
+  factory _$$RememberImplCopyWith(
+          _$RememberImpl value, $Res Function(_$RememberImpl) then) =
       __$$RememberImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -103,9 +104,12 @@ abstract class _$$RememberImplCopyWith<$Res> implements $RememberMeStateCopyWith
 }
 
 /// @nodoc
-class __$$RememberImplCopyWithImpl<$Res> extends _$RememberMeStateCopyWithImpl<$Res, _$RememberImpl>
+class __$$RememberImplCopyWithImpl<$Res>
+    extends _$RememberMeStateCopyWithImpl<$Res, _$RememberImpl>
     implements _$$RememberImplCopyWith<$Res> {
-  __$$RememberImplCopyWithImpl(_$RememberImpl _value, $Res Function(_$RememberImpl) _then) : super(_value, _then);
+  __$$RememberImplCopyWithImpl(
+      _$RememberImpl _value, $Res Function(_$RememberImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of RememberMeState
   /// with the given fields replaced by the non-null parameter values.
@@ -141,7 +145,8 @@ class _$RememberImpl implements _Remember {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RememberImpl &&
-            (identical(other.remember, remember) || other.remember == remember));
+            (identical(other.remember, remember) ||
+                other.remember == remember));
   }
 
   @override
@@ -222,5 +227,6 @@ abstract class _Remember implements RememberMeState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RememberImplCopyWith<_$RememberImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$RememberImplCopyWith<_$RememberImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
