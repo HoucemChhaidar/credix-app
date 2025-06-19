@@ -27,6 +27,7 @@ class HomePage extends StatelessWidget {
                   orElse: () => false,
                   loading: () => true,
                 ),
+                onRetryPressed: () => context.read<WalletBloc>().add(const WalletEvent.started()),
               ),
               TransactionListCard(
                 onViewAll: () => tabsRouter.setActiveIndex(1),

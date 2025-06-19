@@ -82,6 +82,10 @@ class $AssetsIconsGen {
   SvgGenImage get lockOutline =>
       const SvgGenImage('assets/icons/lock_outline.svg');
 
+  /// File path: assets/icons/refresh_outline.svg
+  SvgGenImage get refreshOutline =>
+      const SvgGenImage('assets/icons/refresh_outline.svg');
+
   /// File path: assets/icons/settings_filled.svg
   SvgGenImage get settingsFilled =>
       const SvgGenImage('assets/icons/settings_filled.svg');
@@ -120,6 +124,7 @@ class $AssetsIconsGen {
     homeOutline,
     lockFilled,
     lockOutline,
+    refreshOutline,
     settingsFilled,
     settingsOutline,
     tagFilled,

@@ -56,8 +56,9 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     final response = await loginRepository.login(email: email, password: password);
     await response.fold(
       (left) async {
-        emit(const LoginState.success());
+        await Future<void>.delayed(const Duration(milliseconds: 2000));
         await TokenStorage.saveAuthData(token: left.token!);
+        emit(const LoginState.success());
         await getIt<AppRouter>().replaceAll([const MainRoute()]);
       },
       (right) async {

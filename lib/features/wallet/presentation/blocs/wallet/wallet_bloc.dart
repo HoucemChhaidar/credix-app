@@ -28,7 +28,7 @@ class WalletBloc extends Bloc<WalletEvent, WalletState> {
     final response = await _walletRepository.myWallet();
     await response.fold(
       (wallet) async {
-        await Future<void>.delayed(const Duration(milliseconds: 5000));
+        await Future<void>.delayed(const Duration(milliseconds: 2000));
         emit(WalletState.success(wallet: wallet));
       },
       (error) {
