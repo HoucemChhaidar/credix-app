@@ -1,7 +1,6 @@
 class AppEndpoints {
   // static const String _baseUrl = 'http://192.168.1.15:2345';
-  static const String _baseUrl = 'http://172.16.0.83:2345';
-  // static const String _baseUrl = 'http://192.168.217.129:2345';
+  static const String _baseUrl = 'http://172.16.0.67:2345';
 
   static const String _auth = '$_baseUrl/auth';
   static const String _api = '$_baseUrl/api';

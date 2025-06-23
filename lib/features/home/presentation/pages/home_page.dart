@@ -22,12 +22,24 @@ class HomePage extends StatelessWidget {
             spacing: AppSizes.md,
             children: [
               const ProfileHeader(),
-              BalanceCard(
-                loading: state.maybeWhen(
-                  orElse: () => false,
-                  loading: () => true,
+              state.when(
+                initial: () => const BalanceCard(
+                  state: BalanceCardState.loading,
                 ),
-                onRetryPressed: () => context.read<WalletBloc>().add(const WalletEvent.started()),
+                loading: () => const BalanceCard(
+                  state: BalanceCardState.loading,
+                ),
+                success: (wallet) => BalanceCard(
+                  state: BalanceCardState.success,
+                  wallet: wallet,
+                ),
+                failure: (message) => BalanceCard(
+                  state: BalanceCardState.error,
+                  errorMessage: message,
+                  onRetryPressed: () {
+                    context.read<WalletBloc>().add(const WalletEvent.started());
+                  },
+                ),
               ),
               TransactionListCard(
                 onViewAll: () => tabsRouter.setActiveIndex(1),
