@@ -1,4 +1,4 @@
-package com.example.verygoodcore.credix_app
+package com.example.credix_app
 
 import io.flutter.embedding.android.FlutterActivity
 
