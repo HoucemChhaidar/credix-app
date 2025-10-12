@@ -19,10 +19,10 @@ mixin _$LoginEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loadSavedCredentials,
-    required TResult Function(bool rememberMe, String email, String password)
-        login,
+    required TResult Function(bool rememberMe, String email, String password) login,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loadSavedCredentials,
@@ -36,12 +36,14 @@ mixin _$LoginEvent {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_LoadSavedCredentials value) loadSavedCredentials,
     required TResult Function(_Login value) login,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_LoadSavedCredentials value)? loadSavedCredentials,
@@ -59,19 +61,17 @@ mixin _$LoginEvent {
 
 /// @nodoc
 abstract class $LoginEventCopyWith<$Res> {
-  factory $LoginEventCopyWith(
-          LoginEvent value, $Res Function(LoginEvent) then) =
+  factory $LoginEventCopyWith(LoginEvent value, $Res Function(LoginEvent) then) =
       _$LoginEventCopyWithImpl<$Res, LoginEvent>;
 }
 
 /// @nodoc
-class _$LoginEventCopyWithImpl<$Res, $Val extends LoginEvent>
-    implements $LoginEventCopyWith<$Res> {
+class _$LoginEventCopyWithImpl<$Res, $Val extends LoginEvent> implements $LoginEventCopyWith<$Res> {
   _$LoginEventCopyWithImpl(this._value, this._then);
 
-  // ignore: unused_field
+// ignore: unused_field
   final $Val _value;
-  // ignore: unused_field
+// ignore: unused_field
   final $Res Function($Val) _then;
 
   /// Create a copy of LoginEvent
@@ -80,17 +80,16 @@ class _$LoginEventCopyWithImpl<$Res, $Val extends LoginEvent>
 
 /// @nodoc
 abstract class _$$LoadSavedCredentialsImplCopyWith<$Res> {
-  factory _$$LoadSavedCredentialsImplCopyWith(_$LoadSavedCredentialsImpl value,
-          $Res Function(_$LoadSavedCredentialsImpl) then) =
+  factory _$$LoadSavedCredentialsImplCopyWith(
+          _$LoadSavedCredentialsImpl value, $Res Function(_$LoadSavedCredentialsImpl) then) =
       __$$LoadSavedCredentialsImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadSavedCredentialsImplCopyWithImpl<$Res>
-    extends _$LoginEventCopyWithImpl<$Res, _$LoadSavedCredentialsImpl>
+class __$$LoadSavedCredentialsImplCopyWithImpl<$Res> extends _$LoginEventCopyWithImpl<$Res, _$LoadSavedCredentialsImpl>
     implements _$$LoadSavedCredentialsImplCopyWith<$Res> {
-  __$$LoadSavedCredentialsImplCopyWithImpl(_$LoadSavedCredentialsImpl _value,
-      $Res Function(_$LoadSavedCredentialsImpl) _then)
+  __$$LoadSavedCredentialsImplCopyWithImpl(
+      _$LoadSavedCredentialsImpl _value, $Res Function(_$LoadSavedCredentialsImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of LoginEvent
@@ -109,9 +108,7 @@ class _$LoadSavedCredentialsImpl implements _LoadSavedCredentials {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$LoadSavedCredentialsImpl);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$LoadSavedCredentialsImpl);
   }
 
   @override
@@ -121,8 +118,7 @@ class _$LoadSavedCredentialsImpl implements _LoadSavedCredentials {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loadSavedCredentials,
-    required TResult Function(bool rememberMe, String email, String password)
-        login,
+    required TResult Function(bool rememberMe, String email, String password) login,
   }) {
     return loadSavedCredentials();
   }
@@ -187,20 +183,15 @@ abstract class _LoadSavedCredentials implements LoginEvent {
 
 /// @nodoc
 abstract class _$$LoginImplCopyWith<$Res> {
-  factory _$$LoginImplCopyWith(
-          _$LoginImpl value, $Res Function(_$LoginImpl) then) =
-      __$$LoginImplCopyWithImpl<$Res>;
+  factory _$$LoginImplCopyWith(_$LoginImpl value, $Res Function(_$LoginImpl) then) = __$$LoginImplCopyWithImpl<$Res>;
   @useResult
   $Res call({bool rememberMe, String email, String password});
 }
 
 /// @nodoc
-class __$$LoginImplCopyWithImpl<$Res>
-    extends _$LoginEventCopyWithImpl<$Res, _$LoginImpl>
+class __$$LoginImplCopyWithImpl<$Res> extends _$LoginEventCopyWithImpl<$Res, _$LoginImpl>
     implements _$$LoginImplCopyWith<$Res> {
-  __$$LoginImplCopyWithImpl(
-      _$LoginImpl _value, $Res Function(_$LoginImpl) _then)
-      : super(_value, _then);
+  __$$LoginImplCopyWithImpl(_$LoginImpl _value, $Res Function(_$LoginImpl) _then) : super(_value, _then);
 
   /// Create a copy of LoginEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -231,8 +222,7 @@ class __$$LoginImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$LoginImpl implements _Login {
-  const _$LoginImpl(
-      {required this.rememberMe, required this.email, required this.password});
+  const _$LoginImpl({required this.rememberMe, required this.email, required this.password});
 
   @override
   final bool rememberMe;
@@ -251,11 +241,9 @@ class _$LoginImpl implements _Login {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LoginImpl &&
-            (identical(other.rememberMe, rememberMe) ||
-                other.rememberMe == rememberMe) &&
+            (identical(other.rememberMe, rememberMe) || other.rememberMe == rememberMe) &&
             (identical(other.email, email) || other.email == email) &&
-            (identical(other.password, password) ||
-                other.password == password));
+            (identical(other.password, password) || other.password == password));
   }
 
   @override
@@ -266,15 +254,13 @@ class _$LoginImpl implements _Login {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$LoginImplCopyWith<_$LoginImpl> get copyWith =>
-      __$$LoginImplCopyWithImpl<_$LoginImpl>(this, _$identity);
+  _$$LoginImplCopyWith<_$LoginImpl> get copyWith => __$$LoginImplCopyWithImpl<_$LoginImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loadSavedCredentials,
-    required TResult Function(bool rememberMe, String email, String password)
-        login,
+    required TResult Function(bool rememberMe, String email, String password) login,
   }) {
     return login(rememberMe, email, password);
   }
@@ -334,10 +320,8 @@ class _$LoginImpl implements _Login {
 }
 
 abstract class _Login implements LoginEvent {
-  const factory _Login(
-      {required final bool rememberMe,
-      required final String email,
-      required final String password}) = _$LoginImpl;
+  const factory _Login({required final bool rememberMe, required final String email, required final String password}) =
+      _$LoginImpl;
 
   bool get rememberMe;
   String get email;
@@ -346,8 +330,7 @@ abstract class _Login implements LoginEvent {
   /// Create a copy of LoginEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LoginImplCopyWith<_$LoginImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LoginImplCopyWith<_$LoginImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -356,8 +339,7 @@ mixin _$LoginState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String email, String password, bool rememberMe)
-        credentialsLoaded,
+    required TResult Function(String email, String password, bool rememberMe) credentialsLoaded,
     required TResult Function() success,
     required TResult Function(String message) error,
   }) =>
@@ -366,8 +348,7 @@ mixin _$LoginState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String email, String password, bool rememberMe)?
-        credentialsLoaded,
+    TResult? Function(String email, String password, bool rememberMe)? credentialsLoaded,
     TResult? Function()? success,
     TResult? Function(String message)? error,
   }) =>
@@ -376,8 +357,7 @@ mixin _$LoginState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String email, String password, bool rememberMe)?
-        credentialsLoaded,
+    TResult Function(String email, String password, bool rememberMe)? credentialsLoaded,
     TResult Function()? success,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -415,19 +395,17 @@ mixin _$LoginState {
 
 /// @nodoc
 abstract class $LoginStateCopyWith<$Res> {
-  factory $LoginStateCopyWith(
-          LoginState value, $Res Function(LoginState) then) =
+  factory $LoginStateCopyWith(LoginState value, $Res Function(LoginState) then) =
       _$LoginStateCopyWithImpl<$Res, LoginState>;
 }
 
 /// @nodoc
-class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
-    implements $LoginStateCopyWith<$Res> {
+class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState> implements $LoginStateCopyWith<$Res> {
   _$LoginStateCopyWithImpl(this._value, this._then);
 
-  // ignore: unused_field
+// ignore: unused_field
   final $Val _value;
-  // ignore: unused_field
+// ignore: unused_field
   final $Res Function($Val) _then;
 
   /// Create a copy of LoginState
@@ -436,18 +414,14 @@ class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
+  factory _$$InitialImplCopyWith(_$InitialImpl value, $Res Function(_$InitialImpl) then) =
       __$$InitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$LoginStateCopyWithImpl<$Res, _$InitialImpl>
+class __$$InitialImplCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
-      : super(_value, _then);
+  __$$InitialImplCopyWithImpl(_$InitialImpl _value, $Res Function(_$InitialImpl) _then) : super(_value, _then);
 
   /// Create a copy of LoginState
   /// with the given fields replaced by the non-null parameter values.
@@ -465,8 +439,7 @@ class _$InitialImpl implements _Initial {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialImpl);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$InitialImpl);
   }
 
   @override
@@ -477,8 +450,7 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String email, String password, bool rememberMe)
-        credentialsLoaded,
+    required TResult Function(String email, String password, bool rememberMe) credentialsLoaded,
     required TResult Function() success,
     required TResult Function(String message) error,
   }) {
@@ -490,8 +462,7 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String email, String password, bool rememberMe)?
-        credentialsLoaded,
+    TResult? Function(String email, String password, bool rememberMe)? credentialsLoaded,
     TResult? Function()? success,
     TResult? Function(String message)? error,
   }) {
@@ -503,8 +474,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String email, String password, bool rememberMe)?
-        credentialsLoaded,
+    TResult Function(String email, String password, bool rememberMe)? credentialsLoaded,
     TResult Function()? success,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -562,18 +532,14 @@ abstract class _Initial implements LoginState {
 
 /// @nodoc
 abstract class _$$LoadingImplCopyWith<$Res> {
-  factory _$$LoadingImplCopyWith(
-          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
+  factory _$$LoadingImplCopyWith(_$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
       __$$LoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$LoginStateCopyWithImpl<$Res, _$LoadingImpl>
+class __$$LoadingImplCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
-  __$$LoadingImplCopyWithImpl(
-      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
-      : super(_value, _then);
+  __$$LoadingImplCopyWithImpl(_$LoadingImpl _value, $Res Function(_$LoadingImpl) _then) : super(_value, _then);
 
   /// Create a copy of LoginState
   /// with the given fields replaced by the non-null parameter values.
@@ -591,8 +557,7 @@ class _$LoadingImpl implements _Loading {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingImpl);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$LoadingImpl);
   }
 
   @override
@@ -603,8 +568,7 @@ class _$LoadingImpl implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String email, String password, bool rememberMe)
-        credentialsLoaded,
+    required TResult Function(String email, String password, bool rememberMe) credentialsLoaded,
     required TResult Function() success,
     required TResult Function(String message) error,
   }) {
@@ -616,8 +580,7 @@ class _$LoadingImpl implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String email, String password, bool rememberMe)?
-        credentialsLoaded,
+    TResult? Function(String email, String password, bool rememberMe)? credentialsLoaded,
     TResult? Function()? success,
     TResult? Function(String message)? error,
   }) {
@@ -629,8 +592,7 @@ class _$LoadingImpl implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String email, String password, bool rememberMe)?
-        credentialsLoaded,
+    TResult Function(String email, String password, bool rememberMe)? credentialsLoaded,
     TResult Function()? success,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -688,19 +650,16 @@ abstract class _Loading implements LoginState {
 
 /// @nodoc
 abstract class _$$CredentialsLoadedImplCopyWith<$Res> {
-  factory _$$CredentialsLoadedImplCopyWith(_$CredentialsLoadedImpl value,
-          $Res Function(_$CredentialsLoadedImpl) then) =
+  factory _$$CredentialsLoadedImplCopyWith(_$CredentialsLoadedImpl value, $Res Function(_$CredentialsLoadedImpl) then) =
       __$$CredentialsLoadedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String email, String password, bool rememberMe});
 }
 
 /// @nodoc
-class __$$CredentialsLoadedImplCopyWithImpl<$Res>
-    extends _$LoginStateCopyWithImpl<$Res, _$CredentialsLoadedImpl>
+class __$$CredentialsLoadedImplCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res, _$CredentialsLoadedImpl>
     implements _$$CredentialsLoadedImplCopyWith<$Res> {
-  __$$CredentialsLoadedImplCopyWithImpl(_$CredentialsLoadedImpl _value,
-      $Res Function(_$CredentialsLoadedImpl) _then)
+  __$$CredentialsLoadedImplCopyWithImpl(_$CredentialsLoadedImpl _value, $Res Function(_$CredentialsLoadedImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of LoginState
@@ -732,8 +691,7 @@ class __$$CredentialsLoadedImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$CredentialsLoadedImpl implements _CredentialsLoaded {
-  const _$CredentialsLoadedImpl(
-      {required this.email, required this.password, required this.rememberMe});
+  const _$CredentialsLoadedImpl({required this.email, required this.password, required this.rememberMe});
 
   @override
   final String email;
@@ -753,10 +711,8 @@ class _$CredentialsLoadedImpl implements _CredentialsLoaded {
         (other.runtimeType == runtimeType &&
             other is _$CredentialsLoadedImpl &&
             (identical(other.email, email) || other.email == email) &&
-            (identical(other.password, password) ||
-                other.password == password) &&
-            (identical(other.rememberMe, rememberMe) ||
-                other.rememberMe == rememberMe));
+            (identical(other.password, password) || other.password == password) &&
+            (identical(other.rememberMe, rememberMe) || other.rememberMe == rememberMe));
   }
 
   @override
@@ -768,16 +724,14 @@ class _$CredentialsLoadedImpl implements _CredentialsLoaded {
   @override
   @pragma('vm:prefer-inline')
   _$$CredentialsLoadedImplCopyWith<_$CredentialsLoadedImpl> get copyWith =>
-      __$$CredentialsLoadedImplCopyWithImpl<_$CredentialsLoadedImpl>(
-          this, _$identity);
+      __$$CredentialsLoadedImplCopyWithImpl<_$CredentialsLoadedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String email, String password, bool rememberMe)
-        credentialsLoaded,
+    required TResult Function(String email, String password, bool rememberMe) credentialsLoaded,
     required TResult Function() success,
     required TResult Function(String message) error,
   }) {
@@ -789,8 +743,7 @@ class _$CredentialsLoadedImpl implements _CredentialsLoaded {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String email, String password, bool rememberMe)?
-        credentialsLoaded,
+    TResult? Function(String email, String password, bool rememberMe)? credentialsLoaded,
     TResult? Function()? success,
     TResult? Function(String message)? error,
   }) {
@@ -802,8 +755,7 @@ class _$CredentialsLoadedImpl implements _CredentialsLoaded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String email, String password, bool rememberMe)?
-        credentialsLoaded,
+    TResult Function(String email, String password, bool rememberMe)? credentialsLoaded,
     TResult Function()? success,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -868,24 +820,19 @@ abstract class _CredentialsLoaded implements LoginState {
   /// Create a copy of LoginState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CredentialsLoadedImplCopyWith<_$CredentialsLoadedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CredentialsLoadedImplCopyWith<_$CredentialsLoadedImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$SuccessImplCopyWith<$Res> {
-  factory _$$SuccessImplCopyWith(
-          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
+  factory _$$SuccessImplCopyWith(_$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
       __$$SuccessImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SuccessImplCopyWithImpl<$Res>
-    extends _$LoginStateCopyWithImpl<$Res, _$SuccessImpl>
+class __$$SuccessImplCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res, _$SuccessImpl>
     implements _$$SuccessImplCopyWith<$Res> {
-  __$$SuccessImplCopyWithImpl(
-      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
-      : super(_value, _then);
+  __$$SuccessImplCopyWithImpl(_$SuccessImpl _value, $Res Function(_$SuccessImpl) _then) : super(_value, _then);
 
   /// Create a copy of LoginState
   /// with the given fields replaced by the non-null parameter values.
@@ -903,8 +850,7 @@ class _$SuccessImpl implements _Success {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SuccessImpl);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$SuccessImpl);
   }
 
   @override
@@ -915,8 +861,7 @@ class _$SuccessImpl implements _Success {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String email, String password, bool rememberMe)
-        credentialsLoaded,
+    required TResult Function(String email, String password, bool rememberMe) credentialsLoaded,
     required TResult Function() success,
     required TResult Function(String message) error,
   }) {
@@ -928,8 +873,7 @@ class _$SuccessImpl implements _Success {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String email, String password, bool rememberMe)?
-        credentialsLoaded,
+    TResult? Function(String email, String password, bool rememberMe)? credentialsLoaded,
     TResult? Function()? success,
     TResult? Function(String message)? error,
   }) {
@@ -941,8 +885,7 @@ class _$SuccessImpl implements _Success {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String email, String password, bool rememberMe)?
-        credentialsLoaded,
+    TResult Function(String email, String password, bool rememberMe)? credentialsLoaded,
     TResult Function()? success,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -1000,20 +943,15 @@ abstract class _Success implements LoginState {
 
 /// @nodoc
 abstract class _$$ErrorImplCopyWith<$Res> {
-  factory _$$ErrorImplCopyWith(
-          _$ErrorImpl value, $Res Function(_$ErrorImpl) then) =
-      __$$ErrorImplCopyWithImpl<$Res>;
+  factory _$$ErrorImplCopyWith(_$ErrorImpl value, $Res Function(_$ErrorImpl) then) = __$$ErrorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$ErrorImplCopyWithImpl<$Res>
-    extends _$LoginStateCopyWithImpl<$Res, _$ErrorImpl>
+class __$$ErrorImplCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res, _$ErrorImpl>
     implements _$$ErrorImplCopyWith<$Res> {
-  __$$ErrorImplCopyWithImpl(
-      _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
-      : super(_value, _then);
+  __$$ErrorImplCopyWithImpl(_$ErrorImpl _value, $Res Function(_$ErrorImpl) _then) : super(_value, _then);
 
   /// Create a copy of LoginState
   /// with the given fields replaced by the non-null parameter values.
@@ -1060,16 +998,14 @@ class _$ErrorImpl implements _Error {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
-      __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
+  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith => __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String email, String password, bool rememberMe)
-        credentialsLoaded,
+    required TResult Function(String email, String password, bool rememberMe) credentialsLoaded,
     required TResult Function() success,
     required TResult Function(String message) error,
   }) {
@@ -1081,8 +1017,7 @@ class _$ErrorImpl implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String email, String password, bool rememberMe)?
-        credentialsLoaded,
+    TResult? Function(String email, String password, bool rememberMe)? credentialsLoaded,
     TResult? Function()? success,
     TResult? Function(String message)? error,
   }) {
@@ -1094,8 +1029,7 @@ class _$ErrorImpl implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String email, String password, bool rememberMe)?
-        credentialsLoaded,
+    TResult Function(String email, String password, bool rememberMe)? credentialsLoaded,
     TResult Function()? success,
     TResult Function(String message)? error,
     required TResult orElse(),
@@ -1155,6 +1089,5 @@ abstract class _Error implements LoginState {
   /// Create a copy of LoginState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith => throw _privateConstructorUsedError;
 }

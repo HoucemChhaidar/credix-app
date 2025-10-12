@@ -32,13 +32,12 @@ class HomePage extends StatelessWidget {
                 success: (wallet) => BalanceCard(
                   state: BalanceCardState.success,
                   wallet: wallet,
+                  onRetryPressed: () => context.read<WalletBloc>().add(const WalletEvent.started()),
                 ),
                 failure: (message) => BalanceCard(
                   state: BalanceCardState.error,
                   errorMessage: message,
-                  onRetryPressed: () {
-                    context.read<WalletBloc>().add(const WalletEvent.started());
-                  },
+                  onRetryPressed: () => context.read<WalletBloc>().add(const WalletEvent.started()),
                 ),
               ),
               TransactionListCard(

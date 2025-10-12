@@ -1,13 +1,13 @@
 import 'package:credix_app/core/data/network/models/base_model.dart';
 import 'package:credix_app/features/auth/data/datasources/login_service.dart';
 import 'package:credix_app/features/auth/data/models/login_response.dart';
-import 'package:credix_app/features/auth/domain/repositories/login_repository.dart';
+import 'package:credix_app/features/auth/domain/interfaces/i_login_repository.dart';
 import 'package:dio/dio.dart';
 import 'package:either_dart/either.dart';
 import 'package:injectable/injectable.dart';
 
-@Injectable(as: LoginRepository)
-class LoginRepositoryImpl implements LoginRepository {
+@Injectable(as: ILoginRepository)
+class LoginRepositoryImpl implements ILoginRepository {
   LoginRepositoryImpl(this._service, this._dio);
 
   final LoginService _service;

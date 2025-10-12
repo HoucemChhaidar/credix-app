@@ -92,9 +92,8 @@ class BalanceCard extends StatelessWidget {
                 ),
                 Skeleton.shade(
                   child: AppIcon(
-                    icon: Assets.icons.arrowRightOutline,
+                    icon: Assets.icons.refreshOutline,
                     color: AppColors.neutral1,
-                    size: AppSizes.xl,
                   ),
                 ),
               ],
@@ -141,10 +140,12 @@ class BalanceCard extends StatelessWidget {
                   ),
                 ],
               ),
-              AppIcon(
-                icon: Assets.icons.arrowRightOutline,
-                color: AppColors.neutral1,
-                size: AppSizes.xl,
+              InkWell(
+                onTap: onRetryPressed,
+                child: AppIcon(
+                  icon: Assets.icons.refreshOutline,
+                  color: AppColors.neutral1,
+                ),
               ),
             ],
           ),

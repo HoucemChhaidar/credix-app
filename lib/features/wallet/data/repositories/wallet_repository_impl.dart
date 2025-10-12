@@ -1,13 +1,13 @@
 import 'package:credix_app/core/data/network/models/base_model.dart';
 import 'package:credix_app/features/wallet/data/datasources/wallet_service.dart';
 import 'package:credix_app/features/wallet/data/models/wallet_response.dart';
-import 'package:credix_app/features/wallet/domain/repositories/wallet_repository.dart';
+import 'package:credix_app/features/wallet/domain/interfaces/i_wallet_repository.dart';
 import 'package:dio/dio.dart';
 import 'package:either_dart/either.dart';
 import 'package:injectable/injectable.dart';
 
-@Injectable(as: WalletRepository)
-class WalletRepositoryImpl implements WalletRepository {
+@Injectable(as: IWalletRepository)
+class WalletRepositoryImpl implements IWalletRepository {
   WalletRepositoryImpl(this._service, this._dio);
 
   final WalletService _service;

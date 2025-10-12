@@ -3,7 +3,8 @@ import 'package:credix_app/core/data/local/credentials_storage.dart';
 import 'package:credix_app/core/data/local/token_storage.dart';
 import 'package:credix_app/core/di/injection.dart';
 import 'package:credix_app/core/routing/app_router.dart';
-import 'package:credix_app/features/auth/domain/repositories/login_repository.dart';
+import 'package:credix_app/core/utils/user_preferences.dart';
+import 'package:credix_app/features/auth/domain/interfaces//i_login_repository.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 
@@ -26,7 +27,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     });
   }
 
-  LoginRepository loginRepository;
+  ILoginRepository loginRepository;
 
   Future<void> loadSavedCredentials(Emitter<LoginState> emit) async {
     emit(const LoginState.loading());
@@ -56,8 +57,9 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     final response = await loginRepository.login(email: email, password: password);
     await response.fold(
       (left) async {
-        await Future<void>.delayed(const Duration(milliseconds: 2000));
+        await Future<void>.delayed(const Duration(milliseconds: 1000));
         await TokenStorage.saveAuthData(token: left.token!);
+        await UserPreferences.setUserEmail(email);
         emit(const LoginState.success());
         await getIt<AppRouter>().replaceAll([const MainRoute()]);
       },

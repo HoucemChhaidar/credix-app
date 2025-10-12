@@ -1,5 +1,4 @@
 class WalletResponse {
-
   const WalletResponse({
     required this.tokenizedId,
     required this.balance,
@@ -7,6 +6,7 @@ class WalletResponse {
     required this.userEmail,
     required this.createdAt,
   });
+
   factory WalletResponse.fromJson(Map<String, dynamic> json) {
     return WalletResponse(
       tokenizedId: json['tokenizedId'] as String,

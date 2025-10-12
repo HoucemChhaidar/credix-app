@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:credix_app/features/wallet/data/models/wallet_response.dart';
-import 'package:credix_app/features/wallet/domain/repositories/wallet_repository.dart';
+import 'package:credix_app/features/wallet/domain/interfaces/i_wallet_repository.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 
@@ -20,7 +20,7 @@ class WalletBloc extends Bloc<WalletEvent, WalletState> {
     });
   }
 
-  final WalletRepository _walletRepository;
+  final IWalletRepository _walletRepository;
 
   Future<void> _onWalletStarted({required Emitter<WalletState> emit}) async {
     emit(const WalletState.loading());
@@ -28,7 +28,7 @@ class WalletBloc extends Bloc<WalletEvent, WalletState> {
     final response = await _walletRepository.myWallet();
     await response.fold(
       (wallet) async {
-        await Future<void>.delayed(const Duration(milliseconds: 2000));
+        await Future<void>.delayed(const Duration(milliseconds: 800));
         emit(WalletState.success(wallet: wallet));
       },
       (error) {

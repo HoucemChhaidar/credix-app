@@ -6,8 +6,8 @@ import 'package:credix_app/features/home/presentation/pages/home_page.dart';
 import 'package:credix_app/features/main/presentation/pages/main_page.dart';
 import 'package:credix_app/features/offers/presentation/pages/offers_page.dart';
 import 'package:credix_app/features/settings/presentation/pages/settings_page.dart';
-import 'package:credix_app/features/transactions/presentation/pages/transaction_details_page.dart';
-import 'package:credix_app/features/transactions/presentation/pages/transaction_list_page.dart';
+import 'package:credix_app/features/transactions_history/presentation/pages/transaction_details_page.dart';
+import 'package:credix_app/features/transactions_history/presentation/pages/transaction_list_page.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 
