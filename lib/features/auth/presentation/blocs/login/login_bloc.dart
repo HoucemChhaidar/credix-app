@@ -4,7 +4,7 @@ import 'package:credix_app/core/data/local/token_storage.dart';
 import 'package:credix_app/core/di/injection.dart';
 import 'package:credix_app/core/routing/app_router.dart';
 import 'package:credix_app/core/utils/user_preferences.dart';
-import 'package:credix_app/features/auth/domain/interfaces//i_login_repository.dart';
+import 'package:credix_app/features/auth/domain/interfaces/i_login_repository.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 

@@ -48,9 +48,9 @@ class AppBottomNavBar extends StatelessWidget {
           Expanded(
             child: TabItem(
               isSelected: activeIndex == 3,
-              filledIcon: Assets.icons.tagFilled,
-              outlineIcon: Assets.icons.tagOutline,
-              label: 'Offers',
+              filledIcon: Assets.icons.shopFilled,
+              outlineIcon: Assets.icons.shopOutline,
+              label: 'Stores',
               index: 3,
               onTabSelected: onTabSelected,
             ),

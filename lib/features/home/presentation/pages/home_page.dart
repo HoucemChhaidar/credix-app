@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:credix_app/core/di/injection.dart';
 import 'package:credix_app/core/presentation/resources/sizes/app_sizes.dart';
 import 'package:credix_app/core/presentation/widgets/widgets.dart';
+import 'package:credix_app/features/transactions/presentation/blocs/TransactionsHistory/transactions_history_bloc.dart';
 import 'package:credix_app/features/wallet/presentation/blocs/wallet/wallet_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -14,8 +15,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final tabsRouter = AutoTabsRouter.of(context);
 
-    return BlocProvider(
-      create: (context) => getIt<WalletBloc>()..add(const WalletEvent.started()),
+    return MultiBlocProvider(
+      providers: [
+        // @formatter:off
+        BlocProvider(create: (_) => getIt<WalletBloc>()..add(const WalletEvent.started())),
+        BlocProvider(create: (_) => getIt<TransactionsHistoryBloc>()..add(const TransactionsHistoryEvent.loadTransactionsHistory())),
+        // @formatter:on
+      ],
       child: BlocBuilder<WalletBloc, WalletState>(
         builder: (context, state) {
           return Column(
@@ -40,8 +46,44 @@ class HomePage extends StatelessWidget {
                   onRetryPressed: () => context.read<WalletBloc>().add(const WalletEvent.started()),
                 ),
               ),
-              TransactionListCard(
-                onViewAll: () => tabsRouter.setActiveIndex(1),
+              BlocBuilder<TransactionsHistoryBloc, TransactionsHistoryState>(
+                builder: (context, transactionsState) {
+                  return transactionsState.maybeWhen(
+                    orElse: () => TransactionListCard(
+                      state: TransactionListState.loading,
+                      transactions: const [],
+                      onViewAll: () => tabsRouter.setActiveIndex(1),
+                    ),
+                    initial: () => TransactionListCard(
+                      state: TransactionListState.loading,
+                      transactions: const [],
+                      onViewAll: () => tabsRouter.setActiveIndex(1),
+                    ),
+                    loading: () => TransactionListCard(
+                      state: TransactionListState.loading,
+                      transactions: const [],
+                      onViewAll: () => tabsRouter.setActiveIndex(1),
+                    ),
+                    empty: () => TransactionListCard(
+                      state: TransactionListState.empty,
+                      transactions: const [],
+                      onViewAll: () => tabsRouter.setActiveIndex(1),
+                    ),
+                    error: (error) => TransactionListCard(
+                      state: TransactionListState.error,
+                      errorMessage: error,
+                      transactions: const [],
+                      onViewAll: () => tabsRouter.setActiveIndex(1),
+                      onRetry: () {
+                        getIt<TransactionsHistoryBloc>().add(const TransactionsHistoryEvent.loadTransactionsHistory());
+                      },
+                    ),
+                    transactionsHistoryLoaded: (transactions) => TransactionListCard(
+                      transactions: transactions,
+                      onViewAll: () => tabsRouter.setActiveIndex(1),
+                    ),
+                  );
+                },
               ),
             ],
           );

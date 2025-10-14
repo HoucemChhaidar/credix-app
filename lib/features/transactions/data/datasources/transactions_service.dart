@@ -9,18 +9,14 @@ import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 
 @injectable
-class WalletService with NetworkServiceProvider<BaseModel<dynamic, dynamic>> {
-  Future<NetworkResponse<Object>> myWallet({required Dio dio}) async {
+class TransactionsService with NetworkServiceProvider<BaseModel<dynamic, dynamic>> {
+  Future<NetworkResponse<Object>> getMyTransactionsHistory({required Dio dio}) async {
     final token = await TokenStorage.getToken();
-
-    if (token == null || token.isEmpty) {
-      return const NetworkResponse.noAuth('Unauthorized');
-    }
 
     final response = await executeRequest(
       dio,
       NetworkRequest(
-        path: AppEndpoints.myWallet,
+        path: AppEndpoints.myTransactionsHistory,
         type: NetworkRequestType.get,
         body: const NetworkRequestBody.empty(),
         headers: {
@@ -29,7 +25,6 @@ class WalletService with NetworkServiceProvider<BaseModel<dynamic, dynamic>> {
         },
       ),
     );
-
     return response;
   }
 }

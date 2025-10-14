@@ -14,7 +14,7 @@ class MainPage extends StatelessWidget {
       animatePageTransition: false,
       routes: const [
         HomeRoute(),
-        TransactionListRoute(),
+        TransactionsListRoute(),
         BarcodeRoute(),
         OffersRoute(),
         SettingsRoute(),

@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:credix_app/core/constants/app_endpoints.dart';
+import 'package:credix_app/core/utils/user_preferences.dart';
 import 'package:credix_app/features/barcode/data/models/transaction_notification.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 
@@ -10,8 +12,9 @@ class WebSocketService {
 
   Stream<TransactionNotification> get notifications => _controller.stream;
 
-  Future<void> connect(String baseUrl, String userEmail) async {
-    final uri = Uri.parse('$baseUrl/ws-raw?userEmail=$userEmail');
+  Future<void> connect() async {
+    final userEmail = await UserPreferences.getUserEmail();
+    final uri = Uri.parse('${AppEndpoints.wsBaseUrl}/ws-raw?userEmail=$userEmail');
     _channel = WebSocketChannel.connect(uri);
 
     _channel!.stream.listen((event) {
