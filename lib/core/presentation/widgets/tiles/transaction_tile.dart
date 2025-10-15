@@ -40,8 +40,8 @@ class TransactionTile extends StatelessWidget {
       case TransactionTileState.loading:
         return Skeleton.shade(
           child: Container(
-            width: AppSizes.xxxl,
-            height: AppSizes.xxxl,
+            width: AppSizes.xxl,
+            height: AppSizes.xxl,
             padding: const EdgeInsets.all(AppSizes.smPlus),
             decoration: const BoxDecoration(
               color: AppColors.neutral3,
@@ -51,8 +51,8 @@ class TransactionTile extends StatelessWidget {
         );
       case TransactionTileState.success:
         return Container(
-          width: AppSizes.xxxl,
-          height: AppSizes.xxxl,
+          width: AppSizes.xxl,
+          height: AppSizes.xxl,
           padding: const EdgeInsets.all(AppSizes.smPlus),
           decoration: const BoxDecoration(
             color: AppColors.neutral3,
@@ -98,20 +98,18 @@ class TransactionTile extends StatelessWidget {
           ),
         );
       case TransactionTileState.success:
-        return Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              AppText.labelMedium(
-                transaction!.transactionId!.split('-').last,
-                color: AppColors.neutral11,
-              ),
-              AppText.labelSmall(
-                DateFormat('dd/MM/yy • HH:mm').format(DateTime.parse(transaction!.completedAt!)),
-                color: AppColors.neutral7,
-              ),
-            ],
-          ),
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            AppText.labelMedium(
+              transaction!.transactionId!.split('-').last,
+              color: AppColors.neutral11,
+            ),
+            AppText.labelSmall(
+              DateFormat('dd/MM/yy • HH:mm').format(DateTime.parse(transaction!.completedAt!)),
+              color: AppColors.neutral7,
+            ),
+          ],
         );
     }
   }
@@ -132,17 +130,17 @@ class TransactionTile extends StatelessWidget {
                 ),
               ),
             ),
-            Skeleton.shade(
-              child: Container(
-                width: AppSizes.xl,
-                height: AppSizes.xl,
-                padding: const EdgeInsets.all(AppSizes.sm),
-                decoration: const BoxDecoration(
-                  color: AppColors.neutral3,
-                  shape: BoxShape.circle,
-                ),
-              ),
-            ),
+            // Skeleton.shade(
+            //   child: Container(
+            //     width: AppSizes.xl,
+            //     height: AppSizes.xl,
+            //     padding: const EdgeInsets.all(AppSizes.sm),
+            //     decoration: const BoxDecoration(
+            //       color: AppColors.neutral3,
+            //       shape: BoxShape.circle,
+            //     ),
+            //   ),
+            // ),
           ],
         );
       case TransactionTileState.success:
@@ -155,19 +153,19 @@ class TransactionTile extends StatelessWidget {
                   : '+ ${transaction!.amount!.toStringAsFixed(3)}',
               color: transaction!.type == 'PAYMENT' ? AppColors.red500 : AppColors.green500,
             ),
-            Container(
-              width: AppSizes.xl,
-              height: AppSizes.xl,
-              padding: const EdgeInsets.all(AppSizes.sm),
-              decoration: const BoxDecoration(
-                color: AppColors.neutral3,
-                shape: BoxShape.circle,
-              ),
-              child: AppIcon(
-                icon: Assets.icons.chevronRightOutline,
-                color: AppColors.neutral11,
-              ),
-            ),
+            // Container(
+            //   width: AppSizes.xl,
+            //   height: AppSizes.xl,
+            //   padding: const EdgeInsets.all(AppSizes.sm),
+            //   decoration: const BoxDecoration(
+            //     color: AppColors.neutral3,
+            //     shape: BoxShape.circle,
+            //   ),
+            //   child: AppIcon(
+            //     icon: Assets.icons.chevronRightOutline,
+            //     color: AppColors.neutral11,
+            //   ),
+            // ),
           ],
         );
     }

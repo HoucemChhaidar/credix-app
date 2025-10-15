@@ -181,11 +181,11 @@ class TransactionListCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(AppSizes.md),
       decoration: BoxDecoration(
-        color: AppColors.neutral2,
+        color: AppColors.neutral3,
         borderRadius: BorderRadius.circular(AppSizes.sm),
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           _buildStatItem('Spent', '-${totalSpent.toStringAsFixed(3)}', AppColors.red500),
           _buildStatItem('Received', '+${totalReceived.toStringAsFixed(3)}', AppColors.green500),

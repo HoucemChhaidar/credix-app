@@ -16,7 +16,7 @@ class MainPage extends StatelessWidget {
         HomeRoute(),
         TransactionsListRoute(),
         BarcodeRoute(),
-        OffersRoute(),
+        StoresRoute(),
         SettingsRoute(),
       ],
       builder: (context, child, animation) {

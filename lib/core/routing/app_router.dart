@@ -32,7 +32,7 @@ class AppRouter extends RootStackRouter {
             ],
           ),
           AutoRoute(page: BarcodeRoute.page),
-          AutoRoute(page: OffersRoute.page),
+          AutoRoute(page: StoresRoute.page),
           AutoRoute(page: SettingsRoute.page),
         ],
       ),

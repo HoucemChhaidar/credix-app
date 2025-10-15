@@ -127,22 +127,6 @@ class MainRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [OffersPage]
-class OffersRoute extends PageRouteInfo<void> {
-  const OffersRoute({List<PageRouteInfo>? children})
-    : super(OffersRoute.name, initialChildren: children);
-
-  static const String name = 'OffersRoute';
-
-  static PageInfo page = PageInfo(
-    name,
-    builder: (data) {
-      return const OffersPage();
-    },
-  );
-}
-
-/// generated route for
 /// [SettingsPage]
 class SettingsRoute extends PageRouteInfo<void> {
   const SettingsRoute({List<PageRouteInfo>? children})
@@ -154,6 +138,22 @@ class SettingsRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const SettingsPage();
+    },
+  );
+}
+
+/// generated route for
+/// [StoresPage]
+class StoresRoute extends PageRouteInfo<void> {
+  const StoresRoute({List<PageRouteInfo>? children})
+    : super(StoresRoute.name, initialChildren: children);
+
+  static const String name = 'StoresRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const StoresPage();
     },
   );
 }

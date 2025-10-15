@@ -74,6 +74,14 @@ class $AssetsIconsGen {
   SvgGenImage get homeOutline =>
       const SvgGenImage('assets/icons/home_outline.svg');
 
+  /// File path: assets/icons/location_filled.svg
+  SvgGenImage get locationFilled =>
+      const SvgGenImage('assets/icons/location_filled.svg');
+
+  /// File path: assets/icons/location_outline.svg
+  SvgGenImage get locationOutline =>
+      const SvgGenImage('assets/icons/location_outline.svg');
+
   /// File path: assets/icons/lock_filled.svg
   SvgGenImage get lockFilled =>
       const SvgGenImage('assets/icons/lock_filled.svg');
@@ -82,9 +90,21 @@ class $AssetsIconsGen {
   SvgGenImage get lockOutline =>
       const SvgGenImage('assets/icons/lock_outline.svg');
 
+  /// File path: assets/icons/navigation_filled.svg
+  SvgGenImage get navigationFilled =>
+      const SvgGenImage('assets/icons/navigation_filled.svg');
+
+  /// File path: assets/icons/navigation_outline.svg
+  SvgGenImage get navigationOutline =>
+      const SvgGenImage('assets/icons/navigation_outline.svg');
+
   /// File path: assets/icons/refresh_outline.svg
   SvgGenImage get refreshOutline =>
       const SvgGenImage('assets/icons/refresh_outline.svg');
+
+  /// File path: assets/icons/search_outline.svg
+  SvgGenImage get searchOutline =>
+      const SvgGenImage('assets/icons/search_outline.svg');
 
   /// File path: assets/icons/settings_filled.svg
   SvgGenImage get settingsFilled =>
@@ -130,9 +150,14 @@ class $AssetsIconsGen {
     eyeSlashFilled,
     homeFilled,
     homeOutline,
+    locationFilled,
+    locationOutline,
     lockFilled,
     lockOutline,
+    navigationFilled,
+    navigationOutline,
     refreshOutline,
+    searchOutline,
     settingsFilled,
     settingsOutline,
     shopFilled,

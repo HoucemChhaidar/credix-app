@@ -85,7 +85,7 @@ class TransactionSuccessContent extends StatelessWidget {
                   spacing: 12,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    _detailRow('Reference Number', notification.transactionId),
+                    _detailRow('Reference Number', notification.transactionId.split('-').last),
                     _detailRow('Vendor', notification.merchantName),
                     _detailRow(
                       'DateTime',

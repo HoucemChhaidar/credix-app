@@ -127,9 +127,16 @@ class BalanceCard extends StatelessWidget {
                 children: [
                   const AppText.labelLarge('Total balance', color: AppColors.neutral6),
                   const SizedBox(height: AppSizes.xs),
-                  AppText.display(
-                    '${wallet?.balance.toStringAsFixed(3) ?? '0.000'} TND',
-                    color: AppColors.neutral1,
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    spacing: 8,
+                    children: [
+                      AppText.display(
+                        wallet?.balance.toStringAsFixed(3) ?? '0.000',
+                        color: AppColors.neutral1,
+                      ),
+                      const AppText.labelLarge('TND', color: AppColors.neutral1),
+                    ],
                   ),
                   const SizedBox(height: AppSizes.lg),
                   const AppText.labelLarge('Account number', color: AppColors.neutral6),
