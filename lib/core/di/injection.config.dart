@@ -22,6 +22,14 @@ import 'package:credix_app/features/auth/presentation/blocs/login/login_bloc.dar
     as _i693;
 import 'package:credix_app/features/auth/presentation/blocs/remember_me/remember_me_cubit.dart'
     as _i488;
+import 'package:credix_app/features/stores/data/datasources/stores_service.dart'
+    as _i664;
+import 'package:credix_app/features/stores/data/repository/stores_repository_impl.dart'
+    as _i430;
+import 'package:credix_app/features/stores/domain/interfaces/i_stores_repository.dart'
+    as _i530;
+import 'package:credix_app/features/stores/presentation/blocs/stores/stores_bloc.dart'
+    as _i912;
 import 'package:credix_app/features/transactions/data/datasources/transactions_service.dart'
     as _i180;
 import 'package:credix_app/features/transactions/data/repositories/transactions_repository_impl.dart'
@@ -56,6 +64,7 @@ extension GetItInjectableX on _i174.GetIt {
     final dioProvider = _$DioProvider();
     gh.factory<_i680.LoginService>(() => _i680.LoginService());
     gh.factory<_i488.RememberMeCubit>(() => _i488.RememberMeCubit());
+    gh.factory<_i664.StoresService>(() => _i664.StoresService());
     gh.factory<_i180.TransactionsService>(() => _i180.TransactionsService());
     gh.factory<_i1064.WalletService>(() => _i1064.WalletService());
     gh.singleton<_i141.AppRouter>(() => _i141.AppRouter());
@@ -65,6 +74,10 @@ extension GetItInjectableX on _i174.GetIt {
               gh<_i180.TransactionsService>(),
               gh<_i361.Dio>(),
             ));
+    gh.factory<_i530.IStoresRepository>(() => _i430.StoresRepositoryImpl(
+          gh<_i664.StoresService>(),
+          gh<_i361.Dio>(),
+        ));
     gh.factory<_i1015.IWalletRepository>(() => _i741.WalletRepositoryImpl(
           gh<_i1064.WalletService>(),
           gh<_i361.Dio>(),
@@ -79,6 +92,8 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i1022.WalletBloc(gh<_i1015.IWalletRepository>()));
     gh.factory<_i68.TransactionsHistoryBloc>(() =>
         _i68.TransactionsHistoryBloc(gh<_i278.ITransactionsRepository>()));
+    gh.factory<_i912.StoresBloc>(
+        () => _i912.StoresBloc(gh<_i530.IStoresRepository>()));
     return this;
   }
 }

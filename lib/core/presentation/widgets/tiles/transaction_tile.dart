@@ -106,7 +106,9 @@ class TransactionTile extends StatelessWidget {
               color: AppColors.neutral11,
             ),
             AppText.labelSmall(
-              DateFormat('dd/MM/yy • HH:mm').format(DateTime.parse(transaction!.completedAt!)),
+              transaction!.completedAt != null
+                  ? DateFormat('dd/MM/yy • HH:mm').format(DateTime.parse(transaction!.completedAt!))
+                  : '--- • ---',
               color: AppColors.neutral7,
             ),
           ],

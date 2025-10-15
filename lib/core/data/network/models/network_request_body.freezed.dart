@@ -23,7 +23,6 @@ mixin _$NetworkRequestBody {
     required TResult Function(Map<String, dynamic> data) formData,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? empty,
@@ -39,7 +38,6 @@ mixin _$NetworkRequestBody {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Empty value) empty,
@@ -47,7 +45,6 @@ mixin _$NetworkRequestBody {
     required TResult Function(FormData value) formData,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Empty value)? empty,
@@ -67,7 +64,8 @@ mixin _$NetworkRequestBody {
 
 /// @nodoc
 abstract class $NetworkRequestBodyCopyWith<$Res> {
-  factory $NetworkRequestBodyCopyWith(NetworkRequestBody value, $Res Function(NetworkRequestBody) then) =
+  factory $NetworkRequestBodyCopyWith(
+          NetworkRequestBody value, $Res Function(NetworkRequestBody) then) =
       _$NetworkRequestBodyCopyWithImpl<$Res, NetworkRequestBody>;
 }
 
@@ -76,9 +74,9 @@ class _$NetworkRequestBodyCopyWithImpl<$Res, $Val extends NetworkRequestBody>
     implements $NetworkRequestBodyCopyWith<$Res> {
   _$NetworkRequestBodyCopyWithImpl(this._value, this._then);
 
-// ignore: unused_field
+  // ignore: unused_field
   final $Val _value;
-// ignore: unused_field
+  // ignore: unused_field
   final $Res Function($Val) _then;
 
   /// Create a copy of NetworkRequestBody
@@ -87,13 +85,18 @@ class _$NetworkRequestBodyCopyWithImpl<$Res, $Val extends NetworkRequestBody>
 
 /// @nodoc
 abstract class _$$EmptyImplCopyWith<$Res> {
-  factory _$$EmptyImplCopyWith(_$EmptyImpl value, $Res Function(_$EmptyImpl) then) = __$$EmptyImplCopyWithImpl<$Res>;
+  factory _$$EmptyImplCopyWith(
+          _$EmptyImpl value, $Res Function(_$EmptyImpl) then) =
+      __$$EmptyImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$EmptyImplCopyWithImpl<$Res> extends _$NetworkRequestBodyCopyWithImpl<$Res, _$EmptyImpl>
+class __$$EmptyImplCopyWithImpl<$Res>
+    extends _$NetworkRequestBodyCopyWithImpl<$Res, _$EmptyImpl>
     implements _$$EmptyImplCopyWith<$Res> {
-  __$$EmptyImplCopyWithImpl(_$EmptyImpl _value, $Res Function(_$EmptyImpl) _then) : super(_value, _then);
+  __$$EmptyImplCopyWithImpl(
+      _$EmptyImpl _value, $Res Function(_$EmptyImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of NetworkRequestBody
   /// with the given fields replaced by the non-null parameter values.
@@ -111,7 +114,8 @@ class _$EmptyImpl implements Empty {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$EmptyImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$EmptyImpl);
   }
 
   @override
@@ -192,15 +196,19 @@ abstract class Empty implements NetworkRequestBody {
 
 /// @nodoc
 abstract class _$$JsonImplCopyWith<$Res> {
-  factory _$$JsonImplCopyWith(_$JsonImpl value, $Res Function(_$JsonImpl) then) = __$$JsonImplCopyWithImpl<$Res>;
+  factory _$$JsonImplCopyWith(
+          _$JsonImpl value, $Res Function(_$JsonImpl) then) =
+      __$$JsonImplCopyWithImpl<$Res>;
   @useResult
   $Res call({Map<String, dynamic> data});
 }
 
 /// @nodoc
-class __$$JsonImplCopyWithImpl<$Res> extends _$NetworkRequestBodyCopyWithImpl<$Res, _$JsonImpl>
+class __$$JsonImplCopyWithImpl<$Res>
+    extends _$NetworkRequestBodyCopyWithImpl<$Res, _$JsonImpl>
     implements _$$JsonImplCopyWith<$Res> {
-  __$$JsonImplCopyWithImpl(_$JsonImpl _value, $Res Function(_$JsonImpl) _then) : super(_value, _then);
+  __$$JsonImplCopyWithImpl(_$JsonImpl _value, $Res Function(_$JsonImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of NetworkRequestBody
   /// with the given fields replaced by the non-null parameter values.
@@ -227,7 +235,7 @@ class _$JsonImpl implements Json {
   @override
   Map<String, dynamic> get data {
     if (_data is EqualUnmodifiableMapView) return _data;
-// ignore: implicit_dynamic_type
+    // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(_data);
   }
 
@@ -245,14 +253,16 @@ class _$JsonImpl implements Json {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_data));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_data));
 
   /// Create a copy of NetworkRequestBody
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$JsonImplCopyWith<_$JsonImpl> get copyWith => __$$JsonImplCopyWithImpl<_$JsonImpl>(this, _$identity);
+  _$$JsonImplCopyWith<_$JsonImpl> get copyWith =>
+      __$$JsonImplCopyWithImpl<_$JsonImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -331,21 +341,26 @@ abstract class Json implements NetworkRequestBody {
   /// Create a copy of NetworkRequestBody
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$JsonImplCopyWith<_$JsonImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$JsonImplCopyWith<_$JsonImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$FormDataImplCopyWith<$Res> {
-  factory _$$FormDataImplCopyWith(_$FormDataImpl value, $Res Function(_$FormDataImpl) then) =
+  factory _$$FormDataImplCopyWith(
+          _$FormDataImpl value, $Res Function(_$FormDataImpl) then) =
       __$$FormDataImplCopyWithImpl<$Res>;
   @useResult
   $Res call({Map<String, dynamic> data});
 }
 
 /// @nodoc
-class __$$FormDataImplCopyWithImpl<$Res> extends _$NetworkRequestBodyCopyWithImpl<$Res, _$FormDataImpl>
+class __$$FormDataImplCopyWithImpl<$Res>
+    extends _$NetworkRequestBodyCopyWithImpl<$Res, _$FormDataImpl>
     implements _$$FormDataImplCopyWith<$Res> {
-  __$$FormDataImplCopyWithImpl(_$FormDataImpl _value, $Res Function(_$FormDataImpl) _then) : super(_value, _then);
+  __$$FormDataImplCopyWithImpl(
+      _$FormDataImpl _value, $Res Function(_$FormDataImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of NetworkRequestBody
   /// with the given fields replaced by the non-null parameter values.
@@ -372,7 +387,7 @@ class _$FormDataImpl implements FormData {
   @override
   Map<String, dynamic> get data {
     if (_data is EqualUnmodifiableMapView) return _data;
-// ignore: implicit_dynamic_type
+    // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(_data);
   }
 
@@ -390,7 +405,8 @@ class _$FormDataImpl implements FormData {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_data));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_data));
 
   /// Create a copy of NetworkRequestBody
   /// with the given fields replaced by the non-null parameter values.
@@ -477,5 +493,6 @@ abstract class FormData implements NetworkRequestBody {
   /// Create a copy of NetworkRequestBody
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$FormDataImplCopyWith<_$FormDataImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$FormDataImplCopyWith<_$FormDataImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

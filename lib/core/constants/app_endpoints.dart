@@ -1,5 +1,5 @@
 class AppEndpoints {
-  static const String _serverHost = '192.168.100.18';
+  static const String _serverHost = '172.16.0.49';
   static const String _port = '2345';
 
   static const String _baseUrl = 'http://$_serverHost:$_port';
@@ -9,9 +9,11 @@ class AppEndpoints {
   static const String _api = '$_baseUrl/api';
   static const String _wallets = '$_api/wallets';
   static const String _transactions = '$_api/transactions';
+  static const String _stores = '$_api/stores';
 
   static const String login = '$_auth/login';
   static const String register = '$_auth/register';
   static const String myWallet = '$_wallets/my-wallet';
   static const String myTransactionsHistory = '$_transactions/history';
+  static const String allStores = _stores;
 }
