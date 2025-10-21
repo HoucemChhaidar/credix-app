@@ -2,7 +2,7 @@ class WalletResponse {
   const WalletResponse({
     required this.tokenizedId,
     required this.balance,
-    required this.isActive,
+    required this.active,
     required this.userEmail,
     required this.createdAt,
   });
@@ -11,7 +11,7 @@ class WalletResponse {
     return WalletResponse(
       tokenizedId: json['tokenizedId'] as String,
       balance: (json['balance'] as num).toDouble(),
-      isActive: json['isActive'] as bool,
+      active: json['active'] as bool,
       userEmail: json['userEmail'] as String,
       createdAt: DateTime.parse(json['createdAt'] as String),
     );
@@ -19,7 +19,7 @@ class WalletResponse {
 
   final String tokenizedId;
   final double balance;
-  final bool isActive;
+  final bool active;
   final String userEmail;
   final DateTime createdAt;
 
@@ -27,7 +27,7 @@ class WalletResponse {
     return {
       'tokenizedId': tokenizedId,
       'balance': balance,
-      'isActive': isActive,
+      'active': active,
       'userEmail': userEmail,
       'createdAt': createdAt.toIso8601String(),
     };
@@ -35,6 +35,6 @@ class WalletResponse {
 
   @override
   String toString() {
-    return 'WalletModel(tokenizedId: $tokenizedId, balance: $balance, isActive: $isActive, userEmail: $userEmail, createdAt: $createdAt)';
+    return 'WalletModel(tokenizedId: $tokenizedId, balance: $balance, active: $active, userEmail: $userEmail, createdAt: $createdAt)';
   }
 }

@@ -22,9 +22,7 @@ mixin NetworkServiceProvider<T> {
     return result;
   }
 
-  Future<NetworkResponse<Object>> execute(
-    PreparedNetworkRequest preparedNetworkRequest,
-  ) async {
+  Future<NetworkResponse<Object>> execute(PreparedNetworkRequest preparedNetworkRequest) async {
     const extra = <String, dynamic>{};
     final dynamic body = preparedNetworkRequest.request.body.whenOrNull(
       json: (data) => data,
