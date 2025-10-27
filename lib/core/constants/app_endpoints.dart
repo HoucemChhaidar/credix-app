@@ -1,5 +1,5 @@
 class AppEndpoints {
-  static const String _serverHost = '172.16.0.61';
+  static const String _serverHost = '192.168.100.18';
   static const String _port = '2345';
 
   static const String _baseUrl = 'http://$_serverHost:$_port';

@@ -21,7 +21,6 @@ mixin _$TransactionsHistoryEvent {
     required TResult Function() loadTransactionsHistory,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loadTransactionsHistory,
@@ -33,13 +32,12 @@ mixin _$TransactionsHistoryEvent {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_LoadTransactionsHistory value) loadTransactionsHistory,
+    required TResult Function(_LoadTransactionsHistory value)
+        loadTransactionsHistory,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_LoadTransactionsHistory value)? loadTransactionsHistory,
@@ -55,19 +53,20 @@ mixin _$TransactionsHistoryEvent {
 
 /// @nodoc
 abstract class $TransactionsHistoryEventCopyWith<$Res> {
-  factory $TransactionsHistoryEventCopyWith(
-          TransactionsHistoryEvent value, $Res Function(TransactionsHistoryEvent) then) =
+  factory $TransactionsHistoryEventCopyWith(TransactionsHistoryEvent value,
+          $Res Function(TransactionsHistoryEvent) then) =
       _$TransactionsHistoryEventCopyWithImpl<$Res, TransactionsHistoryEvent>;
 }
 
 /// @nodoc
-class _$TransactionsHistoryEventCopyWithImpl<$Res, $Val extends TransactionsHistoryEvent>
+class _$TransactionsHistoryEventCopyWithImpl<$Res,
+        $Val extends TransactionsHistoryEvent>
     implements $TransactionsHistoryEventCopyWith<$Res> {
   _$TransactionsHistoryEventCopyWithImpl(this._value, this._then);
 
-// ignore: unused_field
+  // ignore: unused_field
   final $Val _value;
-// ignore: unused_field
+  // ignore: unused_field
   final $Res Function($Val) _then;
 
   /// Create a copy of TransactionsHistoryEvent
@@ -77,16 +76,19 @@ class _$TransactionsHistoryEventCopyWithImpl<$Res, $Val extends TransactionsHist
 /// @nodoc
 abstract class _$$LoadTransactionsHistoryImplCopyWith<$Res> {
   factory _$$LoadTransactionsHistoryImplCopyWith(
-          _$LoadTransactionsHistoryImpl value, $Res Function(_$LoadTransactionsHistoryImpl) then) =
+          _$LoadTransactionsHistoryImpl value,
+          $Res Function(_$LoadTransactionsHistoryImpl) then) =
       __$$LoadTransactionsHistoryImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
 class __$$LoadTransactionsHistoryImplCopyWithImpl<$Res>
-    extends _$TransactionsHistoryEventCopyWithImpl<$Res, _$LoadTransactionsHistoryImpl>
+    extends _$TransactionsHistoryEventCopyWithImpl<$Res,
+        _$LoadTransactionsHistoryImpl>
     implements _$$LoadTransactionsHistoryImplCopyWith<$Res> {
   __$$LoadTransactionsHistoryImplCopyWithImpl(
-      _$LoadTransactionsHistoryImpl _value, $Res Function(_$LoadTransactionsHistoryImpl) _then)
+      _$LoadTransactionsHistoryImpl _value,
+      $Res Function(_$LoadTransactionsHistoryImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of TransactionsHistoryEvent
@@ -105,7 +107,9 @@ class _$LoadTransactionsHistoryImpl implements _LoadTransactionsHistory {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$LoadTransactionsHistoryImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadTransactionsHistoryImpl);
   }
 
   @override
@@ -142,7 +146,8 @@ class _$LoadTransactionsHistoryImpl implements _LoadTransactionsHistory {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_LoadTransactionsHistory value) loadTransactionsHistory,
+    required TResult Function(_LoadTransactionsHistory value)
+        loadTransactionsHistory,
   }) {
     return loadTransactionsHistory(this);
   }
@@ -179,7 +184,8 @@ mixin _$TransactionsHistoryState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() empty,
-    required TResult Function(List<TransactionResponse> transactions) transactionsHistoryLoaded,
+    required TResult Function(List<TransactionResponse> transactions)
+        transactionsHistoryLoaded,
     required TResult Function(String errorMessage) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -188,7 +194,8 @@ mixin _$TransactionsHistoryState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? empty,
-    TResult? Function(List<TransactionResponse> transactions)? transactionsHistoryLoaded,
+    TResult? Function(List<TransactionResponse> transactions)?
+        transactionsHistoryLoaded,
     TResult? Function(String errorMessage)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -197,7 +204,8 @@ mixin _$TransactionsHistoryState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? empty,
-    TResult Function(List<TransactionResponse> transactions)? transactionsHistoryLoaded,
+    TResult Function(List<TransactionResponse> transactions)?
+        transactionsHistoryLoaded,
     TResult Function(String errorMessage)? error,
     required TResult orElse(),
   }) =>
@@ -207,7 +215,8 @@ mixin _$TransactionsHistoryState {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Empty value) empty,
-    required TResult Function(_TransactionsHistoryLoaded value) transactionsHistoryLoaded,
+    required TResult Function(_TransactionsHistoryLoaded value)
+        transactionsHistoryLoaded,
     required TResult Function(_Error value) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -216,7 +225,8 @@ mixin _$TransactionsHistoryState {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Empty value)? empty,
-    TResult? Function(_TransactionsHistoryLoaded value)? transactionsHistoryLoaded,
+    TResult? Function(_TransactionsHistoryLoaded value)?
+        transactionsHistoryLoaded,
     TResult? Function(_Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -225,7 +235,8 @@ mixin _$TransactionsHistoryState {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Empty value)? empty,
-    TResult Function(_TransactionsHistoryLoaded value)? transactionsHistoryLoaded,
+    TResult Function(_TransactionsHistoryLoaded value)?
+        transactionsHistoryLoaded,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) =>
@@ -234,19 +245,20 @@ mixin _$TransactionsHistoryState {
 
 /// @nodoc
 abstract class $TransactionsHistoryStateCopyWith<$Res> {
-  factory $TransactionsHistoryStateCopyWith(
-          TransactionsHistoryState value, $Res Function(TransactionsHistoryState) then) =
+  factory $TransactionsHistoryStateCopyWith(TransactionsHistoryState value,
+          $Res Function(TransactionsHistoryState) then) =
       _$TransactionsHistoryStateCopyWithImpl<$Res, TransactionsHistoryState>;
 }
 
 /// @nodoc
-class _$TransactionsHistoryStateCopyWithImpl<$Res, $Val extends TransactionsHistoryState>
+class _$TransactionsHistoryStateCopyWithImpl<$Res,
+        $Val extends TransactionsHistoryState>
     implements $TransactionsHistoryStateCopyWith<$Res> {
   _$TransactionsHistoryStateCopyWithImpl(this._value, this._then);
 
-// ignore: unused_field
+  // ignore: unused_field
   final $Val _value;
-// ignore: unused_field
+  // ignore: unused_field
   final $Res Function($Val) _then;
 
   /// Create a copy of TransactionsHistoryState
@@ -255,14 +267,18 @@ class _$TransactionsHistoryStateCopyWithImpl<$Res, $Val extends TransactionsHist
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(_$InitialImpl value, $Res Function(_$InitialImpl) then) =
+  factory _$$InitialImplCopyWith(
+          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
       __$$InitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$InitialImplCopyWithImpl<$Res> extends _$TransactionsHistoryStateCopyWithImpl<$Res, _$InitialImpl>
+class __$$InitialImplCopyWithImpl<$Res>
+    extends _$TransactionsHistoryStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(_$InitialImpl _value, $Res Function(_$InitialImpl) _then) : super(_value, _then);
+  __$$InitialImplCopyWithImpl(
+      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of TransactionsHistoryState
   /// with the given fields replaced by the non-null parameter values.
@@ -280,7 +296,8 @@ class _$InitialImpl implements _Initial {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$InitialImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$InitialImpl);
   }
 
   @override
@@ -292,7 +309,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() empty,
-    required TResult Function(List<TransactionResponse> transactions) transactionsHistoryLoaded,
+    required TResult Function(List<TransactionResponse> transactions)
+        transactionsHistoryLoaded,
     required TResult Function(String errorMessage) error,
   }) {
     return initial();
@@ -304,7 +322,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? empty,
-    TResult? Function(List<TransactionResponse> transactions)? transactionsHistoryLoaded,
+    TResult? Function(List<TransactionResponse> transactions)?
+        transactionsHistoryLoaded,
     TResult? Function(String errorMessage)? error,
   }) {
     return initial?.call();
@@ -316,7 +335,8 @@ class _$InitialImpl implements _Initial {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? empty,
-    TResult Function(List<TransactionResponse> transactions)? transactionsHistoryLoaded,
+    TResult Function(List<TransactionResponse> transactions)?
+        transactionsHistoryLoaded,
     TResult Function(String errorMessage)? error,
     required TResult orElse(),
   }) {
@@ -332,7 +352,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Empty value) empty,
-    required TResult Function(_TransactionsHistoryLoaded value) transactionsHistoryLoaded,
+    required TResult Function(_TransactionsHistoryLoaded value)
+        transactionsHistoryLoaded,
     required TResult Function(_Error value) error,
   }) {
     return initial(this);
@@ -344,7 +365,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Empty value)? empty,
-    TResult? Function(_TransactionsHistoryLoaded value)? transactionsHistoryLoaded,
+    TResult? Function(_TransactionsHistoryLoaded value)?
+        transactionsHistoryLoaded,
     TResult? Function(_Error value)? error,
   }) {
     return initial?.call(this);
@@ -356,7 +378,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Empty value)? empty,
-    TResult Function(_TransactionsHistoryLoaded value)? transactionsHistoryLoaded,
+    TResult Function(_TransactionsHistoryLoaded value)?
+        transactionsHistoryLoaded,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -373,14 +396,18 @@ abstract class _Initial implements TransactionsHistoryState {
 
 /// @nodoc
 abstract class _$$LoadingImplCopyWith<$Res> {
-  factory _$$LoadingImplCopyWith(_$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
+  factory _$$LoadingImplCopyWith(
+          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
       __$$LoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadingImplCopyWithImpl<$Res> extends _$TransactionsHistoryStateCopyWithImpl<$Res, _$LoadingImpl>
+class __$$LoadingImplCopyWithImpl<$Res>
+    extends _$TransactionsHistoryStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
-  __$$LoadingImplCopyWithImpl(_$LoadingImpl _value, $Res Function(_$LoadingImpl) _then) : super(_value, _then);
+  __$$LoadingImplCopyWithImpl(
+      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of TransactionsHistoryState
   /// with the given fields replaced by the non-null parameter values.
@@ -398,7 +425,8 @@ class _$LoadingImpl implements _Loading {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$LoadingImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LoadingImpl);
   }
 
   @override
@@ -410,7 +438,8 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() empty,
-    required TResult Function(List<TransactionResponse> transactions) transactionsHistoryLoaded,
+    required TResult Function(List<TransactionResponse> transactions)
+        transactionsHistoryLoaded,
     required TResult Function(String errorMessage) error,
   }) {
     return loading();
@@ -422,7 +451,8 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? empty,
-    TResult? Function(List<TransactionResponse> transactions)? transactionsHistoryLoaded,
+    TResult? Function(List<TransactionResponse> transactions)?
+        transactionsHistoryLoaded,
     TResult? Function(String errorMessage)? error,
   }) {
     return loading?.call();
@@ -434,7 +464,8 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? empty,
-    TResult Function(List<TransactionResponse> transactions)? transactionsHistoryLoaded,
+    TResult Function(List<TransactionResponse> transactions)?
+        transactionsHistoryLoaded,
     TResult Function(String errorMessage)? error,
     required TResult orElse(),
   }) {
@@ -450,7 +481,8 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Empty value) empty,
-    required TResult Function(_TransactionsHistoryLoaded value) transactionsHistoryLoaded,
+    required TResult Function(_TransactionsHistoryLoaded value)
+        transactionsHistoryLoaded,
     required TResult Function(_Error value) error,
   }) {
     return loading(this);
@@ -462,7 +494,8 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Empty value)? empty,
-    TResult? Function(_TransactionsHistoryLoaded value)? transactionsHistoryLoaded,
+    TResult? Function(_TransactionsHistoryLoaded value)?
+        transactionsHistoryLoaded,
     TResult? Function(_Error value)? error,
   }) {
     return loading?.call(this);
@@ -474,7 +507,8 @@ class _$LoadingImpl implements _Loading {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Empty value)? empty,
-    TResult Function(_TransactionsHistoryLoaded value)? transactionsHistoryLoaded,
+    TResult Function(_TransactionsHistoryLoaded value)?
+        transactionsHistoryLoaded,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -491,13 +525,18 @@ abstract class _Loading implements TransactionsHistoryState {
 
 /// @nodoc
 abstract class _$$EmptyImplCopyWith<$Res> {
-  factory _$$EmptyImplCopyWith(_$EmptyImpl value, $Res Function(_$EmptyImpl) then) = __$$EmptyImplCopyWithImpl<$Res>;
+  factory _$$EmptyImplCopyWith(
+          _$EmptyImpl value, $Res Function(_$EmptyImpl) then) =
+      __$$EmptyImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$EmptyImplCopyWithImpl<$Res> extends _$TransactionsHistoryStateCopyWithImpl<$Res, _$EmptyImpl>
+class __$$EmptyImplCopyWithImpl<$Res>
+    extends _$TransactionsHistoryStateCopyWithImpl<$Res, _$EmptyImpl>
     implements _$$EmptyImplCopyWith<$Res> {
-  __$$EmptyImplCopyWithImpl(_$EmptyImpl _value, $Res Function(_$EmptyImpl) _then) : super(_value, _then);
+  __$$EmptyImplCopyWithImpl(
+      _$EmptyImpl _value, $Res Function(_$EmptyImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of TransactionsHistoryState
   /// with the given fields replaced by the non-null parameter values.
@@ -515,7 +554,8 @@ class _$EmptyImpl implements _Empty {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$EmptyImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$EmptyImpl);
   }
 
   @override
@@ -527,7 +567,8 @@ class _$EmptyImpl implements _Empty {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() empty,
-    required TResult Function(List<TransactionResponse> transactions) transactionsHistoryLoaded,
+    required TResult Function(List<TransactionResponse> transactions)
+        transactionsHistoryLoaded,
     required TResult Function(String errorMessage) error,
   }) {
     return empty();
@@ -539,7 +580,8 @@ class _$EmptyImpl implements _Empty {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? empty,
-    TResult? Function(List<TransactionResponse> transactions)? transactionsHistoryLoaded,
+    TResult? Function(List<TransactionResponse> transactions)?
+        transactionsHistoryLoaded,
     TResult? Function(String errorMessage)? error,
   }) {
     return empty?.call();
@@ -551,7 +593,8 @@ class _$EmptyImpl implements _Empty {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? empty,
-    TResult Function(List<TransactionResponse> transactions)? transactionsHistoryLoaded,
+    TResult Function(List<TransactionResponse> transactions)?
+        transactionsHistoryLoaded,
     TResult Function(String errorMessage)? error,
     required TResult orElse(),
   }) {
@@ -567,7 +610,8 @@ class _$EmptyImpl implements _Empty {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Empty value) empty,
-    required TResult Function(_TransactionsHistoryLoaded value) transactionsHistoryLoaded,
+    required TResult Function(_TransactionsHistoryLoaded value)
+        transactionsHistoryLoaded,
     required TResult Function(_Error value) error,
   }) {
     return empty(this);
@@ -579,7 +623,8 @@ class _$EmptyImpl implements _Empty {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Empty value)? empty,
-    TResult? Function(_TransactionsHistoryLoaded value)? transactionsHistoryLoaded,
+    TResult? Function(_TransactionsHistoryLoaded value)?
+        transactionsHistoryLoaded,
     TResult? Function(_Error value)? error,
   }) {
     return empty?.call(this);
@@ -591,7 +636,8 @@ class _$EmptyImpl implements _Empty {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Empty value)? empty,
-    TResult Function(_TransactionsHistoryLoaded value)? transactionsHistoryLoaded,
+    TResult Function(_TransactionsHistoryLoaded value)?
+        transactionsHistoryLoaded,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -609,7 +655,8 @@ abstract class _Empty implements TransactionsHistoryState {
 /// @nodoc
 abstract class _$$TransactionsHistoryLoadedImplCopyWith<$Res> {
   factory _$$TransactionsHistoryLoadedImplCopyWith(
-          _$TransactionsHistoryLoadedImpl value, $Res Function(_$TransactionsHistoryLoadedImpl) then) =
+          _$TransactionsHistoryLoadedImpl value,
+          $Res Function(_$TransactionsHistoryLoadedImpl) then) =
       __$$TransactionsHistoryLoadedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<TransactionResponse> transactions});
@@ -617,10 +664,12 @@ abstract class _$$TransactionsHistoryLoadedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$TransactionsHistoryLoadedImplCopyWithImpl<$Res>
-    extends _$TransactionsHistoryStateCopyWithImpl<$Res, _$TransactionsHistoryLoadedImpl>
+    extends _$TransactionsHistoryStateCopyWithImpl<$Res,
+        _$TransactionsHistoryLoadedImpl>
     implements _$$TransactionsHistoryLoadedImplCopyWith<$Res> {
   __$$TransactionsHistoryLoadedImplCopyWithImpl(
-      _$TransactionsHistoryLoadedImpl _value, $Res Function(_$TransactionsHistoryLoadedImpl) _then)
+      _$TransactionsHistoryLoadedImpl _value,
+      $Res Function(_$TransactionsHistoryLoadedImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of TransactionsHistoryState
@@ -642,13 +691,15 @@ class __$$TransactionsHistoryLoadedImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$TransactionsHistoryLoadedImpl implements _TransactionsHistoryLoaded {
-  const _$TransactionsHistoryLoadedImpl(final List<TransactionResponse> transactions) : _transactions = transactions;
+  const _$TransactionsHistoryLoadedImpl(
+      final List<TransactionResponse> transactions)
+      : _transactions = transactions;
 
   final List<TransactionResponse> _transactions;
   @override
   List<TransactionResponse> get transactions {
     if (_transactions is EqualUnmodifiableListView) return _transactions;
-// ignore: implicit_dynamic_type
+    // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_transactions);
   }
 
@@ -662,19 +713,22 @@ class _$TransactionsHistoryLoadedImpl implements _TransactionsHistoryLoaded {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TransactionsHistoryLoadedImpl &&
-            const DeepCollectionEquality().equals(other._transactions, _transactions));
+            const DeepCollectionEquality()
+                .equals(other._transactions, _transactions));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_transactions));
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_transactions));
 
   /// Create a copy of TransactionsHistoryState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$TransactionsHistoryLoadedImplCopyWith<_$TransactionsHistoryLoadedImpl> get copyWith =>
-      __$$TransactionsHistoryLoadedImplCopyWithImpl<_$TransactionsHistoryLoadedImpl>(this, _$identity);
+  _$$TransactionsHistoryLoadedImplCopyWith<_$TransactionsHistoryLoadedImpl>
+      get copyWith => __$$TransactionsHistoryLoadedImplCopyWithImpl<
+          _$TransactionsHistoryLoadedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -682,7 +736,8 @@ class _$TransactionsHistoryLoadedImpl implements _TransactionsHistoryLoaded {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() empty,
-    required TResult Function(List<TransactionResponse> transactions) transactionsHistoryLoaded,
+    required TResult Function(List<TransactionResponse> transactions)
+        transactionsHistoryLoaded,
     required TResult Function(String errorMessage) error,
   }) {
     return transactionsHistoryLoaded(transactions);
@@ -694,7 +749,8 @@ class _$TransactionsHistoryLoadedImpl implements _TransactionsHistoryLoaded {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? empty,
-    TResult? Function(List<TransactionResponse> transactions)? transactionsHistoryLoaded,
+    TResult? Function(List<TransactionResponse> transactions)?
+        transactionsHistoryLoaded,
     TResult? Function(String errorMessage)? error,
   }) {
     return transactionsHistoryLoaded?.call(transactions);
@@ -706,7 +762,8 @@ class _$TransactionsHistoryLoadedImpl implements _TransactionsHistoryLoaded {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? empty,
-    TResult Function(List<TransactionResponse> transactions)? transactionsHistoryLoaded,
+    TResult Function(List<TransactionResponse> transactions)?
+        transactionsHistoryLoaded,
     TResult Function(String errorMessage)? error,
     required TResult orElse(),
   }) {
@@ -722,7 +779,8 @@ class _$TransactionsHistoryLoadedImpl implements _TransactionsHistoryLoaded {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Empty value) empty,
-    required TResult Function(_TransactionsHistoryLoaded value) transactionsHistoryLoaded,
+    required TResult Function(_TransactionsHistoryLoaded value)
+        transactionsHistoryLoaded,
     required TResult Function(_Error value) error,
   }) {
     return transactionsHistoryLoaded(this);
@@ -734,7 +792,8 @@ class _$TransactionsHistoryLoadedImpl implements _TransactionsHistoryLoaded {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Empty value)? empty,
-    TResult? Function(_TransactionsHistoryLoaded value)? transactionsHistoryLoaded,
+    TResult? Function(_TransactionsHistoryLoaded value)?
+        transactionsHistoryLoaded,
     TResult? Function(_Error value)? error,
   }) {
     return transactionsHistoryLoaded?.call(this);
@@ -746,7 +805,8 @@ class _$TransactionsHistoryLoadedImpl implements _TransactionsHistoryLoaded {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Empty value)? empty,
-    TResult Function(_TransactionsHistoryLoaded value)? transactionsHistoryLoaded,
+    TResult Function(_TransactionsHistoryLoaded value)?
+        transactionsHistoryLoaded,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -758,7 +818,8 @@ class _$TransactionsHistoryLoadedImpl implements _TransactionsHistoryLoaded {
 }
 
 abstract class _TransactionsHistoryLoaded implements TransactionsHistoryState {
-  const factory _TransactionsHistoryLoaded(final List<TransactionResponse> transactions) =
+  const factory _TransactionsHistoryLoaded(
+          final List<TransactionResponse> transactions) =
       _$TransactionsHistoryLoadedImpl;
 
   List<TransactionResponse> get transactions;
@@ -766,21 +827,26 @@ abstract class _TransactionsHistoryLoaded implements TransactionsHistoryState {
   /// Create a copy of TransactionsHistoryState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$TransactionsHistoryLoadedImplCopyWith<_$TransactionsHistoryLoadedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$TransactionsHistoryLoadedImplCopyWith<_$TransactionsHistoryLoadedImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ErrorImplCopyWith<$Res> {
-  factory _$$ErrorImplCopyWith(_$ErrorImpl value, $Res Function(_$ErrorImpl) then) = __$$ErrorImplCopyWithImpl<$Res>;
+  factory _$$ErrorImplCopyWith(
+          _$ErrorImpl value, $Res Function(_$ErrorImpl) then) =
+      __$$ErrorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String errorMessage});
 }
 
 /// @nodoc
-class __$$ErrorImplCopyWithImpl<$Res> extends _$TransactionsHistoryStateCopyWithImpl<$Res, _$ErrorImpl>
+class __$$ErrorImplCopyWithImpl<$Res>
+    extends _$TransactionsHistoryStateCopyWithImpl<$Res, _$ErrorImpl>
     implements _$$ErrorImplCopyWith<$Res> {
-  __$$ErrorImplCopyWithImpl(_$ErrorImpl _value, $Res Function(_$ErrorImpl) _then) : super(_value, _then);
+  __$$ErrorImplCopyWithImpl(
+      _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of TransactionsHistoryState
   /// with the given fields replaced by the non-null parameter values.
@@ -816,7 +882,8 @@ class _$ErrorImpl implements _Error {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ErrorImpl &&
-            (identical(other.errorMessage, errorMessage) || other.errorMessage == errorMessage));
+            (identical(other.errorMessage, errorMessage) ||
+                other.errorMessage == errorMessage));
   }
 
   @override
@@ -827,7 +894,8 @@ class _$ErrorImpl implements _Error {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith => __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
+  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
+      __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -835,7 +903,8 @@ class _$ErrorImpl implements _Error {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() empty,
-    required TResult Function(List<TransactionResponse> transactions) transactionsHistoryLoaded,
+    required TResult Function(List<TransactionResponse> transactions)
+        transactionsHistoryLoaded,
     required TResult Function(String errorMessage) error,
   }) {
     return error(errorMessage);
@@ -847,7 +916,8 @@ class _$ErrorImpl implements _Error {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? empty,
-    TResult? Function(List<TransactionResponse> transactions)? transactionsHistoryLoaded,
+    TResult? Function(List<TransactionResponse> transactions)?
+        transactionsHistoryLoaded,
     TResult? Function(String errorMessage)? error,
   }) {
     return error?.call(errorMessage);
@@ -859,7 +929,8 @@ class _$ErrorImpl implements _Error {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? empty,
-    TResult Function(List<TransactionResponse> transactions)? transactionsHistoryLoaded,
+    TResult Function(List<TransactionResponse> transactions)?
+        transactionsHistoryLoaded,
     TResult Function(String errorMessage)? error,
     required TResult orElse(),
   }) {
@@ -875,7 +946,8 @@ class _$ErrorImpl implements _Error {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Empty value) empty,
-    required TResult Function(_TransactionsHistoryLoaded value) transactionsHistoryLoaded,
+    required TResult Function(_TransactionsHistoryLoaded value)
+        transactionsHistoryLoaded,
     required TResult Function(_Error value) error,
   }) {
     return error(this);
@@ -887,7 +959,8 @@ class _$ErrorImpl implements _Error {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Empty value)? empty,
-    TResult? Function(_TransactionsHistoryLoaded value)? transactionsHistoryLoaded,
+    TResult? Function(_TransactionsHistoryLoaded value)?
+        transactionsHistoryLoaded,
     TResult? Function(_Error value)? error,
   }) {
     return error?.call(this);
@@ -899,7 +972,8 @@ class _$ErrorImpl implements _Error {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Empty value)? empty,
-    TResult Function(_TransactionsHistoryLoaded value)? transactionsHistoryLoaded,
+    TResult Function(_TransactionsHistoryLoaded value)?
+        transactionsHistoryLoaded,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -918,5 +992,6 @@ abstract class _Error implements TransactionsHistoryState {
   /// Create a copy of TransactionsHistoryState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

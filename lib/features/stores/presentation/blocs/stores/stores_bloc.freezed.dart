@@ -21,7 +21,6 @@ mixin _$StoresEvent {
     required TResult Function() loadStores,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loadStores,
@@ -33,13 +32,11 @@ mixin _$StoresEvent {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_LoadStores value) loadStores,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_LoadStores value)? loadStores,
@@ -55,17 +52,19 @@ mixin _$StoresEvent {
 
 /// @nodoc
 abstract class $StoresEventCopyWith<$Res> {
-  factory $StoresEventCopyWith(StoresEvent value, $Res Function(StoresEvent) then) =
+  factory $StoresEventCopyWith(
+          StoresEvent value, $Res Function(StoresEvent) then) =
       _$StoresEventCopyWithImpl<$Res, StoresEvent>;
 }
 
 /// @nodoc
-class _$StoresEventCopyWithImpl<$Res, $Val extends StoresEvent> implements $StoresEventCopyWith<$Res> {
+class _$StoresEventCopyWithImpl<$Res, $Val extends StoresEvent>
+    implements $StoresEventCopyWith<$Res> {
   _$StoresEventCopyWithImpl(this._value, this._then);
 
-// ignore: unused_field
+  // ignore: unused_field
   final $Val _value;
-// ignore: unused_field
+  // ignore: unused_field
   final $Res Function($Val) _then;
 
   /// Create a copy of StoresEvent
@@ -74,14 +73,18 @@ class _$StoresEventCopyWithImpl<$Res, $Val extends StoresEvent> implements $Stor
 
 /// @nodoc
 abstract class _$$LoadStoresImplCopyWith<$Res> {
-  factory _$$LoadStoresImplCopyWith(_$LoadStoresImpl value, $Res Function(_$LoadStoresImpl) then) =
+  factory _$$LoadStoresImplCopyWith(
+          _$LoadStoresImpl value, $Res Function(_$LoadStoresImpl) then) =
       __$$LoadStoresImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadStoresImplCopyWithImpl<$Res> extends _$StoresEventCopyWithImpl<$Res, _$LoadStoresImpl>
+class __$$LoadStoresImplCopyWithImpl<$Res>
+    extends _$StoresEventCopyWithImpl<$Res, _$LoadStoresImpl>
     implements _$$LoadStoresImplCopyWith<$Res> {
-  __$$LoadStoresImplCopyWithImpl(_$LoadStoresImpl _value, $Res Function(_$LoadStoresImpl) _then) : super(_value, _then);
+  __$$LoadStoresImplCopyWithImpl(
+      _$LoadStoresImpl _value, $Res Function(_$LoadStoresImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of StoresEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -99,7 +102,8 @@ class _$LoadStoresImpl implements _LoadStores {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$LoadStoresImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LoadStoresImpl);
   }
 
   @override
@@ -228,17 +232,19 @@ mixin _$StoresState {
 
 /// @nodoc
 abstract class $StoresStateCopyWith<$Res> {
-  factory $StoresStateCopyWith(StoresState value, $Res Function(StoresState) then) =
+  factory $StoresStateCopyWith(
+          StoresState value, $Res Function(StoresState) then) =
       _$StoresStateCopyWithImpl<$Res, StoresState>;
 }
 
 /// @nodoc
-class _$StoresStateCopyWithImpl<$Res, $Val extends StoresState> implements $StoresStateCopyWith<$Res> {
+class _$StoresStateCopyWithImpl<$Res, $Val extends StoresState>
+    implements $StoresStateCopyWith<$Res> {
   _$StoresStateCopyWithImpl(this._value, this._then);
 
-// ignore: unused_field
+  // ignore: unused_field
   final $Val _value;
-// ignore: unused_field
+  // ignore: unused_field
   final $Res Function($Val) _then;
 
   /// Create a copy of StoresState
@@ -247,14 +253,18 @@ class _$StoresStateCopyWithImpl<$Res, $Val extends StoresState> implements $Stor
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(_$InitialImpl value, $Res Function(_$InitialImpl) then) =
+  factory _$$InitialImplCopyWith(
+          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
       __$$InitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$InitialImplCopyWithImpl<$Res> extends _$StoresStateCopyWithImpl<$Res, _$InitialImpl>
+class __$$InitialImplCopyWithImpl<$Res>
+    extends _$StoresStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(_$InitialImpl _value, $Res Function(_$InitialImpl) _then) : super(_value, _then);
+  __$$InitialImplCopyWithImpl(
+      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of StoresState
   /// with the given fields replaced by the non-null parameter values.
@@ -272,7 +282,8 @@ class _$InitialImpl implements _Initial {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$InitialImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$InitialImpl);
   }
 
   @override
@@ -365,14 +376,18 @@ abstract class _Initial implements StoresState {
 
 /// @nodoc
 abstract class _$$LoadingImplCopyWith<$Res> {
-  factory _$$LoadingImplCopyWith(_$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
+  factory _$$LoadingImplCopyWith(
+          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
       __$$LoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadingImplCopyWithImpl<$Res> extends _$StoresStateCopyWithImpl<$Res, _$LoadingImpl>
+class __$$LoadingImplCopyWithImpl<$Res>
+    extends _$StoresStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
-  __$$LoadingImplCopyWithImpl(_$LoadingImpl _value, $Res Function(_$LoadingImpl) _then) : super(_value, _then);
+  __$$LoadingImplCopyWithImpl(
+      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of StoresState
   /// with the given fields replaced by the non-null parameter values.
@@ -390,7 +405,8 @@ class _$LoadingImpl implements _Loading {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$LoadingImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LoadingImpl);
   }
 
   @override
@@ -483,13 +499,18 @@ abstract class _Loading implements StoresState {
 
 /// @nodoc
 abstract class _$$EmptyImplCopyWith<$Res> {
-  factory _$$EmptyImplCopyWith(_$EmptyImpl value, $Res Function(_$EmptyImpl) then) = __$$EmptyImplCopyWithImpl<$Res>;
+  factory _$$EmptyImplCopyWith(
+          _$EmptyImpl value, $Res Function(_$EmptyImpl) then) =
+      __$$EmptyImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$EmptyImplCopyWithImpl<$Res> extends _$StoresStateCopyWithImpl<$Res, _$EmptyImpl>
+class __$$EmptyImplCopyWithImpl<$Res>
+    extends _$StoresStateCopyWithImpl<$Res, _$EmptyImpl>
     implements _$$EmptyImplCopyWith<$Res> {
-  __$$EmptyImplCopyWithImpl(_$EmptyImpl _value, $Res Function(_$EmptyImpl) _then) : super(_value, _then);
+  __$$EmptyImplCopyWithImpl(
+      _$EmptyImpl _value, $Res Function(_$EmptyImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of StoresState
   /// with the given fields replaced by the non-null parameter values.
@@ -507,7 +528,8 @@ class _$EmptyImpl implements _Empty {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$EmptyImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$EmptyImpl);
   }
 
   @override
@@ -600,16 +622,19 @@ abstract class _Empty implements StoresState {
 
 /// @nodoc
 abstract class _$$StoresLoadedImplCopyWith<$Res> {
-  factory _$$StoresLoadedImplCopyWith(_$StoresLoadedImpl value, $Res Function(_$StoresLoadedImpl) then) =
+  factory _$$StoresLoadedImplCopyWith(
+          _$StoresLoadedImpl value, $Res Function(_$StoresLoadedImpl) then) =
       __$$StoresLoadedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<StoreResponse> stores});
 }
 
 /// @nodoc
-class __$$StoresLoadedImplCopyWithImpl<$Res> extends _$StoresStateCopyWithImpl<$Res, _$StoresLoadedImpl>
+class __$$StoresLoadedImplCopyWithImpl<$Res>
+    extends _$StoresStateCopyWithImpl<$Res, _$StoresLoadedImpl>
     implements _$$StoresLoadedImplCopyWith<$Res> {
-  __$$StoresLoadedImplCopyWithImpl(_$StoresLoadedImpl _value, $Res Function(_$StoresLoadedImpl) _then)
+  __$$StoresLoadedImplCopyWithImpl(
+      _$StoresLoadedImpl _value, $Res Function(_$StoresLoadedImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of StoresState
@@ -637,7 +662,7 @@ class _$StoresLoadedImpl implements _StoresLoaded {
   @override
   List<StoreResponse> get stores {
     if (_stores is EqualUnmodifiableListView) return _stores;
-// ignore: implicit_dynamic_type
+    // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_stores);
   }
 
@@ -655,7 +680,8 @@ class _$StoresLoadedImpl implements _StoresLoaded {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_stores));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_stores));
 
   /// Create a copy of StoresState
   /// with the given fields replaced by the non-null parameter values.
@@ -747,27 +773,34 @@ class _$StoresLoadedImpl implements _StoresLoaded {
 }
 
 abstract class _StoresLoaded implements StoresState {
-  const factory _StoresLoaded(final List<StoreResponse> stores) = _$StoresLoadedImpl;
+  const factory _StoresLoaded(final List<StoreResponse> stores) =
+      _$StoresLoadedImpl;
 
   List<StoreResponse> get stores;
 
   /// Create a copy of StoresState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$StoresLoadedImplCopyWith<_$StoresLoadedImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$StoresLoadedImplCopyWith<_$StoresLoadedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ErrorImplCopyWith<$Res> {
-  factory _$$ErrorImplCopyWith(_$ErrorImpl value, $Res Function(_$ErrorImpl) then) = __$$ErrorImplCopyWithImpl<$Res>;
+  factory _$$ErrorImplCopyWith(
+          _$ErrorImpl value, $Res Function(_$ErrorImpl) then) =
+      __$$ErrorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String errorMessage});
 }
 
 /// @nodoc
-class __$$ErrorImplCopyWithImpl<$Res> extends _$StoresStateCopyWithImpl<$Res, _$ErrorImpl>
+class __$$ErrorImplCopyWithImpl<$Res>
+    extends _$StoresStateCopyWithImpl<$Res, _$ErrorImpl>
     implements _$$ErrorImplCopyWith<$Res> {
-  __$$ErrorImplCopyWithImpl(_$ErrorImpl _value, $Res Function(_$ErrorImpl) _then) : super(_value, _then);
+  __$$ErrorImplCopyWithImpl(
+      _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of StoresState
   /// with the given fields replaced by the non-null parameter values.
@@ -803,7 +836,8 @@ class _$ErrorImpl implements _Error {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ErrorImpl &&
-            (identical(other.errorMessage, errorMessage) || other.errorMessage == errorMessage));
+            (identical(other.errorMessage, errorMessage) ||
+                other.errorMessage == errorMessage));
   }
 
   @override
@@ -814,7 +848,8 @@ class _$ErrorImpl implements _Error {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith => __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
+  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
+      __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -905,5 +940,6 @@ abstract class _Error implements StoresState {
   /// Create a copy of StoresState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -1,3 +1,4 @@
+import 'package:change_case/change_case.dart';
 import 'package:credix_app/core/presentation/resources/colors/app_colors.dart';
 import 'package:credix_app/core/presentation/resources/sizes/app_sizes.dart';
 import 'package:credix_app/core/presentation/widgets/widgets.dart';
@@ -170,7 +171,7 @@ class StoreTile extends StatelessWidget {
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: AppText.labelSmall(
-                      store.type!,
+                      store.type!.toCapitalCase(),
                       color: AppColors.neutral7,
                     ),
                   ),
