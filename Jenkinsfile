@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'your-username/flutter-android:latest' // Use your built Docker image
+            image 'your-username/flutter-android:latest'
             args '-u root:root'
         }
     }
@@ -18,7 +18,7 @@ pipeline {
     }
 
     triggers {
-        pollSCM('H/5 * * * *') // Poll every 5 minutes
+        pollSCM('H/5 * * * *')
     }
 
     stages {

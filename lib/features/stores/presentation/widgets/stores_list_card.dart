@@ -1,3 +1,4 @@
+import 'package:change_case/change_case.dart';
 import 'package:credix_app/core/presentation/resources/colors/app_colors.dart';
 import 'package:credix_app/core/presentation/resources/sizes/app_sizes.dart';
 import 'package:credix_app/core/presentation/widgets/widgets.dart';
@@ -48,7 +49,7 @@ class StoresListCard extends StatelessWidget {
     var filtered = stores;
 
     if (selectedType != 'All') {
-      filtered = filtered.where((store) => store.type == selectedType).toList();
+      filtered = filtered.where((store) => store.type!.toCapitalCase() == selectedType).toList();
     }
 
     if (searchQuery.isNotEmpty) {
